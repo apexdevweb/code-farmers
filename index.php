@@ -1,9 +1,16 @@
 <?php
 if (isset($_POST['signup'])) {
+
     if (!empty($_POST['userName']) && !empty($_POST['userPassword'])) {
-        # code...
+
+        $Uname = $_POST['userName'];
+        $Upasse = $_POST['userPassword'];
+        $Xtreme_cryptage = password_hash($Upasse, PASSWORD_ARGON2ID);
+
+        $bdd->prepare("INSERT INTO user (userName,userPasse) VALUES(?,?)");
+        $bdd->execute();
     } else {
-        $errorMsg = "Vous devez remplir tous les champs!";
+        $errorMsg = "Tous les champs sont obligatoire!";
     }
 }
 
