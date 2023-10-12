@@ -1,5 +1,5 @@
 <?php
-require "actionback/signupScript.php";
+require "actionback/users/signupScript.php";
 ?>
 <!DOCTYPE html>
 <html lang="fr">

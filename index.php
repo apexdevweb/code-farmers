@@ -1,5 +1,6 @@
 <?php
-require('actionback/securityScript.php');
+session_start();
+require('actionback/users/securityScript.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,9 @@ include("includes/head.php");
     <?php
     include("includes/navbar.php");
     ?>
+    <div class="titre_contenu">
+        <h1>Code-Farmer</h1>
+    </div>
 </body>
 
 </html>

@@ -25,8 +25,8 @@ if (isset($_POST['connexion'])) {
 
                 //ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
                 $_SESSION['valide'] = true;
-                $_SESSION['id'] = $userInfo['id'];
-                $_SESSION['userName'] = $userInfo['userName'];
+                $_SESSION['id'] = $Uinfos['id'];
+                $_SESSION['userName'] = $Uinfos['userName'];
                 //on redirige l'utilisateur vers la page d'acceuil
                 header("Location: index.php");
             } else {
@@ -36,6 +36,4 @@ if (isset($_POST['connexion'])) {
             $errorMsg = "Nom d'utilisateur incorrect!";
         }
     }
-} else {
-    $errorMsg = "Tous les champs sont obligatoire!";
 }
