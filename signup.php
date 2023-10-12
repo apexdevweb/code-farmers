@@ -9,12 +9,7 @@ include "includes/head.php";
 ?>
 
 <body>
-    <?php
-    include "includes/navbar.php";
-    ?>
-
-
-    <form method="post">
+    <form method="POST">
 
         <?php
         if (isset($errorMsg)) {
@@ -31,6 +26,10 @@ include "includes/head.php";
             <input type="password" class="form-control" name="userPassword">
         </div>
         <button type="submit" class="btn btn-primary" name="signup">Inscription</button>
+        <br>
+        <a href="login.php">
+            <p>J'ai déjà un compte, je me connecte</p>
+        </a>
     </form>
 
 </body>
