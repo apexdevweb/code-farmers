@@ -5,7 +5,7 @@ require("actionback/database.php");
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE
 if (isset($_POST['connexion'])) {
 
-    // ON VERIFIE SI LES CHAMPS NE SONT PAS VIDE
+    // ON VERIFIE QUE SI LES CHAMPS NE SONT PAS VIDE
 
     if (!empty($_POST['userName']) && !empty($_POST['userPassword'])) {
 

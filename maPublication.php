@@ -13,10 +13,25 @@ include "includes/head.php";
     <?php
     include "includes/navbar.php";
     ?>
+    <br>
+    <br>
     <?php
-    // while ($publication = $publi_rescu) {
-    # code...
-    //  }
+    while ($publication = $publi_rescu->fetch()) {
+    ?>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><?= $publication['titre'] ?></h5>
+                <hr>
+                <p class="card-text"><?= $publication['contenu'] ?></p>
+                <hr>
+                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $publication['date_publication'] ?> <?= $publication['nom_auteur'] ?></h6>
+                <a href="supprimerPublication.php" class="card-link">Supprimer</a>
+                <a href="editeurPublication.php" class="card-link">Modifier</a>
+            </div>
+        </div>
+    <?php
+
+    }
     ?>
 
 

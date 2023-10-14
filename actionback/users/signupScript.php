@@ -3,7 +3,7 @@ require("actionback/database.php");
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE
 if (isset($_POST['signup'])) {
 
-    // ON VERIFIE LES CHAMPS NE SONT PAS VIDE
+    // ON VERIFIE QUE LES CHAMPS NE SONT PAS VIDE
 
     if (!empty($_POST['userName']) && !empty($_POST['userPassword'])) {
 
