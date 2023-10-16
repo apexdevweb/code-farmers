@@ -38,7 +38,7 @@ if (isset($_POST['signup'])) {
 
             //ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
 
-            header('Location: index.php');
+            header('Location: home.php');
         } else {
             $errorMsg = "Se compte éxiste déjà!";
         }

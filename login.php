@@ -9,6 +9,10 @@ include "includes/head.php";
 ?>
 
 <body>
+    <br>
+    <a href="index.php"><i class="fa-solid fa-arrow-left"></i>Retour</a>
+    <br>
+    <br>
     <form method="POST">
 
         <?php
@@ -27,9 +31,7 @@ include "includes/head.php";
         </div>
         <button type="submit" class="btn btn-primary" name="connexion">Connection</button>
         <br>
-        <a href="signup.php">
-            <p>Je n'ai pas encore de compte, je m'inscris!</p>
-        </a>
+        <a href="signup.php">Je n'ai pas encore de compte, je m'inscris<i class="fa-solid fa-arrow-right"></i></a>
     </form>
 
 </body>

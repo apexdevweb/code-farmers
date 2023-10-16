@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../home.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../publication.php">Publier</a>
@@ -21,7 +21,6 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="maPublication.php">Mes Publications</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                         <li><a class="dropdown-item" href="actionback/users/logout.php">Déconnexion</a></li>
                     </ul>
                 </li>
