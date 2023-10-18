@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require("actionback/database.php");
 
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("actionback/database.php");
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE
 if (isset($_POST['signup'])) {
@@ -25,7 +26,7 @@ if (isset($_POST['signup'])) {
 
             // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
 
-            $rescu_user_info = $bdd->prepare("SELECT id userName FROM users WHERE userName = ? ");
+            $rescu_user_info = $bdd->prepare("SELECT `id` userName FROM users WHERE userName = ? ");
             $rescu_user_info->execute(array($Uname));
 
             $userInfo = $rescu_user_info->fetch();
