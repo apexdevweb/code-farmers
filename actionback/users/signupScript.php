@@ -33,7 +33,7 @@ if (isset($_POST['signup'])) {
 
             //ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
 
-            $_SESSION['valide'] = true;
+            $_SESSION['valideAuth'] = true;
             $_SESSION['id'] = $userInfo['id'];
             $_SESSION['userName'] = $userInfo['userName'];
 

@@ -1,5 +1,5 @@
 <?php
-require('actionback/users/securityScript.php');
+session_start();
 require('actionback/users/afficheUserScript.php');
 ?>
 
