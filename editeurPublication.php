@@ -14,6 +14,7 @@ include "includes/head.php";
     <?php
     include "includes/navbar.php";
     ?>
+    <br>
     <div class="container">
         <?php
         if (isset($errorMsg,)) {

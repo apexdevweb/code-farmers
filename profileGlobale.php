@@ -28,7 +28,7 @@ include("includes/head.php");
                     <h5 class="card-title"><?= $afu['userName'] ?></h5>
                     <hr>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                    <button type="button" class="btn btn-info"><a href="#">Voir le profil</a></button>
                 </div>
             </div>
         <?php

@@ -13,6 +13,7 @@ include("includes/head.php");
     <?php
     include("includes/navbar.php");
     ?>
+    <br>
     <div class="container">
         <form method="POST">
             <?php

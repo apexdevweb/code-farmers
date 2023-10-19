@@ -7,27 +7,15 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../home.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../home.php"><i class="fa-solid fa-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../profile.php">Profil</a>
+                    <a class="nav-link" href="../profileGlobale.php"><i class="fa-solid fa-users"></i> Profils</a>
                 </li>
-                <?php
-                if (isset($_SESSION['valideAuth'])) {
-                ?>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Mon profile
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../publication.php">Publier</a></li>
-                            <li><a class="dropdown-item" href="maPublication.php">Mes Publications</a></li>
-                            <li><a class="dropdown-item" href="actionback/users/logout.php">Déconnexion</a></li>
-                        </ul>
-                    </li>
-                <?php
-                }
-                ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="../recherche.php"><i class="fa-solid fa-magnifying-glass"></i> Recherche</a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php">Sortie <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                 </li>
@@ -35,7 +23,22 @@
         </div>
         <?php
         if (isset($_SESSION['valideAuth'])) {
-            echo "<h4> Bienvenue " . $_SESSION['userName'] . "</h4>";
+        ?>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-regular fa-user"></i> Mon profil</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../publication.php"><i class="fa-solid fa-file-pen"></i>Publier</a></li>
+                    <li><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open"></i>Mes Publications</a></li>
+                    <li><a class="dropdown-item" href="actionback/users/logout.php"><i class="fa-solid fa-power-off"></i>Déconnexion</a></li>
+                </ul>
+            </li>
+        <?php
+        }
+        ?>
+        <?php
+        if (isset($_SESSION['valideAuth'])) {
+            echo "<h4>  Bienvenue " . $_SESSION['userName'] . "</h4>";
         }
         ?>
     </div>

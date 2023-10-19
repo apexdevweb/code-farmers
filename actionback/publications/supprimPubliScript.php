@@ -18,9 +18,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($verifPubliExist->rowCount() > 0) {
 
-        $info_user = $verifPubliExist->fetch();
+        $info_publi = $verifPubliExist->fetch();
 
-        if ($info_user['id_auteur'] == $_SESSION['id']) {
+        if ($info_publi['id_auteur'] == $_SESSION['id']) {
 
             $supr_publi = $bdd->prepare("DELETE FROM publications WHERE `id` = ?");
             $supr_publi->execute(array($id_publi));
