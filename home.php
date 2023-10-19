@@ -1,7 +1,7 @@
 <?php
 session_start();
-require('actionback/publications/afficheRecherche.php');
 require('actionback/publications/affichepubliScript.php');
+require('actionback/publications/afficheRecherche.php');
 ?>
 
 <!DOCTYPE html>
@@ -28,15 +28,31 @@ include("includes/head.php");
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary">Rechercher</button>
-                <?php
-                $search = $_GET['chercher'];
-                var_dump($search);
-                ?>
+                <br>
+                <br>
+                <div class="container-sm">
+                    <?php
+                    //on fais une boucle while avec un fetch() pour récupéré les données dans un tableaux
+                    while ($publi = $affiche_publiSearch->fetch()) {
+                    ?>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $publi['titre'] ?></h5>
+                                <hr>
+                                <p class="card-text"><?= $publi['contenu'] ?></p>
+                                <hr>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $publi['date_publication'] ?> <?= $publi['nom_auteur'] ?></h6>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
             </form>
         </div>
 
     </section>
-    <!-- on fait un foreach en php pour afficher tout les utilisateur enregistré dans la database -->
+    <!-- on fait un foreach en php pour afficher toutes les publications enregistré dans la database -->
     <section class="contenu_secondaire">
         <?php
         foreach ($affiche_publi as $afp) {

@@ -31,7 +31,6 @@ include "includes/head.php";
             </div>
         </div>
     <?php
-
     }
     ?>
 
