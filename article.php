@@ -19,9 +19,9 @@ include('includes/head.php');
         if (isset($errorMsg)) {
             echo $errorMsg;
         }
-
         if (isset($publi_date_select)) {
         ?>
+
             <h3><?= $publi_titre_select; ?></h3>
             <hr>
             <p><?= $publi_contenu_select; ?></p>

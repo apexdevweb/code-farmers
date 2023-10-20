@@ -1,0 +1,2 @@
+<img src="asset/image/<?= $_SESSION['img_publication']?>">
+ <img src="asset/image/<?= $publi_img_select; ?>" style="width: 150px; height: 150px">

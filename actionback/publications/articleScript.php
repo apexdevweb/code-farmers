@@ -17,6 +17,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         $publi_id_select = $publiSelectInfo['id_auteur'];
         $publi_auteur_select = $publiSelectInfo['nom_auteur'];
         $publi_date_select = $publiSelectInfo['date_publication'];
+        $publi_img_select = $publiSelectInfo['img_publication'];
     } else {
         $errorMsg = "Aucune publication a été trouver";
     }

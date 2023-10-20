@@ -15,7 +15,7 @@ include("includes/head.php");
     ?>
     <br>
     <div class="container">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <?php
             if (isset($errorMsg,)) {
                 echo "<p>" . $errorMsg . "</p>";
@@ -31,6 +31,10 @@ include("includes/head.php");
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Contenu de la publication</label>
                 <textarea class="form-control" name="containPubli"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="formFileSm" class="form-label">Image de la publication</label>
+                <input class="form-control form-control-sm" type="file" name="imgPubli">
             </div>
             <button type="submit" class="btn btn-primary" name="publish">Publier</button>
         </form>
