@@ -17,6 +17,9 @@ include "includes/head.php";
     include "includes/navbar.php";
     ?>
     <br>
+    <div class="infoPratique">
+        <h4>Ici vous pouvez géré votre profil personnel</h4>
+    </div>
     <div class="container text-center">
         <div class="row">
             <div class="col">

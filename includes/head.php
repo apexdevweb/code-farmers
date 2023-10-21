@@ -10,5 +10,6 @@
     <script src="https://kit.fontawesome.com/268e7a0888.js" crossorigin="anonymous"></script>
     <!--fontAwesome fin-->
     <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="asset/responsive.css">
     <title>Code-Farmer</title>
 </head>

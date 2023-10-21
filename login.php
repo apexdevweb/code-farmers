@@ -9,11 +9,11 @@ include "includes/head.php";
 ?>
 
 <body>
-    <br>
-    <a href="index.php"><i class="fa-solid fa-arrow-left"></i>Retour</a>
-    <br>
-    <br>
     <div class="container">
+        <br>
+        <a href="index.php"><i class="fa-solid fa-arrow-left"></i>Retour</a>
+        <br>
+        <br>
         <form method="POST">
 
             <?php

@@ -6,7 +6,7 @@ if (isset($_POST['signup'])) {
 
     // ON VERIFIE QUE LES CHAMPS NE SONT PAS VIDE
 
-    if (!empty($_POST['userName']) && !empty($_POST['userPassword'])) {
+    if (!empty($_POST['userName']) && !empty($_POST['userPassword']) && !empty($_POST['confirmPassword'])) {
 
         // ON PLACE LA SUPERGLOBALE DANS UNE VARIABLE ET ON SECURISE LES CHAMP AVEC UN STRIPTAGS ET ON CRYPTE LE MDP
 
@@ -18,28 +18,34 @@ if (isset($_POST['signup'])) {
         $data_verif = $bdd->prepare("SELECT userName FROM users WHERE userName = ?");
         $data_verif->execute(array($Uname));
 
-        // ON INSERT LE NOUVEL UTILISATEUR DANS LA DATABASE
+        // ON VERIFIE QUE LES MOT DE PASSE CORRESPONDENT 
+        if ($_POST['userPassword'] == $_POST['confirmPassword']) {
 
-        if ($data_verif->rowcount() == 0) {
-            $user_insert = $bdd->prepare("INSERT INTO users (userName, userPassword) VALUES (?,?)");
-            $user_insert->execute(array($Uname, $Upasse));
+            // ON INSERT LE NOUVEL UTILISATEUR DANS LA DATABASE
 
-            // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
+            if ($data_verif->rowcount() == 0) {
+                $user_insert = $bdd->prepare("INSERT INTO users (userName, userPassword) VALUES (?,?)");
+                $user_insert->execute(array($Uname, $Upasse));
 
-            $rescu_user_info = $bdd->prepare("SELECT `id` userName FROM users WHERE userName = ? ");
-            $rescu_user_info->execute(array($Uname));
+                // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
 
-            $userInfo = $rescu_user_info->fetch();
+                $rescu_user_info = $bdd->prepare("SELECT `id` userName FROM users WHERE userName = ? ");
+                $rescu_user_info->execute(array($Uname));
 
-            //ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
+                $userInfo = $rescu_user_info->fetch();
 
-            $_SESSION['valideAuth'] = true;
-            $_SESSION['id'] = $userInfo['id'];
-            $_SESSION['userName'] = $userInfo['userName'];
+                //ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
 
-            //ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
+                $_SESSION['valideAuth'] = true;
+                $_SESSION['id'] = $userInfo['id'];
+                $_SESSION['userName'] = $userInfo['userName'];
 
-            header('Location: home.php');
+                //ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
+
+                header('Location: home.php');
+            } else {
+                $errorMsg = "Les password ne correspondent pas";
+            }
         } else {
             $errorMsg = "Se compte éxiste déjà!";
         }
