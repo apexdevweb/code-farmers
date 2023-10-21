@@ -1,6 +1,6 @@
 <?php
-require('actionback/publications/articleScript.php');
 require('actionback/users/securityScript.php');
+require('actionback/users/profilScript.php');
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +19,12 @@ include('includes/head.php');
         if (isset($errorMsg)) {
             echo $errorMsg;
         }
-        if (isset($publiSelectInfo)) {
-
+        if (isset($userSelectInfo)) {
         ?>
-            <h3><?= $publi_titre_select; ?></h3>
+            <h3><?= $user_name_select; ?></h3>
             <hr>
-            <img src="asset/image/<?= $publi_img_select; ?>" style="width: 150px; height: 150px">
-            <p><?= $publi_contenu_select; ?></p>
+            <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 150px; height: 150px">
             <hr>
-            <small><?= $publi_date_select . " " . $publi_auteur_select; ?></small>
         <?php
         }
         ?>
