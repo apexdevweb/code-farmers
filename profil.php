@@ -16,9 +16,6 @@ include('includes/head.php');
     <br>
     <div class="container">
         <?php
-        if (isset($errorMsg)) {
-            echo $errorMsg;
-        }
         if (isset($userSelectInfo)) {
         ?>
             <h3><?= $user_name_select; ?></h3>

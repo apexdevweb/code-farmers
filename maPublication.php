@@ -34,9 +34,6 @@ include "includes/head.php";
     <?php
     }
     ?>
-
-
-
 </body>
 
 </html>
