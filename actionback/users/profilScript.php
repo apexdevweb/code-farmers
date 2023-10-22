@@ -14,6 +14,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         //ON PLACE LA DATA RECUPERE DANS DES VARIABLES
         $user_name_select =  $userSelectInfo['userName'];
         $user_avatar_select =  $userSelectInfo['avatar'];
+        $user_age_select = $userSelectInfo['date_naissance'];
+        $user_genre_select = $userSelectInfo['genre'];
+        $user_city_select = $userSelectInfo['ville'];
     } else {
         $errorMsg = "Aucun utilisateur a été trouver";
     }

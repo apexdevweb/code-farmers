@@ -7,15 +7,15 @@ if (isset($_POST['connexion'])) {
 
     // ON VERIFIE QUE SI LES CHAMPS NE SONT PAS VIDE
 
-    if (!empty($_POST['userName']) && !empty($_POST['userPassword'])) {
+    if (!empty($_POST['mail']) && !empty($_POST['userPassword'])) {
 
         // les données de l'utilisateur qui souhaite se connecté!
-        $Uname = strip_tags($_POST['userName']);
+        $Umail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
         $Upasse = strip_tags($_POST['userPassword']);
 
         // vérifie si l'utilisateur existe
-        $data_verif = $bdd->prepare("SELECT * FROM users WHERE userName = ?");
-        $data_verif->execute(array($Uname));
+        $data_verif = $bdd->prepare("SELECT * FROM users WHERE mail = ?");
+        $data_verif->execute(array($Umail));
 
         if ($data_verif->rowcount() > 0) {
 

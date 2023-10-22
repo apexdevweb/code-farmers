@@ -6,12 +6,21 @@ if (isset($_POST['signup'])) {
 
     // ON VERIFIE QUE LES CHAMPS NE SONT PAS VIDE
 
-    if (!empty($_POST['userName']) && !empty($_POST['userPassword']) && !empty($_POST['confirmPassword'])) {
+    if (
+        !empty($_POST['userName']) && !empty($_POST['mail']) && !empty($_POST['userPassword']) && !empty($_POST['confirmPassword'])
+        && !empty($_POST['city']) && !empty($_POST['dateNaissance'])
+    ) {
 
         // ON PLACE LA SUPERGLOBALE DANS UNE VARIABLE ET ON SECURISE LES CHAMP AVEC UN STRIPTAGS ET ON CRYPTE LE MDP
 
         $Uname = strip_tags($_POST['userName']);
+        $Umail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
         $Upasse = password_hash($_POST['userPassword'], PASSWORD_ARGON2ID);
+        $Ubirthday = $_POST['dateNaissance'];
+        $Ucity = $_POST['city'];
+        $Usex = $_POST['genre'];
+        $date_inscription = date("Y-m-d");
+        $date_connexion = date("Y-m-d H:i:s");
 
         // ON VERIFIE QUE L'UTILISATEUR N'EXISTE PAS DEJA 
 
@@ -24,8 +33,8 @@ if (isset($_POST['signup'])) {
             // ON INSERT LE NOUVEL UTILISATEUR DANS LA DATABASE
 
             if ($data_verif->rowcount() == 0) {
-                $user_insert = $bdd->prepare("INSERT INTO users (userName, userPassword) VALUES (?,?)");
-                $user_insert->execute(array($Uname, $Upasse));
+                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription) VALUES (?,?,?,?,?,?,?)");
+                $user_insert->execute(array($Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription));
 
                 // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
 
@@ -42,12 +51,12 @@ if (isset($_POST['signup'])) {
 
                 //ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
 
-                header('Location: home.php');
+                header('Location: login.php');
             } else {
-                $errorMsg = "Les password ne correspondent pas";
+                $errorMsg = " Se compte éxiste déjà!";
             }
         } else {
-            $errorMsg = "Se compte éxiste déjà!";
+            $errorMsg = "Les mot de passe ne correspondent pas!";
         }
     } else {
         $errorMsg = "Tous les champs sont obligatoire!";

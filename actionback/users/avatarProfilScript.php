@@ -13,7 +13,7 @@ if (isset($_POST['modifProfil']) && isset($_FILES['avatar']) && !empty($_FILES['
         $extensionUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
         if (in_array($extensionUpload, $extensionValide)) {
 
-            //on définie le chemin pour que l'image soit placé dans un dossier via la database
+            //on définie le chemin pour que l'image soit placé dans un dossier avec un id via la database
             $cheminUpload = "asset/image/" . $_SESSION['id'] . "." . $extensionUpload;
             $transferImg = move_uploaded_file($_FILES['avatar']['tmp_name'], $cheminUpload);
 

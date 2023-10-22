@@ -21,10 +21,9 @@ include "includes/head.php";
                 echo "<p>" . $errorMsg . "</p>";
             }
             ?>
-
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">User-name</label>
-                <input type="text" class="form-control" name="userName">
+            <div class="input-group mb-3">
+                <input type="email" class="form-control" name="mail" placeholder="E-mail">
+                <span class="input-group-text">@example.com</span>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>

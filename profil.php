@@ -23,7 +23,18 @@ include('includes/head.php');
         ?>
             <h3><?= $user_name_select; ?></h3>
             <hr>
-            <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 150px; height: 150px">
+            <div class="container text-left">
+                <div class="row">
+                    <div class="col">
+                        <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 300px; height: 300px">
+                    </div>
+                    <div class="col">
+                        <h6>âge: <?= $user_age_select; ?></h6>
+                        <h6>genre: <?= $user_genre_select; ?></h6>
+                        <h6>ville: <?= $user_city_select; ?></h6>
+                    </div>
+                </div>
+            </div>
             <hr>
         <?php
         }

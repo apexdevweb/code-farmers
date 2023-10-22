@@ -21,6 +21,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
             $profil_name = $profilInfos['userName'];
             $profil_avatar = $profilInfos['avatar'];
+            $profil_age = $profilInfos['date_naissance'];
+            $profil_genre = $profilInfos['genre'];
+            $profil_city = $profilInfos['ville'];
         } else {
             $errorMsg = "Vous n'êtes pas le propriétaire de se profil!!!";
         }

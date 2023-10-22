@@ -39,29 +39,29 @@ include "includes/head.php";
             <label for="city" class="form-label">Choisir une province</label>
             <select class="form-select form-select-sm" name="city">
                 <option selected>...</option>
-                <option value="1">Anvers</option>
-                <option value="2">Limbourg</option>
-                <option value="3">Flandre orientale</option>
-                <option value="3">Brabant famand</option>
-                <option value="3">Flandre occidenal</option>
-                <option value="3">Bruxelles</option>
-                <option value="3">Namure</option>
-                <option value="3">Brabant wallon</option>
-                <option value="3">Hainaut</option>
+                <option value="Anvers">Anvers</option>
+                <option value="Limbourg">Limbourg</option>
+                <option value="Flandre orientale">Flandre orientale</option>
+                <option value="Brabant famand">Brabant famand</option>
+                <option value="Flandre occidenal">Flandre occidenal</option>
+                <option value="Bruxelles">Bruxelles</option>
+                <option value="Namur">Namur</option>
+                <option value="Brabant wallon">Brabant wallon</option>
+                <option value="Hainaut">Hainaut</option>
             </select>
             <br>
             <div class="container_downform">
                 <label for="dateNaissance" class=" form-label">Votre date de naissance</label>
                 <input type="date" name="dateNaissance">
                 <br>
-                <label for="Homme" class=" form-label">Votre genre</label>
+                <label for="Homme" class=" form-label">Votre genre <i class="fa-solid fa-arrow-right"></i></label>
                 <div class="subcontainer_downform">
-                    <label for="dateNaissance" class=" form-label">Homme</label>
-                    <input type="radio" name="Homme">
+                    <label for="genre" class=" form-label">Homme</label>
+                    <input type="radio" name="genre" value="Homme">
                     <label for="dateNaissance" class=" form-label">Femme</label>
-                    <input type="radio" name="Femme">
+                    <input type="radio" name="genre" value="Femme">
                     <label for="Extraterrestre" class=" form-label">Extraterrestre</label>
-                    <input type="radio" name="Extraterrestre">
+                    <input type="radio" name="genre" value="Extraterrestre">
                 </div>
             </div>
             <br>

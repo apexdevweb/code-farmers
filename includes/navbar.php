@@ -37,6 +37,8 @@
         <?php
         }
         ?>
+        <br>
+        <br>
         <?php
         if (isset($_SESSION['valideAuth'])) {
             echo "<h4>  Bienvenue " . $_SESSION['userName'] . "</h4>";
