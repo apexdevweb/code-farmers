@@ -1,24 +1,8 @@
 <?php
 require("actionback/users/securityScript.php");
-require("actionback/database.php");
-print_r($_POST);
+require("actionback/privateMessage/messagerieScript.php");
+print_r($_GET);
 var_dump($_GET);
-
-if (isset($_GET['id']) && !empty($_GET['id'])) {
-
-    if (isset($_POST['envoyer'])) {
-        if (!empty($_POST['messagePV'])) {
-
-            $message = strip_tags($_POST['messagePV']);
-            $getid = $_GET['id'];
-            $lasess = $_SESSION['id'];
-
-            $insertMessage = $bdd->prepare("INSERT INTO msgprive(`message`, id_destinataire, id_expediteur) VALUES ('?,?,?')");
-            $insertMessage->execute(array($message, $getid, $lasess));
-        }
-    }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,7 +23,7 @@ include("includes/head.php");
             <div class="container-sm">
                 <?php
                 $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
-                $recupMsg->execute(array($_SESSION['id'], $getid));
+                $recupMsg->execute(array($_SESSION['id'], $_GET['id']));
                 while ($message = $recupMsg->fetch()) {
                 ?>
                     <p><?= $message ?></p>
