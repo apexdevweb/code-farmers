@@ -93,3 +93,12 @@ li {
 p {
   font-family: "Manrope", sans-serif;
 }
+.myPubli_contain {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
