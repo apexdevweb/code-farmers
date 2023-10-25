@@ -1,38 +1,6 @@
 <?php
 require("actionback/users/securityScript.php");
-require("actionback/database.php");
-
-print_r($_GET);
-var_dump($_GET);
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//TRAITEMENT DE LA MESSAGERIE
-if (isset($_GET['id']) && !empty($_GET['id'])) {
-
-    $messGetId = $_GET['id'];
-    $recupUser = $bdd->prepare("SELECT * FROM users WHERE `id` = ?");
-    $recupUser->execute(array($messGetId));
-
-    if ($recupUser->rowCount() > 0) {
-
-        if (isset($_POST['envoi_pv'], $_POST['msg_pv']) && !empty($_POST['msg_pv'])) {
-
-            $message = strip_tags($_POST['msg_pv']);
-            $destinataire = $_GET['id'];
-            $expediteur = $_SESSION['id'];
-
-            $insertMessage = $bdd->prepare("INSERT INTO msgprive(`message`, `id_destinataire`, `id_expediteur`) VALUES ('?,?,?')");
-            $insertMessage->execute(array($message, $destinataire, $expediteur));
-        } else {
-            echo "aucun message n'as été trouvé";
-        }
-    } else {
-        echo "aucun utilisateur trouvé";
-    }
-} else {
-    echo "aucun identifiant a été trouvé";
-}
-
+require("actionback/privateMessage/messagerieScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -46,20 +14,34 @@ include("includes/head.php");
     include("includes/navbar.php");
     ?>
     <br>
+    <a href="messagerie.php"><i class="fa-solid fa-arrow-left"></i>Retour</a>
+    <br>
     <div class="container">
-        <h4>discussion privée avec: </h4>
-        <br>
         <section id="messages">
             <div class="container-sm">
+                <h5>Discussion avec : <img src="asset/image/<?= $_GET['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"></h5>
+                <hr>
+                <!--on récupère et affiche le message de l'expéditeur-->
                 <?php
                 $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
                 $recupMsg->execute(array($_SESSION['id'], $_GET['id']));
                 while ($message = $recupMsg->fetch()) {
                 ?>
-                    <p><?= $message ?></p>
+                    <p><?= $message['msg_date'] . " " ?><img src="asset/image/<?= $_SESSION['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><?= " " . $message['message']; ?></p>
                 <?php
                 }
                 ?>
+                <!--on récupère et affiche le message du destinataire-->
+                <?php
+                $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
+                $recupMsg->execute(array($_GET['id'], $_SESSION['id']));
+                while ($message = $recupMsg->fetch()) {
+                ?>
+                    <p><?= $message['msg_date'] . " " ?><img src="asset/image/<?= $_GET['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><?= " " . $message['message']; ?></p>
+                <?php
+                }
+                ?>
+                <hr>
             </div>
         </section>
         <br>

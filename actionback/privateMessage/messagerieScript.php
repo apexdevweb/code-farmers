@@ -1,5 +1,23 @@
 <?php
 require("actionback/database.php");
+/////////////////////////////////////////////////////////////////////////////////////////////
+//TRAITEMENT DE LA MESSAGERIE
+if (isset($_POST['envoi_pv'])) {
+    if (isset($_POST['msg_pv']) && !empty($_POST['msg_pv'])) {
 
-// ON RECUPERE LES MEMBRE INSCRIT DANS LA TABLE USERS POUR LES AFFICHER SUR LES SITE
-$reqMessage_users = $bdd->query("SELECT * FROM users ORDER BY `id` DESC");
+        $message = strip_tags($_POST['msg_pv']);
+        $message_date = date('Y-m-d');
+
+        $insMsg = $bdd->prepare("INSERT INTO `msgprive`(`message`, `id_destinataire`, `id_expediteur`, `msg_date`) VALUES (?,?,?,?)");
+        $insMsg->execute(array($message, $_GET['id'], $_SESSION['id'], $message_date));
+    } else {
+        echo "Aucun message trouvé";
+    }
+} else {
+    echo "vous n'avez pas encore envoyer votre message";
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+//RECUPERATION DES UTILISATEUR
+
+$user4tchat = $bdd->prepare("SELECT * FROM `users` WHERE `id`");
+$user4tchat->execute(array());

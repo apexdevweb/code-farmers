@@ -48,6 +48,7 @@ include "includes/head.php";
                 <option value="Namur">Namur</option>
                 <option value="Brabant wallon">Brabant wallon</option>
                 <option value="Hainaut">Hainaut</option>
+                <option value="Luxembourg">Luxembourg</option>
             </select>
             <br>
             <div class="container_downform">

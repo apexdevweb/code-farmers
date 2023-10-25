@@ -1,6 +1,9 @@
 <?php
 require("actionback/users/securityScript.php");
-require("actionback/privateMessage/messagerieScript.php");
+require("actionback/database.php");
+// ON RECUPERE LES MEMBRE INSCRIT DANS LA TABLE USERS POUR LES AFFICHER SUR LES SITE
+$req_users = $bdd->query("SELECT * FROM users ORDER BY `id` DESC");
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +18,7 @@ include("includes/head.php");
     ?>
 
     <?php
-    while ($message_users = $reqMessage_users->fetch()) {
+    while ($message_users = $req_users->fetch()) {
     ?>
         <br>
         <div class="container-sm">
