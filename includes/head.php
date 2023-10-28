@@ -9,6 +9,10 @@
     <!--fontAwesome-->
     <script src="https://kit.fontawesome.com/268e7a0888.js" crossorigin="anonymous"></script>
     <!--fontAwesome fin-->
+    <!--swiperJS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--swiperJS fin-->
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="asset/responsive.css">
     <title>Code-Farmer</title>
