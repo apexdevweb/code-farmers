@@ -101,29 +101,22 @@ p {
   justify-content: space-evenly;
 }
 /*******swiperJS******/
-.swiper {
-  height: 40vh;
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: #333;
-}
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 20vw;
-  height: 25vh;
-  background-color: blue;
-}
-
-.swiper-slide img {
-  display: block;
-  height: 25vh;
-  width: 100%;
-}
 /*******swiperJS fin******/
 
 /**************MODAL*********************/
 
 /**************MODAL FIN*********************/
+
+/**************skill*********************/
+.skill_contain {
+  height: auto;
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/**************skill fin*********************/

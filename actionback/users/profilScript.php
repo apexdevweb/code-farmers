@@ -17,6 +17,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         $user_age_select = $userSelectInfo['date_naissance'];
         $user_genre_select = $userSelectInfo['genre'];
         $user_city_select = $userSelectInfo['ville'];
+        $user_skill_select = $userSelectInfo['skill'];
     } else {
         $errorMsg = "Aucun utilisateur a été trouver";
     }

@@ -61,8 +61,6 @@ include "includes/head.php";
                     <input type="radio" name="genre" value="Homme">
                     <label for="dateNaissance" class=" form-label">Femme</label>
                     <input type="radio" name="genre" value="Femme">
-                    <label for="Extraterrestre" class=" form-label">Extraterrestre</label>
-                    <input type="radio" name="genre" value="Extraterrestre">
                 </div>
             </div>
             <br>

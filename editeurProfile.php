@@ -37,6 +37,8 @@ include "includes/head.php";
                         <h6>âge: <?= $user_age_select; ?></h6>
                         <h6>Genre: <?= $user_genre_select; ?></h6>
                         <h6>Ville: <?= $user_city_select; ?></h6>
+                        <h6>compétence: <?= $user_skill_select; ?></h6>
+                        <hr>
                     <?php
                     }
                     ?>
@@ -73,12 +75,62 @@ include "includes/head.php";
                                     <option value="Luxembourg">Luxembourg</option>
                                 </select>
                             </div>
+                            <label for="langProg">Vos skill</label>
+                            <br>
+                            <br>
+                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" value="html5" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck1"><i class="fa-brands fa-html5">HTML5</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" value="css3" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck2"><i class="fa-brands fa-css3-alt">CSS3</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off" value="javascript" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck4"><i class="fa-brands fa-square-js">JAVASCRIPT</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off" value="php" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck5"><i class="fa-brands fa-php">PHP</i></label>
+                            <hr>
+                            <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off" value="mysql" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck6"><i class="fa-solid fa-database">MySQL</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off" value="python" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck7"><i class="fa-brands fa-python">PYTHON</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off" value="nodejs" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck8"><i class="fa-brands fa-node">NODEJS</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off" value="java" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck9"><i class="fa-brands fa-java">JAVA</i></label>
+                            <hr>
+                            <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off" value="bootstrap" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck10"><i class="fa-brands fa-bootstrap">BOOTSTRAP</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck11" autocomplete="off" value="laravel" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck11"><i class="fa-brands fa-laravel">LARAVEL</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck12" autocomplete="off" value="symfony" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck12"><i class="fa-brands fa-symfony">SYMFONY</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck13" autocomplete="off" value="react" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck13"><i class="fa-brands fa-react">REACT</i></label>
+                            <hr>
+                            <input type="checkbox" class="btn-check" id="btncheck14" autocomplete="off" value="vueJs" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck14"><i class="fa-brands fa-vuejs">VUEJS</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck15" autocomplete="off" value="github" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck15"><i class="fa-brands fa-github">GITHUB</i></label>
+
+                            <input type="checkbox" class="btn-check" id="btncheck16" autocomplete="off" value="gitkraken" name="skill[]">
+                            <label class="btn btn-outline-primary" for="btncheck16"><i class="fa-brands fa-gitkraken">GITKRAKEN</i></label>
+                            <br>
+                            <br>
                             <div class="mb-3">
                                 <div class="input-group mb-3">
                                     <label class="input-group-text" for="inputGroupFile01">Modifier votre avatar</label>
                                     <input type="file" class="form-control" name="avatar">
                                 </div>
                             </div>
+                            <hr>
                             <button type="submit" class="btn btn-primary" name="modifProfil">Enregistré les modifications</button>
                         </form>
                     <?php

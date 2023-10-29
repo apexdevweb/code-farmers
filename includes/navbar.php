@@ -31,7 +31,7 @@
                     <li><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen"></i>Publier</a></li>
                     <li><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open"></i>Mes Publications</a></li>
                     <li><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments"></i>message privé</a></li>
-                    <li><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['id'] ?>"><i class="fa-solid fa-gear"></i>Paramètre profil</a></li>
+                    <li><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['id'] ?>"><i class="fa-solid fa-gear"></i>Géré profil</a></li>
                     <li><a class="dropdown-item" href="actionback/users/logout.php"><i class="fa-solid fa-power-off"></i>Déconnexion</a></li>
                 </ul>
             </li>
