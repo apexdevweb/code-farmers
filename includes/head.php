@@ -15,5 +15,5 @@
     <!--swiperJS fin-->
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="asset/responsive.css">
-    <title>Code-Farmer</title>
+    <title>Code-Farmers</title>
 </head>
