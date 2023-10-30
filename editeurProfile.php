@@ -38,6 +38,7 @@ include "includes/head.php";
                         <h6>Genre: <?= $user_genre_select; ?></h6>
                         <h6>Ville: <?= $user_city_select; ?></h6>
                         <h6>compétence: <?= $user_skill_select; ?></h6>
+                        <h6>site web: <?= $user_lien_select; ?></h6>
                         <hr>
                     <?php
                     }
@@ -124,6 +125,13 @@ include "includes/head.php";
                             <label class="btn btn-outline-primary" for="btncheck16"><i class="fa-brands fa-gitkraken">GITKRAKEN</i></label>
                             <br>
                             <br>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">lien vers votre site</label>
+                                <input type="text" class="form-control" name="lien" value="<?= $profil_webLien ?>">
+                            </div>
+                            <br>
+                            <br>
+
                             <div class="mb-3">
                                 <div class="input-group mb-3">
                                     <label class="input-group-text" for="inputGroupFile01">Modifier votre avatar</label>

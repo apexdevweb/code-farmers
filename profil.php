@@ -18,7 +18,7 @@ include('includes/head.php');
         <?php
         if (isset($userSelectInfo)) {
         ?>
-            <h3><?= $user_name_select; ?></h3>
+            <h3><i class="fa-solid fa-hashtag"></i><?= $user_name_select; ?></h3>
             <hr>
             <div class="container text-left">
                 <div class="row">
@@ -26,10 +26,11 @@ include('includes/head.php');
                         <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 300px; height: 300px">
                     </div>
                     <div class="col">
-                        <h6>âge: <?= $user_age_select; ?></h6>
-                        <h6>genre: <?= $user_genre_select; ?></h6>
-                        <h6>ville: <?= $user_city_select; ?></h6>
-                        <h6>compétence<i class="fa-solid fa-terminal"></i> <?= $user_skill_select; ?><i class="fa-solid fa-code"></i></h6>
+                        <h6><i class="fa-solid fa-cake-candles"></i> <?= $user_age_select; ?></h6>
+                        <h6><i class="fa-solid fa-venus-mars"></i> genre: <?= $user_genre_select; ?></h6>
+                        <h6><i class="fa-solid fa-location-pin"></i> ville: <?= $user_city_select; ?></h6>
+                        <h6><i class="fa-solid fa-code"></i> compétence: <?= $user_skill_select; ?></h6>
+                        <h6><i class="fa-solid fa-globe"></i> site web: <a href="<?= $user_lien_select; ?>"><?= $user_lien_select; ?></a></h6>
                     </div>
                 </div>
             </div>

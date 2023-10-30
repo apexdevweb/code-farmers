@@ -16,7 +16,7 @@ include("includes/head.php");
     include("includes/navbar.php");
     ?>
     <div class="titre_contenu">
-        <h1>Code-Farmer</h1>
+        <h1>Code-Farmers</h1>
     </div>
     <br>
     <!-- on fait un foreach en php pour afficher toutes les publications enregistré dans la database -->
