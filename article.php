@@ -39,7 +39,7 @@ include('includes/head.php');
             ?>
                 <div class="card">
                     <div class="card-header">
-                        <?= $reponses['name_auteur']; ?>
+                        <h5><i class="fa-solid fa-hashtag"></i><?= $reponses['name_auteur']; ?></h5>
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
