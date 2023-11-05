@@ -91,8 +91,8 @@ if (isset($_POST['signup'])) {
                     $to   = $Umail;
                     $from = 'codefarmers.admin@gmail.com';
                     $name = 'Apex-dev';
-                    $subj = 'Confirmer votre compte.';
-                    $msg = 'http://code-farmerbeta/actionback/users/confirmationMail.php?id=' . $_SESSION['id'] . '&confirmekey=' . $keyConfirm;
+                    $subj = 'Confirmation de votre compte';
+                    $msg = 'http://code-farmerbeta/actionback/users/confirmationMail.php?id=' . $_SESSION['id'] . '&confirmkey=' . $keyConfirm;
 
                     $error = smtpmailer($to, $from, $name, $subj, $msg);
 
