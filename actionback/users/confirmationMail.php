@@ -15,10 +15,10 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
             $Upconfirm = $bdd->prepare('UPDATE users SET confirm = ? WHERE id = ?');
             $Upconfirm->execute(array(1));
             $_SESSION['confirmkey'] = $getKey;
-            header('Location: index.php');
+            header('Location: signup.php');
         } else {
             $_SESSION['confirmkey'] = $getKey;
-            header('Location: signup.php');
+            header('Location: home.php');
         }
     } else {
         echo "identifiant ou Clé incorrecte";
