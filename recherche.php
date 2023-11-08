@@ -24,8 +24,8 @@ include("includes/head.php");
             <form method="GET">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="search" name="chercher" class="form-control">
-                    <button type="submit" class="btn btn-primary" name="valideRch">Rechercher</button>
+                    <input type="search" name="chercher" class="form-control" id="look">
+                    <button type="submit" class="btn btn-primary" name="valideRch" onclick="crypt()">Rechercher</button>
                 </div>
                 <br>
                 <br>

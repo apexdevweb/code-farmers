@@ -33,7 +33,7 @@ if (isset($_POST['signup'])) {
         $data_verif->execute(array($Uname));
 
         // ON VERIFIE QUE LES MOT DE PASSE CORRESPONDENT 
-        if ($_POST['userPassword'] == $_POST['confirmPassword']) {
+        if ($_POST['userPassword'] === $_POST['confirmPassword']) {
 
             // ON INSERT LE NOUVEL UTILISATEUR DANS LA DATABASE
 
@@ -90,7 +90,7 @@ if (isset($_POST['signup'])) {
 
                     $to   = $Umail;
                     $from = 'codefarmers.admin@gmail.com';
-                    $name = 'Apex-dev';
+                    $name = 'Admin';
                     $subj = 'Confirmation de votre compte';
                     $msg = 'http://code-farmerbeta/actionback/users/confirmationMail.php?id=' . $_SESSION['id'] . '&confirmkey=' . $keyConfirm;
 
