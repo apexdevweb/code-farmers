@@ -26,6 +26,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             $profil_city = $profilInfos['ville'];
             $profil_skill = $profilInfos['skill'];
             $profil_webLien = $profilInfos['lien_web'];
+            $profil_tubeLien = $profilInfos['youtube'];
         } else {
             $errorMsg = "Vous n'êtes pas le propriétaire de se profil!!!";
         }

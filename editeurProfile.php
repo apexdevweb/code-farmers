@@ -37,8 +37,9 @@ include "includes/head.php";
                         <h6>âge: <?= $user_age_select; ?></h6>
                         <h6>Genre: <?= $user_genre_select; ?></h6>
                         <h6>Ville: <?= $user_city_select; ?></h6>
-                        <h6>compétence: <?= $user_skill_select; ?></h6>
-                        <h6>site web: <?= $user_lien_select; ?></h6>
+                        <h6>Compétence: <?= $user_skill_select; ?></h6>
+                        <h6>Youtube: <?= $user_tube_select; ?></h6>
+                        <h6>Site web: <?= $user_lien_select; ?></h6>
                         <hr>
                     <?php
                     }
@@ -128,6 +129,12 @@ include "includes/head.php";
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">lien vers votre site</label>
                                 <input type="text" class="form-control" name="lien" value="<?= $profil_webLien ?>">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Votre chaîne youtube</label>
+                                <input type="text" class="form-control" name="Ytube" value="<?= $profil_tubeLien ?>">
                             </div>
                             <br>
                             <br>

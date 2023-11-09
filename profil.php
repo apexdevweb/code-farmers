@@ -31,6 +31,7 @@ include('includes/head.php');
                         <h6><i class="fa-solid fa-venus-mars"></i> genre: <?= $user_genre_select; ?></h6>
                         <h6><i class="fa-solid fa-location-pin"></i> ville: <?= $user_city_select; ?></h6>
                         <h6><i class="fa-solid fa-code"></i> compétence: <?= $user_skill_select; ?></h6>
+                        <h6><i class="fa-brands fa-youtube"></i> Youtube: <a href="<?= $user_tube_select; ?>" target="_blank"><?= $user_tube_select; ?></a></h6>
                         <h6><i class="fa-solid fa-globe"></i> site web: <a href="<?= $user_lien_select; ?>" target="_blank"><?= $user_lien_select; ?></a></h6>
                     </div>
                 </div>

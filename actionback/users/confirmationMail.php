@@ -13,12 +13,12 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
         $userCRFinfo = $recupInfoUser->fetch();
         if ($userCRFinfo['confirm'] != 1) {
             $Upconfirm = $bdd->prepare('UPDATE users SET confirm = ? WHERE id = ?');
-            $Upconfirm->execute(array(1));
+            $Upconfirm->execute(array(1, $getId));
             $_SESSION['confirmkey'] = $getKey;
             header('Location: signup.php');
         } else {
             $_SESSION['confirmkey'] = $getKey;
-            header('Location: home.php');
+            header('Location: login.php');
         }
     } else {
         echo "identifiant ou Clé incorrecte";

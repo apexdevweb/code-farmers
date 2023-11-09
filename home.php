@@ -1,5 +1,8 @@
 <?php
 session_start();
+//if (!$_SESSION['confirmkey']) {
+//    header('Location: login.php');
+//}
 require('actionback/publications/affichepubliScript.php');
 require('actionback/publications/afficheRecherche.php');
 ?>
