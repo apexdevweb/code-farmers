@@ -15,9 +15,9 @@ include("includes/head.php");
     <?php
     include("includes/navbar.php");
     ?>
-    <div class="titre_contenu">
-        <h1>Code-Farmers</h1>
-    </div>
+    <?php
+    include("includes/logo.php");
+    ?>
     <br>
     <section>
         <div class="container">

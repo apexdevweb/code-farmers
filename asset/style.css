@@ -5,16 +5,25 @@ body {
   box-sizing: border-box;
 }
 .titre_contenu {
-  height: 5vh;
+  height: 5.5vh;
   width: 100%;
-  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.titre_contenu > h1 {
-  text-align: center;
-  color: #fff;
+.titre_contenu a > img {
+  height: 5vh;
+  width: 50vw;
+}
+.section_contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
 }
 .premier_contenu {
-  margin-top: 25vh;
+  margin-top: 10vh;
   margin-bottom: auto;
   width: 100%;
   height: auto;
@@ -22,6 +31,19 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
+}
+.logoContent {
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+.logoContent > img {
+  margin-top: 5vh;
+  height: 10vh;
+  width: 90%;
 }
 .contenu_secondaire {
   margin-top: 10vh;

@@ -14,9 +14,9 @@ include("includes/head.php");
     <?php
     include("includes/navbar.php");
     ?>
-    <div class="titre_contenu">
-        <h1>Code-Farmers</h1>
-    </div>
+    <?php
+    include("includes/logo.php");
+    ?>
     <!-- on fait un foreach en php pour afficher tout les utilisateur enregistré dans la database -->
     <section class="contenu_secondaire">
         <?php

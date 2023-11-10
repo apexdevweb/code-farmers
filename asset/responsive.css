@@ -1,4 +1,45 @@
 @media only screen and (max-width: 600px) {
+  .titre_contenu {
+    height: 5.5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .titre_contenu a > img {
+    height: 3vh;
+    width: 80vw;
+  }
+  .section_contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+  }
+  .premier_contenu {
+    margin-top: 5vh;
+    margin-bottom: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .logoContent {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+  }
+  .logoContent > img {
+    margin-top: 5vh;
+    height: 3vh;
+    width: 100%;
+  }
+
   .container_downform {
     height: auto;
     width: 100%;
