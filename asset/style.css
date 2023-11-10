@@ -120,3 +120,24 @@ p {
   justify-content: space-between;
 }
 /**************skill fin*********************/
+/**************WOR IN PROGRESS*********************/
+.warnning {
+  text-align: center;
+  height: auto;
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Manrope", sans-serif;
+  border: 2px solid white;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #000;
+  color: #fff;
+  transform: translateY(50%);
+  text-shadow: 1px 2px 3px #000;
+}
+.warnning > h3 {
+  text-align: center;
+}
+
+/**************WOR IN PROGRESS FIN*********************/
