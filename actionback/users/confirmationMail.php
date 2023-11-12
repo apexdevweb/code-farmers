@@ -15,7 +15,7 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
             $Upconfirm = $bdd->prepare('UPDATE users SET confirm = ? WHERE id = ?');
             $Upconfirm->execute(array(1, $getId));
             $_SESSION['confirmkey'] = $getKey;
-            header('Location: signup.php');
+            header('Location: index.php');
         } else {
             $_SESSION['confirmkey'] = $getKey;
             header('Location: home.php');
