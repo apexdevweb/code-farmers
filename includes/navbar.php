@@ -14,6 +14,37 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../recherche.php"><i class="fa-solid fa-magnifying-glass"></i> Recherche</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-link"></i>
+                        Utilitaire
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <h6 style="text-align: center;">Frontend</h6>
+                        </li>
+                        <li><a class="dropdown-item" href="https://html-css-js.com/html/generator/">Html-css-js.com</a></li>
+                        <li><a class="dropdown-item" href="https://bennettfeely.com/clippy/">Bennettfeely.com</a></li>
+                        <li><a class="dropdown-item" href="https://animejs.com/v2/documentation/#cssSelector">Anime.js</a></li>
+                        <li><a class="dropdown-item" href="https://pixijs.com/examples/mesh-and-shaders/triangle">Pixijs.com</a></li>
+                        <li><a class="dropdown-item" href="https://tobiasahlin.com/moving-letters/">Tobiasahlin.com</a></li>
+                        <li><a class="dropdown-item" href="https://redstapler.co/10-stunning-css-3d-effect-must-see/">Redstapler.co</a></li>
+                        <li><a class="dropdown-item" href="https://webcode.tools/css-generator/keyframe-animation">Webcode.tools</a></li>
+                        <li><a class="dropdown-item" href="https://freefrontend.com/">Freefrontend.com</a></li>
+                        <li><a class="dropdown-item" href="https://jenseign.com/apprendre-html-css/pratique-exemple/javascript-classlist/">Jenseigne.com</a></li>
+                        <li>
+                            <h6 style="text-align: center;">Backend</h6>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-image"></i>
+                        Image rework
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://photomosh.com/">Photomosh.com</a></li>
+                        <li><a class="dropdown-item" href="https://www.text-image.com/convert/">Text-Image.com</a></li>
+                    </ul>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php">Sortie <i class="fa-solid fa-arrow-right-from-bracket"></i></a>

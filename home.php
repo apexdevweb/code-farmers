@@ -17,9 +17,11 @@ include("includes/head.php");
 <body>
     <?php
     include("includes/navbar.php");
-    ?>
-    <?php
     include("includes/logo.php");
+    ?>
+    <hr>
+    <?php
+    include("includes/slider.php");
     ?>
     <br>
     <!-- on fait un foreach en php pour afficher toutes les publications enregistré dans la database -->
