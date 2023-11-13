@@ -28,7 +28,7 @@ if (isset($_POST['connexion'])) {
                 $_SESSION['id'] = $Uinfos['id'];
                 $_SESSION['userName'] = $Uinfos['userName'];
                 //on redirige l'utilisateur vers la page d'acceuil
-                header("Location: confirmationMail.php");
+                header("Location: home.php");
             } else {
                 $errorMsg = "Mot de passe incorrect!";
             }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("actionback/database.php");
+require("../database.php");
 
 if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !empty($_GET['id'])) {
 
