@@ -18,6 +18,9 @@
     height: auto;
     width: 100%;
   }
+  .contenu_secondaire {
+    margin-top: 5vh;
+  }
   .premier_contenu {
     margin-top: 5vh;
     margin-bottom: auto;
@@ -118,7 +121,7 @@
     align-items: center;
   }
   .swiper-slide i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-shadow: 1px 2px 5px black;
     color: #000;
     letter-spacing: 2px;
@@ -132,4 +135,17 @@
   }
 
   /*******swiperJS fin******/
+  /**************Primary bande*********************/
+
+  #primary_bande ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #primary_bande ul li img {
+    height: 100px;
+    width: 100px;
+  }
+  /**************primary bande FIN*********************/
 }

@@ -22,14 +22,16 @@ include("includes/head.php");
     <hr>
     <?php
     include("includes/slider.php");
+    include("includes/primaryBande.php");
     ?>
+    <br>
     <br>
     <!-- on fait un foreach en php pour afficher toutes les publications enregistré dans la database -->
     <section class="contenu_secondaire">
         <?php
         foreach ($affiche_publi as $afp) {
         ?>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem; margin-top: 10px;">
                 <div class="card-body">
                     <h5 class="card-title"><?= $afp['titre'] ?></h5>
                     <hr>

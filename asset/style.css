@@ -48,7 +48,7 @@ body {
   width: 90%;
 }
 .contenu_secondaire {
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: auto;
   width: 100%;
   height: auto;
@@ -130,8 +130,6 @@ p {
   height: 100%;
 }
 .title_Slider {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,3 +204,28 @@ p {
 }
 
 /**************WOR IN PROGRESS FIN*********************/
+/**************Primary bande*********************/
+#primary_bande {
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+}
+#primary_bande ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#primary_bande ul li img {
+  padding: 5px;
+  height: 150px;
+  width: 150px;
+}
+#primary_bande ul li:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  border-radius: 5px;
+
+  mix-blend-mode: difference;
+}
+/**************primary bande FIN*********************/

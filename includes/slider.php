@@ -15,6 +15,7 @@
         <div class="swiper-slide"><a href="https://react.dev/blog/2023/03/16/introducing-react-dev" target="_blank"><i class="fa-brands fa-react">REACT</i></a></div>
         <div class="swiper-slide"><a href="https://vuejs.org/guide/introduction.html" target="_blank"><i class="fa-brands fa-vuejs">VUEJS</i></a></div>
     </div>
+    <br>
     <div class="swiper-pagination"></div>
 </div>
 <script src="../asset/initSlider.js"></script>

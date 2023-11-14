@@ -31,6 +31,7 @@
                         <li><a class="dropdown-item" href="https://graphiste.com/blog/transitions-page-css/">Graphiste.com</a></li>
                         <li><a class="dropdown-item" href="https://getbootstrap.com/">Bootstrap.com</a></li>
                         <li><a class="dropdown-item" href="https://tailwindcss.com/">Tailwindcss.com</a></li>
+                        <li><a class="dropdown-item" href="https://swiperjs.com/demos">Swiperjs.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
