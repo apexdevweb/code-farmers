@@ -15,6 +15,7 @@ body {
 .titre_contenu a > img {
   height: 5vh;
   width: 50vw;
+  text-shadow: 1px 2px 5px #000;
 }
 .section_contain {
   display: flex;

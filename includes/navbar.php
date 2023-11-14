@@ -15,13 +15,10 @@
                     <a class="nav-link" href="../recherche.php"><i class="fa-solid fa-magnifying-glass"></i> Recherche</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-link"></i>
-                        Utilitaire
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-laptop-code"></i>
+                        Utilitaire-frontend
                     </a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <h6 style="text-align: center;">Frontend</h6>
-                        </li>
                         <li><a class="dropdown-item" href="https://html-css-js.com/html/generator/">Html-css-js.com</a></li>
                         <li><a class="dropdown-item" href="https://bennettfeely.com/clippy/">Bennettfeely.com</a></li>
                         <li><a class="dropdown-item" href="https://animejs.com/v2/documentation/#cssSelector">Anime.js</a></li>
@@ -31,9 +28,22 @@
                         <li><a class="dropdown-item" href="https://webcode.tools/css-generator/keyframe-animation">Webcode.tools</a></li>
                         <li><a class="dropdown-item" href="https://freefrontend.com/">Freefrontend.com</a></li>
                         <li><a class="dropdown-item" href="https://jenseign.com/apprendre-html-css/pratique-exemple/javascript-classlist/">Jenseigne.com</a></li>
-                        <li>
-                            <h6 style="text-align: center;">Backend</h6>
-                        </li>
+                        <li><a class="dropdown-item" href="https://graphiste.com/blog/transitions-page-css/">Graphiste.com</a></li>
+                        <li><a class="dropdown-item" href="https://getbootstrap.com/">Bootstrap.com</a></li>
+                        <li><a class="dropdown-item" href="https://tailwindcss.com/">Tailwindcss.com</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-server"></i>
+                        Utilitaire-backend
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://symfony.com/">Symfony.com</a></li>
+                        <li><a class="dropdown-item" href="https://laravel.com/">Laravel.com</a></li>
+                        <li><a class="dropdown-item" href="https://expressjs.com/fr/">Expressjs.com</a></li>
+                        <li><a class="dropdown-item" href="https://cakephp.org/">CakePHP.org</a></li>
+                        <li><a class="dropdown-item" href="https://www.djangoproject.com/">Djangoproject.com</a></li>
+                        <li><a class="dropdown-item" href="https://flask.palletsprojects.com/en/3.0.x/">Flask.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -43,6 +53,9 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="https://photomosh.com/">Photomosh.com</a></li>
                         <li><a class="dropdown-item" href="https://www.text-image.com/convert/">Text-Image.com</a></li>
+                        <li><a class="dropdown-item" href="https://www.remove.bg/fr">RemoveBG.fr</a></li>
+                        <li><a class="dropdown-item" href="https://imageslidermaker.com/v2">SliderMaker.com</a></li>
+                        <li><a class="dropdown-item" href="https://www.unscreen.com/upload">Unscreen.com</a></li>
                     </ul>
                 </li>
 
