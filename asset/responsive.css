@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) {
   .titre_contenu {
     margin-top: 1vh;
-    height: 5.5vh;
+    height: 6vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
+    height: 100%;
     width: 100%;
   }
   .contenu_secondaire {
