@@ -22,7 +22,7 @@ include("includes/head.php");
         <?php
         foreach ($affiche_users as $afu) {
         ?>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem; margin-top: 10px;">
                 <img src="asset/image/<?= $afu['avatar'] ?>" class="card-img-top-fluid" style="width: cover; height: 200px; border-radius: 5px">
                 <div class="card-body">
                     <h5 class="card-title"><?= $afu['userName'] ?></h5>

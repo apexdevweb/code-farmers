@@ -32,6 +32,8 @@
                         <li><a class="dropdown-item" href="https://getbootstrap.com/">Bootstrap.com</a></li>
                         <li><a class="dropdown-item" href="https://tailwindcss.com/">Tailwindcss.com</a></li>
                         <li><a class="dropdown-item" href="https://swiperjs.com/demos">Swiperjs.com</a></li>
+                        <li><a class="dropdown-item" href="https://threejs.org/">Threejs.org</a></li>
+                        <li><a class="dropdown-item" href="https://d3-graph-gallery.com/">D3.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -57,6 +59,33 @@
                         <li><a class="dropdown-item" href="https://www.remove.bg/fr">RemoveBG.fr</a></li>
                         <li><a class="dropdown-item" href="https://imageslidermaker.com/v2">SliderMaker.com</a></li>
                         <li><a class="dropdown-item" href="https://www.unscreen.com/upload">Unscreen.com</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-images"></i>
+                        wallpapper
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://www.peakpx.com/">Peakpx.com</a></li>
+                        <li><a class="dropdown-item" href="https://unsplash.com/fr">Unsplash.com</a></li>
+                        <li><a class="dropdown-item" href="https://www.pngwing.com/">Pngwing.com</a></li>
+                        <li><a class="dropdown-item" href="https://pixabay.com/fr/">Pixabay.com</a></li>
+                        <li><a class="dropdown-item" href="https://fr.freepik.com/">Freepik.com</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-dollar-sign"></i><i class="fa-solid fa-euro-sign"></i>
+                        Système-paiement-online
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://stripe.com/fr-be">Stripe.com</a></li>
+                        <li><a class="dropdown-item" href="https://bridgeapi.io/">BridgeAPI.io</a></li>
+                        <li><a class="dropdown-item" href="https://www.adyen.com/">Adyen.com</a></li>
+                        <li><a class="dropdown-item" href="https://hipay.com/fr/">Hipay.com</a></li>
+                        <li><a class="dropdown-item" href="https://www.payplug.com/fr/">Payplug.com</a></li>
+                        <li><a class="dropdown-item" href="https://www.mollie.com/">Mollie.com</a></li>
+                        <li><a class="dropdown-item" href="https://www.payzen.eu/">Payzen.eu</a></li>
+
                     </ul>
                 </li>
 
