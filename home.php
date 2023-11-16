@@ -1,5 +1,4 @@
 <?php
-session_start();
 //if (!$_SESSION['confirmkey']) {
 //    header('Location: login.php');
 //}

@@ -233,7 +233,10 @@ p {
   transform: scale(1.05);
   transition: 0.3s ease;
   border-radius: 5px;
-
   mix-blend-mode: difference;
+}
+#slrn {
+  height: 200px;
+  width: 200px;
 }
 /**************primary bande FIN*********************/

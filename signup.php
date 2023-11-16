@@ -1,5 +1,73 @@
 <?php
+require "PHPMailer/PHPMailerAutoload.php";
 require "actionback/users/signupScript.php";
+
+if (isset($_POST['signup'])) {
+    if (!empty($_POST['mail'])) {
+        // ON GENERE UNE CLE POUR CONFIRMATION PAR MAIL -> $keyConfirm
+        $keyConfirm = mt_rand(1000000, 9000000);
+        $verifMail = $_POST['mail'];
+        $verifInsert = $bdd->prepare("INSERT INTO users(mail, confirmkey, confirm) VALUES (?,?,?)");
+        $verifInsert->execut(array($verifMail, $keyConfirm, 0));
+
+        // ON RECUPERE LES INFO DE L'UTILISATEUR POUR LA CONFIRMATION PAR EMAIL
+
+        $verifRecupUser = $bdd->prepare("SELECT * FROM users WHERE mail = ?");
+        $verifRecupUser->execute(array($verifMail));
+
+        if ($verifRecupUser->rowCount() > 0) {
+            $verifUserInfos = $verifRecupUser->fetch();
+            $_SESSION['id'] = $verifRecupUserMail['id'];
+
+            //PHP MAILER/////////////////////////////////////////////////////
+
+            function smtpmailer($to, $from, $from_name, $subject, $body)
+            {
+                $mail = new PHPMailer();
+                $mail->IsSMTP();
+                $mail->SMTPAuth = true;
+
+                $mail->SMTPSecure = 'ssl';
+                $mail->Host = 'smtp.gmail.com';
+                $mail->Port = '465';
+                $mail->Username = 'Apex-dev@dmin';
+                $mail->Password = 'Apex1389';
+
+                //   $path = 'reseller.pdf';
+                //   $mail->AddAttachment($path);
+
+                $mail->IsHTML(true);
+                $mail->From = "Apexdevweb@gmail.com";
+                $mail->FromName = $from_name;
+                $mail->Sender = $from;
+                $mail->AddReplyTo($from, $from_name);
+                $mail->Subject = $subject;
+                $mail->Body = $body;
+                $mail->AddAddress($to);
+
+                if (!$mail->Send()) {
+                    $error = "Please try Later, Error Occured while Processing...";
+                    return $error;
+                } else {
+                    $error = "Thanks You !! Your email is sent.";
+                    return $error;
+                }
+            }
+
+            $to   = $Umail;
+            $from = 'codefarmers.admin@gmail.com';
+            $name = 'Admin';
+            $subj = 'Confirmation de votre compte';
+            $msg = 'http://code-farmerbeta/actionback/users/confirmationMail.php?id=' . $_SESSION['id'] . '&confirmkey=' . $keyConfirm;
+
+            $error = smtpmailer($to, $from, $name, $subj, $msg);
+            //PHP MAILER FIN/////////////////////////////////////////////////////
+
+        }
+    } else {
+        echo "Veuillez remplir le champs E-mail !";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">

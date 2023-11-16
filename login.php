@@ -1,5 +1,27 @@
 <?php
 require("actionback/users/loginScript.php");
+if (isset($_POST['connexion'])) {
+    if (!empty($_POST['mail'])) {
+        // ON RECUPERE LES INFO DE L'UTILISATEUR POUR LA CONFIRMATION PAR EMAIL
+
+        $verifRecupUser = $bdd->prepare("SELECT * FROM users WHERE mail = ?");
+        $verifRecupUser->execute(array($_POST['mail']));
+
+        if ($verifRecupUser->rowCount() > 0) {
+            $verifUserInfos = $verifRecupUser->fetch();
+            if ($verifUserInfos['confirmkey'] == 1) {
+                header('Location: actionback/users/verifConfirm.php?id=' . $verifUserInfos['id'] . '&confirmkey' . $verifUserInfos['confirmkey']);
+            } else {
+                echo "Vous n'êtes pas encore confirmé sur le site";
+            }
+        } else {
+            echo "L'utilisateur n'existe pas!";
+        }
+    } else {
+        echo "Aucun e-mail à été saisi!";
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">

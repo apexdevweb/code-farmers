@@ -3,6 +3,11 @@
 <?php
 include("includes/head.php");
 ?>
+<style>
+    body {
+        background-color: #000;
+    }
+</style>
 
 <body>
     <div class="section_contain">
@@ -21,7 +26,7 @@ include("includes/head.php");
                     <div class="card-body">
                         <h5 class="card-title">Signup</h5>
                         <hr>
-                        <a href="asset/progression.html" class="btn btn-primary">Inscription</a>
+                        <a href="signup.php" class="btn btn-primary">Inscription</a>
                     </div>
                 </div>
                 <br>
@@ -29,7 +34,7 @@ include("includes/head.php");
                     <div class="card-body">
                         <h5 class="card-title">Login</h5>
                         <hr>
-                        <a href="asset/progression.html" class="btn btn-primary">Connexion</a>
+                        <a href="login.php" class="btn btn-primary">Connexion</a>
                     </div>
                 </div>
             </section>

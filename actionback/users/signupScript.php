@@ -1,5 +1,4 @@
 <?php
-//require "PHPMailer/PHPMailerAutoload.php";
 session_start();
 require("actionback/database.php");
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE
@@ -13,8 +12,7 @@ if (isset($_POST['signup'])) {
     ) {
 
         // ON PLACE LA SUPERGLOBALE DANS UNE VARIABLE ET ON SECURISE LES CHAMP AVEC UN STRIPTAGS ET ON CRYPTE LE MDP
-        // ON GENERE UNE CLE POUR CONFIRMATION PAR MAIL -> $keyConfirm
-        $keyConfirm = mt_rand(1000000, 9000000);
+
         $Uname = strip_tags($_POST['userName']);
         $Umail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
         $Upasse = password_hash($_POST['userPassword'], PASSWORD_ARGON2ID);
@@ -22,7 +20,6 @@ if (isset($_POST['signup'])) {
         $Ucity = $_POST['city'];
         $Usex = $_POST['genre'];
         $date_inscription = date("Y-m-d");
-        $date_connexion = date("Y-m-d H:i:s");
 
 
 
@@ -40,67 +37,9 @@ if (isset($_POST['signup'])) {
             if ($data_verif->rowcount() == 0) {
                 $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription) VALUES (?,?,?,?,?,?,?)");
                 $user_insert->execute(array($Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription));
-                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                // ON RECUPERE LES INFO DE L'UTILISATEUR POUR LA CONFIRMATION PAR EMAIL
 
-                //$recupUserMail = $bdd->prepare("SELECT * FROM users WHERE mail = ?");
-                //$recupUserMail->execute(array($Umail));
-                //if ($recupUserMail->rowCount() > 0) {
-                //    $mailInfos = $recupUserMail->fetch();
-                //    $_SESSION['id'] = $recupUserMail['id'];
-                //
-                //
-                //    //PHP MAILER/////////////////////////////////////////////////////
-                //
-                //    function smtpmailer($to, $from, $from_name, $subject, $body)
-                //    {
-                //        $mail = new PHPMailer();
-                //        $mail->IsSMTP();
-                //        $mail->SMTPAuth = true;
-                //
-                //        $mail->SMTPSecure = 'ssl';
-                //        $mail->Host = 'smtp.gmail.com';
-                //        $mail->Port = '465';
-                //        $mail->Username = 'codefarmers.admin@gmail.com';
-                //        $mail->Password = 'ENTER YOUR EMAIL PASSWORD';
-                //
-                //        //   $path = 'reseller.pdf';
-                //        //   $mail->AddAttachment($path);
-                //
-                //        $mail->IsHTML(true);
-                //        $mail->From = "codefarmers.admin@gmail.com";
-                //        $mail->FromName = $from_name;
-                //        $mail->Sender = $from;
-                //        $mail->AddReplyTo($from, $from_name);
-                //        $mail->Subject = $subject;
-                //        $mail->Body = $body;
-                //        $mail->AddAddress($to);
-                //
-                //        if (!$mail->Send()) {
-                //            $error = "Please try Later, Error Occured while Processing...";
-                //            return $error;
-                //        } else {
-                //            $error = "Thanks You !! Your email is sent.";
-                //            return $error;
-                //        }
-                //    }
-                //
-                //    $to   = $Umail;
-                //    $from = 'codefarmers.admin@gmail.com';
-                //    $name = 'Admin';
-                //    $subj = 'Confirmation de votre compte';
-                //    $msg = 'http://code-farmerbeta/actionback/users/confirmationMail.php?id=' . $_SESSION['id'] . '&confirmkey=' . $keyConfirm;
-                //
-                //    $error = smtpmailer($to, $from, $name, $subj, $msg);
-                //}
-                //PHP MAILER FIN/////////////////////////////////////////////////////
-                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
                 // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
 
                 $rescu_user_info = $bdd->prepare("SELECT `id` userName FROM users WHERE userName = ? ");

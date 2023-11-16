@@ -18,7 +18,7 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
             header('Location: index.php');
         } else {
             $_SESSION['confirmkey'] = $getKey;
-            header('Location: home.php');
+            header('Location: index.php');
         }
     } else {
         echo "identifiant ou Clé incorrecte";
