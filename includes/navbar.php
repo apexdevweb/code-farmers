@@ -19,21 +19,21 @@
                         Utilitaire-frontend
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://html-css-js.com/html/generator/">Html-css-js.com</a></li>
-                        <li><a class="dropdown-item" href="https://bennettfeely.com/clippy/">Bennettfeely.com</a></li>
-                        <li><a class="dropdown-item" href="https://animejs.com/v2/documentation/#cssSelector">Anime.js</a></li>
-                        <li><a class="dropdown-item" href="https://pixijs.com/examples/mesh-and-shaders/triangle">Pixijs.com</a></li>
-                        <li><a class="dropdown-item" href="https://tobiasahlin.com/moving-letters/">Tobiasahlin.com</a></li>
-                        <li><a class="dropdown-item" href="https://redstapler.co/10-stunning-css-3d-effect-must-see/">Redstapler.co</a></li>
-                        <li><a class="dropdown-item" href="https://webcode.tools/css-generator/keyframe-animation">Webcode.tools</a></li>
-                        <li><a class="dropdown-item" href="https://freefrontend.com/">Freefrontend.com</a></li>
-                        <li><a class="dropdown-item" href="https://jenseign.com/apprendre-html-css/pratique-exemple/javascript-classlist/">Jenseigne.com</a></li>
-                        <li><a class="dropdown-item" href="https://graphiste.com/blog/transitions-page-css/">Graphiste.com</a></li>
-                        <li><a class="dropdown-item" href="https://getbootstrap.com/">Bootstrap.com</a></li>
-                        <li><a class="dropdown-item" href="https://tailwindcss.com/">Tailwindcss.com</a></li>
-                        <li><a class="dropdown-item" href="https://swiperjs.com/demos">Swiperjs.com</a></li>
-                        <li><a class="dropdown-item" href="https://threejs.org/">Threejs.org</a></li>
-                        <li><a class="dropdown-item" href="https://d3-graph-gallery.com/">D3.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://html-css-js.com/html/generator/">Html-css-js.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://bennettfeely.com/clippy/">Bennettfeely.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://animejs.com/v2/documentation/#cssSelector">Anime.js</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://pixijs.com/examples/mesh-and-shaders/triangle">Pixijs.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://tobiasahlin.com/moving-letters/">Tobiasahlin.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://redstapler.co/10-stunning-css-3d-effect-must-see/">Redstapler.co</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://webcode.tools/css-generator/keyframe-animation">Webcode.tools</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://freefrontend.com/">Freefrontend.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://jenseign.com/apprendre-html-css/pratique-exemple/javascript-classlist/">Jenseigne.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://graphiste.com/blog/transitions-page-css/">Graphiste.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://getbootstrap.com/">Bootstrap.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://tailwindcss.com/">Tailwindcss.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://swiperjs.com/demos">Swiperjs.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://threejs.org/">Threejs.org</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://d3-graph-gallery.com/">D3.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -41,12 +41,12 @@
                         Utilitaire-backend
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://symfony.com/">Symfony.com</a></li>
-                        <li><a class="dropdown-item" href="https://laravel.com/">Laravel.com</a></li>
-                        <li><a class="dropdown-item" href="https://expressjs.com/fr/">Expressjs.com</a></li>
-                        <li><a class="dropdown-item" href="https://cakephp.org/">CakePHP.org</a></li>
-                        <li><a class="dropdown-item" href="https://www.djangoproject.com/">Djangoproject.com</a></li>
-                        <li><a class="dropdown-item" href="https://flask.palletsprojects.com/en/3.0.x/">Flask.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://symfony.com/">Symfony.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://laravel.com/">Laravel.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://expressjs.com/fr/">Expressjs.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://cakephp.org/">CakePHP.org</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.djangoproject.com/">Djangoproject.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://flask.palletsprojects.com/en/3.0.x/">Flask.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -54,11 +54,11 @@
                         Image rework
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://photomosh.com/">Photomosh.com</a></li>
-                        <li><a class="dropdown-item" href="https://www.text-image.com/convert/">Text-Image.com</a></li>
-                        <li><a class="dropdown-item" href="https://www.remove.bg/fr">RemoveBG.fr</a></li>
-                        <li><a class="dropdown-item" href="https://imageslidermaker.com/v2">SliderMaker.com</a></li>
-                        <li><a class="dropdown-item" href="https://www.unscreen.com/upload">Unscreen.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://photomosh.com/">Photomosh.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.text-image.com/convert/">Text-Image.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.remove.bg/fr">RemoveBG.fr</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://imageslidermaker.com/v2">SliderMaker.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.unscreen.com/upload">Unscreen.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -66,11 +66,11 @@
                         wallpapper
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://www.peakpx.com/">Peakpx.com</a></li>
-                        <li><a class="dropdown-item" href="https://unsplash.com/fr">Unsplash.com</a></li>
-                        <li><a class="dropdown-item" href="https://www.pngwing.com/">Pngwing.com</a></li>
-                        <li><a class="dropdown-item" href="https://pixabay.com/fr/">Pixabay.com</a></li>
-                        <li><a class="dropdown-item" href="https://fr.freepik.com/">Freepik.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.peakpx.com/">Peakpx.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://unsplash.com/fr">Unsplash.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.pngwing.com/">Pngwing.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://pixabay.com/fr/">Pixabay.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://fr.freepik.com/">Freepik.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -78,13 +78,13 @@
                         Système-paiement-online
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://stripe.com/fr-be">Stripe.com</a></li>
-                        <li><a class="dropdown-item" href="https://bridgeapi.io/">BridgeAPI.io</a></li>
-                        <li><a class="dropdown-item" href="https://www.adyen.com/">Adyen.com</a></li>
-                        <li><a class="dropdown-item" href="https://hipay.com/fr/">Hipay.com</a></li>
-                        <li><a class="dropdown-item" href="https://www.payplug.com/fr/">Payplug.com</a></li>
-                        <li><a class="dropdown-item" href="https://www.mollie.com/">Mollie.com</a></li>
-                        <li><a class="dropdown-item" href="https://www.payzen.eu/">Payzen.eu</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://stripe.com/fr-be">Stripe.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://bridgeapi.io/">BridgeAPI.io</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.adyen.com/">Adyen.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://hipay.com/fr/">Hipay.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.payplug.com/fr/">Payplug.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.mollie.com/">Mollie.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.payzen.eu/">Payzen.eu</a></li>
 
                     </ul>
                 </li>
