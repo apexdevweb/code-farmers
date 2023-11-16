@@ -30,14 +30,14 @@ if (isset($_POST['signup'])) {
                 $mail->SMTPSecure = 'ssl';
                 $mail->Host = 'smtp.gmail.com';
                 $mail->Port = '465';
-                $mail->Username = 'Apex-dev@dmin';
+                $mail->Username = 'USERNAME';
                 $mail->Password = 'votre mdp email';
 
                 //   $path = 'reseller.pdf';
                 //   $mail->AddAttachment($path);
 
                 $mail->IsHTML(true);
-                $mail->From = "Apexdevweb@gmail.com";
+                $mail->From = "Email envoyeur";
                 $mail->FromName = $from_name;
                 $mail->Sender = $from;
                 $mail->AddReplyTo($from, $from_name);
