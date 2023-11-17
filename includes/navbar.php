@@ -34,6 +34,8 @@
                         <li><a class="dropdown-item" target="_blank" href="https://swiperjs.com/demos">Swiperjs.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://threejs.org/">Threejs.org</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://d3-graph-gallery.com/">D3.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://dixonandmoe.com/rellax/">RellaxJs.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://michalsnik.github.io/aos/">AOSjs.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -53,7 +55,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-image"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-images"></i>
                         Image rework
                     </a>
                     <ul class="dropdown-menu">
@@ -65,7 +67,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-images"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-image"></i>
                         wallpapper
                     </a>
                     <ul class="dropdown-menu">
@@ -77,7 +79,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-dollar-sign"></i><i class="fa-solid fa-euro-sign"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-euro-sign"></i>
                         Système-paiement-online
                     </a>
                     <ul class="dropdown-menu">
@@ -88,7 +90,20 @@
                         <li><a class="dropdown-item" target="_blank" href="https://www.payplug.com/fr/">Payplug.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.mollie.com/">Mollie.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.payzen.eu/">Payzen.eu</a></li>
-
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-network-wired"></i>
+                        Team-network
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="https://www.atlassian.com/software/jira">Jira</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://github.com/">Github</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://asana.com/">Asana</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.gitkraken.com/">Gitkraken</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://bitbucket.org/">Bitbucket</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://about.gitlab.com/">Gitlab</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.perforce.com/products/helix-core">Helix Core</a></li>
                     </ul>
                 </li>
 

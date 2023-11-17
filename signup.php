@@ -1,6 +1,6 @@
 <?php
 require "actionback/users/signupScript.php";
-<<<<<<< HEAD
+
 //require "PHPMailer/PHPMailerAutoload.php";
 //
 //if (isset($_POST['signup'])) {
@@ -69,7 +69,7 @@ require "actionback/users/signupScript.php";
 //        echo "Veuillez remplir le champs E-mail !";
 //    }
 //}
-=======
+
 
 if (isset($_POST['signup'])) {
     if (!empty($_POST['mail'])) {
@@ -137,7 +137,7 @@ if (isset($_POST['signup'])) {
         echo "Veuillez remplir le champs E-mail !";
     }
 }
->>>>>>> c997b30d4c8e58d77d552990afbf533718340afa
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
