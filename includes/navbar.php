@@ -9,7 +9,7 @@
                     <a class="nav-link active" aria-current="page" href="../home.php"><i class="fa-solid fa-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../profileGlobale.php"><i class="fa-solid fa-users"></i> Profils</a>
+                    <a class="nav-link" href="../profileGlobale.php"><i class="fa-solid fa-users"></i> Membres</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../recherche.php"><i class="fa-solid fa-magnifying-glass"></i> Recherche</a>
