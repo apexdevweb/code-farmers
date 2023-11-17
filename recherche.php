@@ -34,7 +34,7 @@ include("includes/head.php");
                     //on fais une boucle while avec un fetch() pour récupéré les données dans un tableaux
                     while ($publi = $affiche_publiSearch->fetch()) {
                     ?>
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 17rem; height: 20rem;">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $publi['titre'] ?></h5>
                                 <hr>

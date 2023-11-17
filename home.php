@@ -31,7 +31,7 @@ include("includes/head.php");
         <?php
         foreach ($affiche_publi as $afp) {
         ?>
-            <div class="card" style="width: 18rem; margin-top: 10px;">
+            <div class="card" style="width: 17rem; height: 20rem; margin-top: 10px;">
                 <div class="card-body">
                     <h5 class="card-title"><?= $afp['titre'] ?></h5>
                     <hr>

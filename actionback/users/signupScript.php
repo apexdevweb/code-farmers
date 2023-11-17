@@ -12,7 +12,7 @@ if (isset($_POST['signup'])) {
     ) {
 
         // ON PLACE LA SUPERGLOBALE DANS UNE VARIABLE ET ON SECURISE LES CHAMP AVEC UN STRIPTAGS ET ON CRYPTE LE MDP
-
+        $confirmkey = mt_rand(9000000, 10000000);
         $Uname = strip_tags($_POST['userName']);
         $Umail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
         $Upasse = password_hash($_POST['userPassword'], PASSWORD_ARGON2ID);
@@ -35,10 +35,26 @@ if (isset($_POST['signup'])) {
             // ON INSERT LE NOUVEL UTILISATEUR DANS LA DATABASE
 
             if ($data_verif->rowcount() == 0) {
-                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription) VALUES (?,?,?,?,?,?,?)");
-                $user_insert->execute(array($Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription));
+                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey) VALUES (?,?,?,?,?,?,?,?)");
+                $user_insert->execute(array($Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey));
 
+                // ON ENVOI UN MAIL DE CONFIRMATION
+                $header = "MIME-Version: 1.0\r\n";
+                $header = 'From:"agamous-sides.000webhostapp.com"<apexdevweb@gmail.com>' . "\n";
+                $header = 'Content-type:text/html; charset="utf-8"' . "\n";
+                $header = 'Content-transfert-encoding: 8bit';
 
+                $message = '
+                <html>
+                 <body>
+                    <div align="center">
+                    <a href="http://code-farmerabc/actionback/users/verifconfirm.php?userName=' . urlencode($Uname) . '&confirmkey' . $confirmkey . '">Confirmer votre compte</a>                    
+                    </div>
+                 </body>
+                </html>
+                ';
+
+                mail($Umail, "Confirmation de compte", $message, $header);
 
                 // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
 
@@ -48,7 +64,7 @@ if (isset($_POST['signup'])) {
                 $userInfo = $rescu_user_info->fetch();
 
                 // ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
-                if (isset($_SESSION)) {
+                if (isset($_SESSION['id'])) {
                     $_SESSION['valideAuth'] = true;
                     $_SESSION['id'] = $userInfo['id'];
                     $_SESSION['userName'] = $userInfo['userName'];

@@ -19,7 +19,7 @@ include "includes/head.php";
     while ($publication = $publi_rescu->fetch()) {
     ?>
         <div class="myPubli_contain">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 17rem; height: 20rem;">
                 <div class="card-body">
                     <h5 class="card-title"><?= $publication['titre'] ?></h5>
                     <hr>
