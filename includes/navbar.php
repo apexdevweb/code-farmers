@@ -98,7 +98,6 @@
             </ul>
         </div>
         <?php
-        require('actionback/users/securityScript.php');
         if (isset($_SESSION['valideAuth'])) {
         ?>
             <li class="nav-item dropdown">
