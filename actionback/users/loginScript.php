@@ -24,11 +24,13 @@ if (isset($_POST['connexion'])) {
             if (password_verify($Upasse, $Uinfos['userPassword'])) {
 
                 //ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
-                $_SESSION['valideAuth'] = true;
-                $_SESSION['id'] = $Uinfos['id'];
-                $_SESSION['userName'] = $Uinfos['userName'];
-                //on redirige l'utilisateur vers la page d'acceuil
-                //header("Location: home.php");
+                if (isset($_SESSION)) {
+                    $_SESSION['valideAuth'] = true;
+                    $_SESSION['id'] = $Uinfos['id'];
+                    $_SESSION['userName'] = $Uinfos['userName'];
+                    //on redirige l'utilisateur vers la page d'acceuil
+                    header("Location: home.php");
+                }
             } else {
                 $errorMsg = "Mot de passe incorrect!";
             }

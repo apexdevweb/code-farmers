@@ -48,14 +48,14 @@ if (isset($_POST['signup'])) {
                 $userInfo = $rescu_user_info->fetch();
 
                 // ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
+                if (isset($_SESSION)) {
+                    $_SESSION['valideAuth'] = true;
+                    $_SESSION['id'] = $userInfo['id'];
+                    $_SESSION['userName'] = $userInfo['userName'];
 
-                $_SESSION['valideAuth'] = true;
-                $_SESSION['id'] = $userInfo['id'];
-                $_SESSION['userName'] = $userInfo['userName'];
-
-                // ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
-
-                header('Location: login.php');
+                    // ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
+                    header('Location: login.php');
+                }
             } else {
                 $errorMsg = " Se compte éxiste déjà!";
             }
