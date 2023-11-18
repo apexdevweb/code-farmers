@@ -1,27 +1,5 @@
-/////////////////////////////////////////////////////////////////////////////////////////////
-//TRAITEMENT DE LA MESSAGERIE
-if (isset($_GET['id']) && !empty($_GET['id'])) {
-
-    $messGetId = $_GET['id'];
-    $recupUser = $bdd->prepare("SELECT * FROM users WHERE `id` = ?");
-    $recupUser->execute(array($messGetId));
-
-    if ($recupUser->rowCount() > 0) {
-
-        if (isset($_POST['envoi_pv'], $_POST['msg_pv']) && !empty($_POST['msg_pv'])) {
-
-            $message = htmlspecialchars($_POST['msg_pv']);
-            $destinataire = (int) $_GET['id'];
-            $expediteur = (int) $_SESSION['id'];
-
-            $insertMessage = $bdd->prepare("INSERT INTO msgprive(`message`, `id_destinataire`, `id_expediteur`) VALUES ('?,?,?,?')");
-            $insertMessage->execute(array($message, $destinataire, $expediteur));
-        } else {
-            echo "aucun message n'as été trouvé";
-        }
-    } else {
-        echo "aucun utilisateur trouvé";
-    }
-} else {
-    echo "aucun identifiant a été trouvé";
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=codefarmer;charset=utf8;', 'root', '');
+} catch (Exception $e) {
+    die('Une erreur a été trouver : ' . $e->getmessage());
 }
