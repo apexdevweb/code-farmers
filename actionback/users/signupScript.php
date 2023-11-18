@@ -38,24 +38,6 @@ if (isset($_POST['signup'])) {
                 $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey) VALUES (?,?,?,?,?,?,?,?)");
                 $user_insert->execute(array($Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey));
 
-                // ON ENVOI UN MAIL DE CONFIRMATION
-                $header = "MIME-Version: 1.0\r\n";
-                $header = 'From:"agamous-sides.000webhostapp.com"<apexdevweb@gmail.com>' . "\n";
-                $header = 'Content-type:text/html; charset="utf-8"' . "\n";
-                $header = 'Content-transfert-encoding: 8bit';
-
-                $message = '
-                <html>
-                 <body>
-                    <div align="center">
-                    <a href="http://code-farmerabc/actionback/users/verifconfirm.php?userName=' . urlencode($Uname) . '&confirmkey' . $confirmkey . '">Confirmer votre compte</a>                    
-                    </div>
-                 </body>
-                </html>
-                ';
-
-                mail($Umail, "Confirmation de compte", $message, $header);
-
                 // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
 
                 $rescu_user_info = $bdd->prepare("SELECT `id` userName FROM users WHERE userName = ? ");
@@ -64,17 +46,40 @@ if (isset($_POST['signup'])) {
                 $userInfo = $rescu_user_info->fetch();
 
                 // ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
-                if (isset($_SESSION['id'])) {
-                    $_SESSION['valideAuth'] = true;
-                    $_SESSION['id'] = $userInfo['id'];
-                    $_SESSION['userName'] = $userInfo['userName'];
 
-                    // ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
-                    header('Location: login.php');
-                }
+                $_SESSION['valideAuth'] = true;
+                $_SESSION['id'] = $userInfo['id'];
+                $_SESSION['userName'] = $userInfo['userName'];
+
+                // ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
+                header('Location: login.php');
             } else {
                 $errorMsg = " Se compte éxiste déjà!";
             }
+
+            // ON ENVOI UN MAIL DE CONFIRMATION
+            $header = "MIME-Version: 1.0\r\n";
+            $header .= 'From:"Code-Farmers"<apexdevweb@gmail.com>' . "\r\n";
+            $header .= 'Content-type: text/html; charset="utf-8"' . "\r\n";
+            $header .= 'Content-transfert-encoding: 8bit';
+
+            $message = '
+             <html>
+              <body>
+                 <div align="center">
+                  <img src="../../asset/wallpapper/Logo1.png" style="height: 70px; width: 100px;">
+                 <a href="http://code-farmer001//actionback/users/verifConfirme.php?userName=' . urlencode($Uname) . '&confirmkey' . $confirmkey . '">Veuillez confirmer votre compte</a>                    
+                 </div>
+              </body>
+             </html>
+             ';
+            mail($Umail, "Confirmation de compte", $message, $header);
+
+            //if (mail($Umail, "Confirmation de compte", $message, $header)) {
+            //    echo "Confirmation envoyer à l'adresse mail rentré";
+            //} else {
+            //    echo "Confirmation envoyer à l'adresse mail rentré";
+            //}
         } else {
             $errorMsg = "Les mot de passe ne correspondent pas!";
         }
