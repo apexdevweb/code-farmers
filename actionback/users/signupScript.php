@@ -35,13 +35,13 @@ if (isset($_POST['signup'])) {
             // ON INSERT LE NOUVEL UTILISATEUR DANS LA DATABASE
 
             if ($data_verif->rowcount() == 0) {
-                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey) VALUES (?,?,?,?,?,?,?,?)");
-                $user_insert->execute(array($Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey));
+                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey, confirm) VALUES (?,?,?,?,?,?,?,?,?)");
+                $user_insert->execute(array($Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey, 0));
 
                 // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
 
-                $rescu_user_info = $bdd->prepare("SELECT `id` userName FROM users WHERE userName = ? ");
-                $rescu_user_info->execute(array($Uname));
+                $rescu_user_info = $bdd->prepare("SELECT `id` userName FROM users WHERE userName = ? AND mail = ?");
+                $rescu_user_info->execute(array($Uname, $Umail));
 
                 $userInfo = $rescu_user_info->fetch();
 
@@ -50,36 +50,43 @@ if (isset($_POST['signup'])) {
                 $_SESSION['valideAuth'] = true;
                 $_SESSION['id'] = $userInfo['id'];
                 $_SESSION['userName'] = $userInfo['userName'];
-
-                // ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ACCEUIL
-                header('Location: login.php');
             } else {
                 $errorMsg = " Se compte éxiste déjà!";
             }
 
-            // ON ENVOI UN MAIL DE CONFIRMATION
-            $header = "MIME-Version: 1.0\r\n";
-            $header .= 'From:"Code-Farmers"<apexdevweb@gmail.com>' . "\r\n";
-            $header .= 'Content-type: text/html; charset="utf-8"' . "\r\n";
-            $header .= 'Content-transfert-encoding: 8bit';
+            // ON RECUPERE LES INFORMATION DE L'UTILISATEUR POUR LE MAIL DE CONFIRMATION
+            $recupUserInfo = $bdd->prepare("SELECT * FROM users WHERE mail = ?");
+            $recupUserInfo->execute(array($Umail));
+            if ($recupUserInfo->rowCount() > 0) {
+                $userCrf_Info = $recupUserInfo->fetch();
+                $_SESSION['id'] = $userCrf_Info['id'];
 
-            $message = '
+                // ON ENVOI UN MAIL DE CONFIRMATION
+                $header = "MIME-Version: 1.0\r\n";
+                $header .= 'From:"Code-Farmers"<apexdevweb@gmail.com>' . "\r\n";
+                $header .= 'Content-type: text/html; charset="utf-8"' . "\r\n";
+                $header .= 'Content-transfert-encoding: 8bit';
+
+                $message = '
              <html>
               <body>
-                 <div align="center">
-                  <img src="../../asset/wallpapper/Logo1.png" style="height: 70px; width: 100px;">
-                 <a href="http://code-farmer001//actionback/users/verifConfirme.php?userName=' . urlencode($Uname) . '&confirmkey' . $confirmkey . '">Veuillez confirmer votre compte</a>                    
+                 <div align="center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <img src="Logo2.png" style="height: 70px; width: 150px;" align="center">
+                 <a href="http://code-farmer004//actionback/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Veuillez confirmer votre compte</a>                    
                  </div>
               </body>
              </html>
              ';
-            mail($Umail, "Confirmation de compte", $message, $header);
+                mail($Umail, "Confirmation de compte", $message, $header);
+            }
 
-            //if (mail($Umail, "Confirmation de compte", $message, $header)) {
-            //    echo "Confirmation envoyer à l'adresse mail rentré";
-            //} else {
-            //    echo "Confirmation envoyer à l'adresse mail rentré";
-            //}
+
+            if (mail($Umail, "Confirmation de compte", $message, $header)) {
+                // ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ATTENTE DE CONFIRMATION
+                header('Location: confirmAttente.php');
+            } else {
+                echo "L'email de confirmation n'as pas pu être envoyer";
+            }
         } else {
             $errorMsg = "Les mot de passe ne correspondent pas!";
         }

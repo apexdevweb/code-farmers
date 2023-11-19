@@ -44,6 +44,16 @@ body {
   overflow: hidden;
   background-color: #000;
 }
+.logoContent > h2,
+h4 {
+  text-align: center;
+  color: #fff;
+}
+.logoContent > a {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
 .logoContent > img {
   margin-top: 5vh;
   height: 10vh;

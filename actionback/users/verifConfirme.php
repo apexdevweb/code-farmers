@@ -1,17 +1,21 @@
 <?php
+session_start();
 require("../database.php");
 var_dump($_GET);
 ///////////////////////////PREMIERE METHODE///////////////////////////////////////////////////////////////
 if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !empty($_GET['id'])) {
     $get_id = $_GET['id'];
     $get_cle = $_GET['confirmkey'];
-
     $verif_user = $bdd->prepare("SELECT * FROM users WHERE `id` = ? AND confirmkey = ?");
     $verif_user->execute(array($get_id,  $get_cle));
     if ($verif_user->rowCount() > 0) {
         $verif_user_info = $verif_user->fetch();
-        if ($verif_user_info['confirm']) {
-            # code...
+        if ($verif_user_info['confirm'] != 1) {
+            $update_confirm = $bdd->prepare("UPDATE users SET confirm = ? WHERE `id` = ?");
+            $update_confirm->execute(array(1, $get_id));
+        } else {
+            $_SESSION['confirmkey'] = $get_cle;
+            header('Location: login.php');
         }
     } else {
         echo "Votre clé ou identifiant est incorrecte";

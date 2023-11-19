@@ -10,7 +10,7 @@ require("actionback/users/loginScript.php");
 //        if ($verifRecupUser->rowCount() > 0) {
 //            $verifUserInfos = $verifRecupUser->fetch();
 //            if ($verifUserInfos['confirm'] == 1) {
-//                header('Location: actionback/users/verifConfirm.php?id=' . $verifUserInfos['id'] . '&confirmkey' . $verifUserInfos['confirmkey']);
+//                header('Location: actionback/users/verifConfirme.php?id=' . $verifUserInfos['id'] . '&confirmkey' . $verifUserInfos['confirmkey']);
 //            } else {
 //                echo "Vous n'êtes pas encore confirmé sur le site";
 //            }
