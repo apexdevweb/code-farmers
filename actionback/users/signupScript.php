@@ -21,9 +21,6 @@ if (isset($_POST['signup'])) {
         $Usex = $_POST['genre'];
         $date_inscription = date("Y-m-d");
 
-
-
-
         // ON VERIFIE QUE L'UTILISATEUR N'EXISTE PAS DEJA 
 
         $data_verif = $bdd->prepare("SELECT userName FROM users WHERE userName = ?");
@@ -78,14 +75,13 @@ if (isset($_POST['signup'])) {
              </html>
              ';
                 mail($Umail, "Confirmation de compte", $message, $header);
-            }
-
-
-            if (mail($Umail, "Confirmation de compte", $message, $header)) {
-                // ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ATTENTE DE CONFIRMATION
-                header('Location: confirmAttente.php');
-            } else {
-                echo "L'email de confirmation n'as pas pu être envoyer";
+                //ON FAIS UNE CONDITION POUR VERIFIER QUE L'EMAIL A BIEN ETE ENVOYE
+                if (mail($Umail, "Confirmation de compte", $message, $header)) {
+                    //SI LE MAIL EST ENVOYE ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ATTENTE DE CONFIRMATION
+                    header('Location: confirmAttente.php');
+                } else {
+                    echo "L'email de confirmation n'as pas pu être envoyer";
+                }
             }
         } else {
             $errorMsg = "Les mot de passe ne correspondent pas!";
