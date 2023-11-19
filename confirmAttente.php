@@ -16,9 +16,7 @@ include "includes/head.php";
         <br>
         <h2>En attente de validation...</h2>
         <br>
-        <h4>Veuillez consulter votre boîte mail</h4>
-        <br>
-        <a href="index.php">Retour à la page d'acceuil</a>
+        <h4>Veuillez consulter votre boîte mail <a href="index.php"> <i class="fa-solid fa-arrow-right"></i> Retour à la page d'acceuil</a></h4>
     </section>
 </body>
 

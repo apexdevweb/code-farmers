@@ -113,27 +113,31 @@
             </ul>
         </div>
         <?php
-        if (isset($_SESSION['valideAuth'])) {
+        if (isset($_SESSION['confirmkey'])) {
+            if (isset($_SESSION['valideAuth'])) {
         ?>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="asset/image/<?= $_SESSION['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"></a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen"></i>Publier</a></li>
-                    <li><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open"></i>Mes Publications</a></li>
-                    <li><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments"></i>message privé</a></li>
-                    <li><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['id'] ?>"><i class="fa-solid fa-gear"></i>Géré profil</a></li>
-                    <li><a class="dropdown-item" href="actionback/users/logout.php"><i class="fa-solid fa-power-off"></i>Déconnexion</a></li>
-                </ul>
-            </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="asset/image/<?= $_SESSION['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen"></i>Publier</a></li>
+                        <li><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open"></i>Mes Publications</a></li>
+                        <li><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments"></i>message privé</a></li>
+                        <li><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['id'] ?>"><i class="fa-solid fa-gear"></i>Géré profil</a></li>
+                        <li><a class="dropdown-item" href="actionback/users/logout.php"><i class="fa-solid fa-power-off"></i>Déconnexion</a></li>
+                    </ul>
+                </li>
         <?php
+            }
         }
         ?>
         <br>
         <br>
         <?php
-        if (isset($_SESSION['valideAuth'])) {
-            echo "<h4>  Bienvenue " . $_SESSION['userName'] . "</h4>";
+        if (isset($_SESSION['confirmkey'])) {
+            if (isset($_SESSION['valideAuth'])) {
+                echo "<h5>  Bienvenue " . $_SESSION['userName'] . "</h5>";
+            }
         }
         ?>
     </div>

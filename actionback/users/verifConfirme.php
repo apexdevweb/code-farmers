@@ -1,8 +1,6 @@
 <?php
 session_start();
 require("../database.php");
-var_dump($_GET);
-///////////////////////////PREMIERE METHODE///////////////////////////////////////////////////////////////
 if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !empty($_GET['id'])) {
     $get_id = $_GET['id'];
     $get_cle = $_GET['confirmkey'];
@@ -13,9 +11,78 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
         if ($verif_user_info['confirm'] != 1) {
             $update_confirm = $bdd->prepare("UPDATE users SET confirm = ? WHERE `id` = ?");
             $update_confirm->execute(array(1, $get_id));
+?>
+            <!DOCTYPE html>
+            <html lang="fr">
+            <?php
+            include "../../includes/head.php";
+            ?>
+            <style>
+                body {
+                    background-color: #000;
+                }
+
+                .logoContent {
+                    text-align: center;
+                    height: 100vh;
+                    width: 100%;
+                    overflow: hidden;
+                    background-color: #000;
+                }
+
+                .logoContent>h2,
+                h4 {
+                    text-align: center;
+                    color: #fff;
+                }
+
+                .logoContent>a {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.2rem;
+                }
+
+                .logoContent>img {
+                    margin-top: 5vh;
+                    height: 10vh;
+                    width: 90%;
+                }
+
+                @media only screen and (max-width: 600px) {
+
+                    .logoContent {
+                        position: absolute;
+                        height: auto;
+                        width: 100%;
+                        overflow: hidden;
+                        background-color: #000;
+                    }
+
+                    .logoContent>img {
+                        margin-top: 5vh;
+                        height: 3vh;
+                        width: 100%;
+                    }
+                }
+            </style>
+
+            <body>
+                <section class="logoContent">
+                    <img src="../../asset/wallpapper/Logo1.png">
+                    <br>
+                    <br>
+                    <h2>Votre inscription est validé</h2>
+                    <br>
+                    <h4>Bienvenue <?= $verif_user_info['userName']; ?><a href="../../login.php"> <i class="fa-solid fa-arrow-right"></i> Connexion</a></h4>
+                </section>
+            </body>
+
+            </html>
+<?php
         } else {
+            //SI L'UTILISATEUR EST DEJA CONFIRMER ON L'ENVOI SUR LA SESSION
             $_SESSION['confirmkey'] = $get_cle;
-            header('Location: login.php');
+            header('Location: ../../home.php');
         }
     } else {
         echo "Votre clé ou identifiant est incorrecte";
@@ -23,28 +90,4 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
 } else {
     echo "l'utilisateur n'existe pas !";
 }
-
-///////////////////////////SECONDE METHODE///////////////////////////////////////////////////////////////
-//if (isset($_GET['userName'], $_GET['confirmkey']) && !empty($_GET['userName']) && !empty($_GET['confirmkey'])) {
-//    //on decode l'url avec un url decode
-//    $Uname = strip_tags(urldecode($_GET['userName']));
-//    $confirmkey = strip_tags($_GET['confirmkey']);
-//
-//    $verif_user = $bdd->prepare("SELECT * FROM users WHERE userName = ? AND confirmkey = ?");
-//    $verif_user->execute(array($Uname, $confirmkey));
-//
-//    if ($verif_user->rowCount() == 1) {
-//        $user_wait_confirm = $verif_user->fetch();
-//        if ($user_wait_confirm['confirm'] == 0) {
-//            $update_confirm = $bdd->prepare("UPDATE users SET confirm = 1 WHERE userName = ? AND confirmkey = ?");
-//            $update_confirm->execute(array($Uname, $confirmkey));
-//            echo "Votre compte a biens été validé";
-//            header('Location: login.php');
-//        } else {
-//            echo "compte déjà confirmer !";
-//        }
-//    } else {
-//        echo "l'utilisateur n'existe pas !";
-//    }
-//}
-//
+?>
