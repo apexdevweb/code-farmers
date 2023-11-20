@@ -14,7 +14,7 @@ include("includes/head.php");
         <section class="logoContent">
             <img src="asset/wallpapper/Logo1.png">
             <section class="premier_contenu">
-                <div class="card" style="width: 18rem;">
+                <div class="card carte_hov" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Home</h5>
                         <hr>
@@ -22,7 +22,7 @@ include("includes/head.php");
                     </div>
                 </div>
                 <br>
-                <div class="card" style="width: 18rem;">
+                <div class="card carte_hov" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Signup</h5>
                         <hr>
@@ -30,7 +30,7 @@ include("includes/head.php");
                     </div>
                 </div>
                 <br>
-                <div class="card" style="width: 18rem;">
+                <div class="card carte_hov" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Login</h5>
                         <hr>

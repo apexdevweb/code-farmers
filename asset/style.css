@@ -70,8 +70,8 @@ h4 {
   align-items: center;
   justify-content: space-evenly;
 }
-.card:hover {
-  transform: scale(1.03);
+.carte_hov:hover {
+  transform: scale(1.02);
   transition: 0.3s ease-in-out;
   box-shadow: 1px 1px 5px #000;
 }

@@ -28,7 +28,7 @@ include("includes/head.php");
         <?php
         foreach ($affiche_publi as $afp) {
         ?>
-            <div class="card" style="width: 17rem; height: 20rem; margin-top: 10px;">
+            <div class="card carte_hov" style="width: 15rem; height: 17rem; margin-top: 10px;">
                 <div class="card-body">
                     <h5 class="card-title"><?= $afp['titre'] ?></h5>
                     <hr>
@@ -36,7 +36,7 @@ include("includes/head.php");
                     <hr>
                     <h6 class="card-subtitle mb-2 text-body-secondary"><?= $afp['date_publication'] ?> <?= $afp['nom_auteur'] ?></h6>
                     <!--pour avoir accès a la publications en commun avec la database on place un liens avec : ?id=...et le code php qui suit-->
-                    <button type="button" class="btn btn-info"><a href="article.php?id=<?= $afp['id']; ?>">Voir</a></button>
+                    <button type="button" class="btn btn-info"><a href="article.php?id=<?= $afp['id']; ?>">Voir la publication</a></button>
                 </div>
             </div>
         <?php

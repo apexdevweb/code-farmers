@@ -24,7 +24,9 @@ include('includes/head.php');
             <div class="container text-left">
                 <div class="row">
                     <div class="col">
-                        <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 300px; height: 300px">
+                        <div class="container-sm">
+                            <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 300px; height: 300px">
+                        </div>
                     </div>
                     <div class="col">
                         <h6><i class="fa-solid fa-cake-candles"></i> <?= $user_age_select; ?></h6>

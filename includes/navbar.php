@@ -76,6 +76,9 @@
                         <li><a class="dropdown-item" target="_blank" href="https://www.pngwing.com/">Pngwing.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://pixabay.com/fr/">Pixabay.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://fr.freepik.com/">Freepik.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.pexels.com/">Pexels.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://iconmonstr.com/">Iconmonstr.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://fontawesome.com/">Fontawesome.com</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
