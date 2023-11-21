@@ -12,7 +12,6 @@ include("includes/head.php");
 <body>
     <div class="section_contain">
         <section class="logoContent">
-            <img src="asset/wallpapper/Logo1.png">
             <section class="premier_contenu">
                 <div class="card carte_hov" style="width: 18rem;">
                     <div class="card-body">
@@ -38,6 +37,7 @@ include("includes/head.php");
                     </div>
                 </div>
             </section>
+            <img src="asset/wallpapper/LogoXmosh.gif">
         </section>
 
     </div>

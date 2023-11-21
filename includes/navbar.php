@@ -52,6 +52,7 @@
                         <li><a class="dropdown-item" target="_blank" href="https://www.wampserver.com/">Wampserver.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.apachefriends.org/fr/download.html">Xampp.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.mamp.info/en/windows/">Mamp.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.minifier.org/">Minifier.org</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -121,7 +122,7 @@
         ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="asset/image/<?= $_SESSION['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"></a>
+                        <img src="asset/image/<?= $_SESSION['id']; ?>" class="img-fluid" style="width: 50px; height: 50px; border-radius: 50px;"></a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen"></i>Publier</a></li>
                         <li><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open"></i>Mes Publications</a></li>

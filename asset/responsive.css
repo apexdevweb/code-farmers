@@ -6,31 +6,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url("wallpapper/bgone.jpg") no-repeat 50% 50%;
+    background-size: cover;
   }
   .titre_contenu a > img {
     height: 3vh;
     width: 80vw;
   }
   .section_contain {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
     height: 100%;
     width: 100%;
+  }
+  .premier_contenu {
+    position: absolute;
+    margin-top: 25vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    border: 1px solid red;
   }
   .contenu_secondaire {
     margin-top: 5vh;
   }
-  .premier_contenu {
-    margin-top: 5vh;
-    margin-bottom: auto;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+
   .logoContent {
     position: absolute;
     height: auto;
@@ -39,9 +42,11 @@
     background-color: #000;
   }
   .logoContent > img {
-    margin-top: 5vh;
-    height: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
     width: 100%;
+    border: 1px solid yellow;
   }
 
   .container_downform {
@@ -99,9 +104,11 @@
 
   /*******swiperJS******/
   .swiper {
+    height: auto;
     width: 100%;
-    height: 100%;
+    border-radius: 10px;
   }
+
   .title_Slider {
     display: flex;
     flex-direction: column;
@@ -109,22 +116,28 @@
     justify-content: center;
     width: 100%;
     text-align: center;
+    color: #fff;
+    text-shadow: 1px 2px 5px #000;
+  }
+  .title_Slider i {
+    color: #fff;
+    text-shadow: 1px 2px 5px #000;
   }
 
   .swiper-slide {
-    height: 10vh;
+    height: 7vh;
     width: 100%;
     text-align: center;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .swiper-slide i {
     font-size: 1.5rem;
-    text-shadow: 1px 2px 5px black;
-    color: #000;
-    letter-spacing: 2px;
+    text-shadow: 1px 2px 5px #000;
+    color: #fff;
+    letter-spacing: 5px;
   }
 
   .swiper-slide img {
@@ -132,6 +145,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .swiper-pagination {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
   }
 
   /*******swiperJS fin******/

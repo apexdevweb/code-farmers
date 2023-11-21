@@ -8,14 +8,16 @@ if (isset($_POST['modifProfil'])) {
         $new_profil_name = strip_tags($_POST['profilName']);
         $new_profil_city = strip_tags($_POST['city']);
         $new_profil_skill = $_POST['skill'];
+        $new_profil_git = strip_tags($_POST['liengit']);
         //ON UTILISE IMPLODE POUR UPDATE LES CHECKBOX
         $allSkill = implode(" ", $new_profil_skill);
         $new_lien_web = strip_tags($_POST['lien']);
         $new_lien_tube = strip_tags($_POST['Ytube']);
 
+
         //ON MET A JOUR LES NOUVELLES DONNEES DANS LA DATABASE
-        $UpProfil = $bdd->prepare("UPDATE users SET userName = ? , ville = ?, skill = ?, lien_web = ?, youtube = ? WHERE `id` = ?");
-        $UpProfil->execute(array($new_profil_name, $new_profil_city, $allSkill, $new_lien_web, $new_lien_tube, $idProfil));
+        $UpProfil = $bdd->prepare("UPDATE users SET userName = ? , ville = ?, skill = ?, lien_github = ?, lien_web = ?, youtube = ? WHERE `id` = ?");
+        $UpProfil->execute(array($new_profil_name, $new_profil_city, $allSkill,  $new_profil_git, $new_lien_web, $new_lien_tube, $idProfil));
 
         header('Location: editeurProfile.php');
     } else {

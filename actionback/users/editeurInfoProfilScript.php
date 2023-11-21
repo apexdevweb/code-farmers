@@ -25,6 +25,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             $profil_genre = $profilInfos['genre'];
             $profil_city = $profilInfos['ville'];
             $profil_skill = $profilInfos['skill'];
+            $profil_gitlien = $profilInfos['lien_github'];
             $profil_webLien = $profilInfos['lien_web'];
             $profil_tubeLien = $profilInfos['youtube'];
         } else {

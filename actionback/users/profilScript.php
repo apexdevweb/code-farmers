@@ -18,6 +18,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         $user_genre_select = $userSelectInfo['genre'];
         $user_city_select = $userSelectInfo['ville'];
         $user_skill_select = $userSelectInfo['skill'];
+        $user_git_select = $userSelectInfo['lien_github'];
         $user_tube_select = $userSelectInfo['youtube'];
         $user_lien_select = $userSelectInfo['lien_web'];
     } else {

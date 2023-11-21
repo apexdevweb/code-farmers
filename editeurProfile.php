@@ -17,9 +17,6 @@ include "includes/head.php";
     include "includes/navbar.php";
     ?>
     <br>
-    <div class="infoPratique">
-        <h4>Ici vous pouvez géré votre profil personnel</h4>
-    </div>
     <div class="container text-center">
         <div class="row">
             <div class="col">
@@ -29,18 +26,21 @@ include "includes/head.php";
                         echo $errorMsg;
                     }
                     if (isset($userSelectInfo)) {
+                        include("includes/agecalcule.php");
                     ?>
                         <h3><?= $user_name_select; ?></h3>
                         <hr>
                         <img src="asset/image/<?= $user_avatar_select; ?>" class="img-fluid" style="width: 250px; height: 250px">
                         <hr>
-                        <h6>âge: <?= $user_age_select; ?></h6>
+                        <h6>âge: <?= age($user_age_select); ?></h6>
                         <h6>Genre: <?= $user_genre_select; ?></h6>
                         <h6>Ville: <?= $user_city_select; ?></h6>
                         <h6>Compétence: <?= $user_skill_select; ?></h6>
+                        <h6>Github: <?= $user_git_select; ?></h6>
                         <h6>Youtube: <?= $user_tube_select; ?></h6>
                         <h6>Site web: <?= $user_lien_select; ?></h6>
                         <hr>
+                        <button type="button" class="btn btn-danger"><a href="actionback/users/deleteCompteScript.php?id=<?= $_SESSION['id'] ?>" style="color: #fff;">Supprimer votre compte</a></button>
                     <?php
                     }
                     ?>
@@ -124,6 +124,12 @@ include "includes/head.php";
 
                             <input type="checkbox" class="btn-check" id="btncheck16" autocomplete="off" value="gitkraken" name="skill[]">
                             <label class="btn btn-outline-primary" for="btncheck16"><i class="fa-brands fa-gitkraken">GITKRAKEN</i></label>
+                            <br>
+                            <br>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Profil github</label>
+                                <input type="text" class="form-control" name="liengit" value="<?= $profil_gitlien ?>">
+                            </div>
                             <br>
                             <br>
                             <div class="mb-3">

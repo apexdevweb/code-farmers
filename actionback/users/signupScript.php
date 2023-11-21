@@ -68,8 +68,7 @@ if (isset($_POST['signup'])) {
              <html>
               <body>
                  <div align="center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                  <img src="Logo2.png" style="height: 70px; width: 150px;" align="center">
-                 <a href="http://code-farmer006//actionback/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Veuillez confirmer votre compte</a>                    
+                 <a href="http://code-farmer008//actionback/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Veuillez confirmer votre compte</a>                    
                  </div>
               </body>
              </html>
