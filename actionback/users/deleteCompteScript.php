@@ -19,6 +19,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
             $Delete_user = $bdd->prepare("DELETE FROM users WHERE `id` = ?");
             $Delete_user->execute(array($dlt_id));
+            $_SESSION = [];
+            session_destroy();
             header('Location: ../../index.php');
         } else {
             echo "Vous ne pouvez pas supprimer un compte qui ne vous appartient pas!";

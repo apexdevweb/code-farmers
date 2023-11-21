@@ -73,7 +73,7 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
                     <br>
                     <h2>Votre inscription est validé</h2>
                     <br>
-                    <h4>Bienvenue <?= $verif_user_info['userName']; ?><a href="../../login.php"> <i class="fa-solid fa-arrow-right"></i> Connexion</a></h4>
+                    <h4>Bienvenue <?= $verif_user_info['userName']; ?> <i class="fa-solid fa-arrow-right"></i><a href="../../login.php"> Connexion</a></h4>
                 </section>
             </body>
 

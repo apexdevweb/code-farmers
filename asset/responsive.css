@@ -14,28 +14,24 @@
     width: 80vw;
   }
   .section_contain {
-    position: relative;
     height: 100%;
     width: 100%;
   }
   .premier_contenu {
-    position: absolute;
-    margin-top: 25vh;
+    margin-top: 20vh;
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     overflow: hidden;
-    border: 1px solid red;
   }
   .contenu_secondaire {
     margin-top: 5vh;
   }
 
   .logoContent {
-    position: absolute;
     height: auto;
     width: 100%;
     overflow: hidden;
@@ -44,9 +40,8 @@
   .logoContent > img {
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
+    height: auto;
     width: 100%;
-    border: 1px solid yellow;
   }
 
   .container_downform {
@@ -171,4 +166,27 @@
     width: 150px;
   }
   /**************primary bande FIN*********************/
+  /****************FOOTER******************************************/
+  footer {
+    height: auto;
+    width: 100%;
+    background-color: #000;
+  }
+  .foot_contain {
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 50vw;
+  }
+  .foot_contain > p {
+    font-family: "Orbitron", sans-serif;
+    color: #fff;
+  }
+  .foot_contain > p {
+    font-size: 1.2rem;
+    font-family: "Orbitron", sans-serif;
+    color: #fff;
+  }
+  /****************FOOTER FIN************************************/
 }

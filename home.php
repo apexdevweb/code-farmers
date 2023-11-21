@@ -19,6 +19,10 @@ include("includes/head.php");
     <hr>
     <?php
     include("includes/slider.php");
+    ?>
+    <br>
+    <?php
+    include("includes/subnav.php");
     include("includes/primaryBande.php");
     ?>
     <br>

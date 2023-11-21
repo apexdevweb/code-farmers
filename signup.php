@@ -11,7 +11,7 @@ include "includes/head.php";
 <body>
     <div class="container">
         <br>
-        <img src="actionback/users/Logo2.png" style="width: 99%; height: auto;">
+        <img src="asset/wallpapper/Logo2.png" style="width: 99%; height: auto;">
         <br>
         <br>
         <a href="index.php"><i class="fa-solid fa-arrow-left"></i>Retour</a>
