@@ -73,7 +73,6 @@ include "includes/head.php";
         <br>
         <a href="login.php">J'ai déjà un compte, je me connecte<i class="fa-solid fa-arrow-right"></i></a>
     </div>
-
 </body>
 
 </html>

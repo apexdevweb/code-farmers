@@ -1,18 +1,52 @@
 @media only screen and (max-width: 600px) {
   .titre_contenu {
     margin-top: 1vh;
-    height: 6vh;
+    height: 10vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("wallpapper/bgone.jpg") no-repeat 50% 50%;
-    background-size: cover;
+    box-shadow: 1px 2px 10px #000;
+    overflow: hidden;
+    z-index: 5;
   }
   .titre_contenu a > img {
-    height: 3vh;
-    width: 80vw;
+    margin-top: -5vh;
+    height: 20vh;
+    width: 100%;
   }
+  .titre_contenu a {
+    position: absolute;
+    margin: 0;
+    height: 10vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  .vid_contain {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: -2;
+    overflow: hidden;
+  }
+  .vid {
+    position: relative;
+    height: auto;
+    z-index: -1;
+    height: auto;
+    width: 100%;
+  }
+  /*********SUBNAV***********/
+  #subnav {
+    height: 15vh;
+    width: 100%;
+    background: url("../asset/wallpapper/symbolehtml.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    box-shadow: 1px 2px 10px #000;
+  }
+  #subnav .nav-item > a {
+    color: #fff;
+  }
+  /*********SUB NAV******FIN*****/
   .section_contain {
     height: 100%;
     width: 100%;

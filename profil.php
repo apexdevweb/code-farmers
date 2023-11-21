@@ -46,7 +46,7 @@ include('includes/head.php');
                 <div class="row">
                     <div class="col">
                         <div class="container-sm">
-                            <img src="asset/image/<?= $user_avatar_select; ?>" class="img-fluid" style="width: 300px; height: 300px">
+                            <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 300px; height: 300px">
                         </div>
                     </div>
                     <div class="col">

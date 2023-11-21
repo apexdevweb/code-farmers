@@ -22,6 +22,7 @@ include("includes/head.php");
         <?php
         foreach ($affiche_users as $afu) {
         ?>
+
             <div class="card carte_hov" style="width: 15rem; height: 20rem; margin-top: 10px;  background: url('asset/wallpapper/bgerre.jpg') no-repeat 50% -5%;  background-size: 100%;">
                 <img src="asset/image/<?= $afu['avatar'] ?>" class="card-img-top-fluid" style="width: cover; height: 150px; border-radius: 5px">
                 <div class="card-body">
