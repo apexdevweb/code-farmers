@@ -19,8 +19,10 @@
   z-index: 3;
   letter-spacing: 2px;
 }
-.sub_title {
-  margin-top: 200px;
+.sub_title,
+.sub_title2,
+.sub_title3 {
+  margin-top: 250px;
   position: absolute;
   font-size: 1.3rem;
   font-family: "Share Tech Mono", monospace;
@@ -30,7 +32,10 @@
   transition: 1s ease-in-out;
   animation: 0.5s linear 0.3s running forwards translateLien;
 }
-.gltch {
+
+.gltch,
+.gltch2,
+.gltch3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +48,10 @@
   overflow: hidden;
   z-index: 4;
 }
-.gltch:hover {
+
+.gltch:hover,
+.gltch2:hover,
+.gltch3:hover {
   transition: 1.5s ease-in-out;
   animation: 0.5s linear 0.2s running forwards glitch-anim-translate;
 }
@@ -58,7 +66,9 @@
   height: 30vw;
   width: 40vw;
 }
-.glitch__layers {
+.glitch__layers,
+.glitch__layers2,
+.glitch__layers3 {
   position: absolute;
   z-index: 2;
   left: 0;
@@ -66,7 +76,17 @@
   top: 0;
   bottom: 0;
 }
+
 .sub__layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url("../asset/wallpapper/bgfive.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+.sub__layer2 {
   position: absolute;
   left: 0;
   right: 0;
@@ -75,45 +95,70 @@
   background: url("../asset/wallpapper/bgerrer2.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
+.sub__layer3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url("../asset/wallpapper/bgone.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
 /*LIGNE ORIGINEL*/
-.sub__layer:nth-child(1) {
+.sub__layer:nth-child(1),
+.sub__layer2:nth-child(1),
+.sub__layer3:nth-child(1) {
   transform: translateX(-5%);
   animation: glitch-anim-1 2s infinite linear alternate;
   opacity: 0.8;
 }
-.sub__layer:nth-child(2) {
+.sub__layer:nth-child(2),
+.sub__layer2:nth-child(2),
+.sub__layer3:nth-child(2) {
   transform: translateX(3%) translateY(3%);
   animation: glitch-anim-2 2.3s -0.8s infinite linear alternate;
   opacity: 0.8;
 }
-.sub__layer:nth-child(3) {
+.sub__layer:nth-child(3),
+.sub__layer2:nth-child(3),
+.sub__layer3:nth-child(3) {
   transform: translateX(5%);
   animation: glitch-anim-flash 3s infinite linear;
   opacity: 0.8;
 }
 /*LIGNE ORIGINEL FIN*/
 /*LIGNE Modifié*/
-.sub__layer:nth-child(4) {
+.sub__layer:nth-child(4),
+.sub__layer2:nth-child(4),
+.sub__layer3:nth-child(4) {
   transform: translateX(-60%);
   animation: glitch-anim-1 4s infinite linear alternate;
   opacity: 0.8;
 }
-.sub__layer:nth-child(5) {
+.sub__layer:nth-child(5),
+.sub__layer2:nth-child(5),
+.sub__layer3:nth-child(5) {
   transform: translateX(30%);
   animation: glitch-anim-2 4s infinite linear alternate;
   opacity: 0.8;
 }
-.sub__layer:nth-child(6) {
+.sub__layer:nth-child(6),
+.sub__layer2:nth-child(6),
+.sub__layer3:nth-child(6) {
   transform: translateX(60%);
   animation: glitch-anim-1 2.5s infinite linear alternate;
   opacity: 0.8;
 }
-.sub__layer:nth-child(7) {
+.sub__layer:nth-child(7),
+.sub__layer2:nth-child(7),
+.sub__layer3:nth-child(7) {
   transform: translateX(-20%);
   animation: glitch-anim-2 5s infinite linear alternate;
   opacity: 0.8;
 }
-.sub__layer:nth-child(8) {
+.sub__layer:nth-child(8),
+.sub__layer2:nth-child(8),
+.sub__layer3:nth-child(8) {
   transform: translateX(20%);
   animation: glitch-anim-1 3.1s infinite linear alternate;
   opacity: 0.8;
@@ -222,10 +267,10 @@
 /*experimentale keyframe*/
 @keyframes translateLien {
   0% {
-    transform: translateY(200px);
+    transform: translateY(0px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-40px);
   }
 }
 /*experimentale keyframe*/
