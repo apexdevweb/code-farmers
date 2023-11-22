@@ -19,6 +19,7 @@
     <script src="../asset/initAOS.js"></script>
     <!--AOSJS fin-->
     <!--GLITCH 2-->
+    <!-- <link rel="stylesheet" href="../asset/glitch.css">-->
     <!--GLITH 2fin-->
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="asset/responsive.css">

@@ -12,8 +12,11 @@ include("includes/head.php");
 <body>
     <div class="section_contain">
         <section class="logoContent">
+            <!--LOGO PRINCIPALE -->
             <img src="asset/wallpapper/Logo1.png">
+            <!--SECTION DES CARTES -->
             <section class="premier_contenu">
+                <!--glitch1-->
                 <div class="card carte_hov" style="width: 18rem; height: 13rem; background: url('asset/wallpapper/bgfive.jpg') no-repeat 50% 50%;background-size: cover;">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #fff;font-size: 2.2rem;text-shadow: 1px 2px 5px #000;">Home</h5>
@@ -22,6 +25,7 @@ include("includes/head.php");
                     </div>
                 </div>
                 <br>
+                <!--glitch2-->
                 <div class="card carte_hov" style="width: 18rem; height: 13rem; background: url('asset/wallpapper/bgerrer2.jpg') no-repeat 50% 50% ;background-size: cover;">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #fff;font-size: 2.2rem;text-shadow: 1px 2px 5px #000;">Signup</h5>
@@ -30,6 +34,7 @@ include("includes/head.php");
                     </div>
                 </div>
                 <br>
+                <!--glitch3-->
                 <div class="card carte_hov" style="width: 18rem; height: 13rem; background: url('asset/wallpapper/bgtree.jpg') no-repeat 50% 50%;background-size: cover;">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #fff;font-size: 2.2rem;text-shadow: 1px 2px 5px #000;">Login</h5>
