@@ -90,11 +90,13 @@ body {
   overflow: hidden;
   background-color: #000;
 }
-.logoContent > h2,
-h4 {
+.firstTitre {
   text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
   color: #fff;
 }
+
 .logoContent > a {
   text-align: center;
   color: #fff;

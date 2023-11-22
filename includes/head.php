@@ -18,9 +18,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../asset/initAOS.js"></script>
     <!--AOSJS fin-->
-    <!--GLITCH 2-->
-    <!-- <link rel="stylesheet" href="../asset/glitch.css">-->
-    <!--GLITH 2fin-->
+    <!--GLITCH -->
+    <link rel="stylesheet" href="../asset/glitch.css">
+    <!--GLITH fin-->
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="asset/responsive.css">
     <title>Code-Farmers</title>

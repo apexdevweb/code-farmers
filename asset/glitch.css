@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 .premier_contenu {
-  margin-top: 20vh;
+  margin-top: 15vh;
   width: 100%;
   height: 35vh;
   display: flex;
@@ -12,7 +12,7 @@
 }
 .crdsTitre {
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Orbitron", sans-serif;
   color: #fff;
   text-shadow: 1px 2px 5px #000;
@@ -29,8 +29,8 @@
   color: #fff;
   text-shadow: 1px 2px 5px #000;
   z-index: 3;
-  transition: 1s ease-in-out;
-  animation: 0.5s linear 0.3s running forwards translateLien;
+  transition: 0.5s ease-in-out;
+  animation: 0.4s linear 0.3s running forwards translateLien;
 }
 
 .gltch,
@@ -47,13 +47,14 @@
   clip-path: polygon();
   overflow: hidden;
   z-index: 4;
+  border-radius: 10px;
 }
 
 .gltch:hover,
 .gltch2:hover,
 .gltch3:hover {
-  transition: 1.5s ease-in-out;
-  animation: 0.5s linear 0.2s running forwards glitch-anim-translate;
+  transition: 0.5s ease-in-out;
+  animation: 0.3s linear 0.2s running forwards glitch-anim-translate;
 }
 .glitch {
   position: relative;
@@ -63,7 +64,7 @@
   position: relative;
   z-index: 1;
   display: block;
-  height: 30vw;
+  height: 30vh;
   width: 40vw;
 }
 .glitch__layers,
@@ -101,7 +102,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: url("../asset/wallpapper/bgone.jpg") no-repeat 50% 50%;
+  background: url("../asset/wallpapper/bgtree.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
 /*LIGNE ORIGINEL*/
@@ -253,12 +254,12 @@
 /*experimentale keyframe*/
 @keyframes glitch-anim-translate {
   0% {
-    height: 18vw;
+    height: 18vh;
     width: 13vw;
     transform: translateY(0);
   }
   100% {
-    height: 30vw;
+    height: 30vh;
     width: 30vw;
     transform: scale(1.02);
   }
@@ -274,3 +275,97 @@
   }
 }
 /*experimentale keyframe*/
+/*RESPONSIVE*/
+@media only screen and (max-width: 600px) {
+  .premier_contenu {
+    margin-top: 20vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+  }
+  .gltch,
+  .gltch2,
+  .gltch3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    height: 15vh;
+    width: 50vw;
+    clip-path: polygon();
+    overflow: hidden;
+    z-index: 4;
+    border-radius: 10px;
+  }
+  .gltch:hover,
+  .gltch2:hover,
+  .gltch3:hover {
+    transition: 0.5s ease-in-out;
+    animation: 0.3s linear 0.2s running forwards responsivetranslate;
+  }
+  .glitch {
+    position: relative;
+    overflow: hidden;
+    height: 30vh;
+    width: 100%;
+  }
+  .glitch img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 30vh;
+    width: 100%;
+  }
+  .crdsTitre {
+    position: absolute;
+    font-size: 2rem;
+    font-family: "Orbitron", sans-serif;
+    color: #fff;
+    text-shadow: 1px 2px 5px #000;
+    z-index: 3;
+    letter-spacing: 2px;
+  }
+  .sub_title,
+  .sub_title2,
+  .sub_title3 {
+    margin-top: 250px;
+    position: absolute;
+    font-size: 1.2rem;
+    font-family: "Share Tech Mono", monospace;
+    color: #fff;
+    text-shadow: 1px 2px 5px #000;
+    z-index: 3;
+    transition: 0.5s ease-in-out;
+    animation: 0.4s linear 0.3s running forwards responsivetranslateLien;
+  }
+  /*experimentale keyframe responsive*/
+  @keyframes responsivetranslate {
+    0% {
+      height: 18vh;
+      width: 13vw;
+      transform: translateY(0);
+    }
+    100% {
+      height: 40vh;
+      width: 100vw;
+      transform: scale(1.02);
+    }
+  }
+  /*experimentale keyframe*/
+  /*experimentale keyframe responsive*/
+  @keyframes responsivetranslateLien {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-50px);
+    }
+  }
+  /*experimentale keyframe*/
+}
