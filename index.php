@@ -85,7 +85,7 @@ include("includes/head.php");
                 </div>
             </section>
     </div>
-    <script src="../asset/glitcher.js"></script>
+    <script src="asset/glitcher.js"></script>
 </body>
 
 </html>

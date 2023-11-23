@@ -4,6 +4,7 @@
         <i class="fa-solid fa-chevron-down"></i>
     </div>
     <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="https://devdocs.io/cpp/" target="_blank"><i class="fa-solid fa-terminal">C++</i></a></div>
         <div class="swiper-slide"><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"><i class="fa-brands fa-html5">HTML5</i></a></div>
         <div class="swiper-slide"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i class="fa-brands fa-css3-alt">CSS3</i></a></div>
         <div class="swiper-slide"><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><i class="fa-brands fa-square-js">JAVASCRIPT</i></a></div>

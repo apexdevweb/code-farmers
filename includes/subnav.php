@@ -29,6 +29,19 @@
                         <li><a class="dropdown-item" target="_blank" href="https://fontawesome.com/">Fontawesome.com</a></li>
                     </ul>
                 </li>
+                <?php
+                if (isset($_SESSION['confirmkey'])) {
+                    if (isset($_SESSION['valideAuth'])) {
+                ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://discord.gg/NjcmEd7n/" role="button" aria-expanded="false"><i class="fa-brands fa-discord" style="color: #fff;"></i>
+                                #Officiale-Discord-Europe
+                            </a>
+                        </li>
+                <?php
+                    }
+                }
+                ?>
             </ul>
         </div>
     </div>
