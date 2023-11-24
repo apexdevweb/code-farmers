@@ -1,21 +1,21 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" style="color:#555;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color:#555;"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../home.php"><i class="fa-solid fa-house"></i> Home</a>
+                    <a class="nav-link active" aria-current="page" href="../home.php" style="color:#fff;"><i class="fa-solid fa-house" style="color:#E60000;"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../profileGlobale.php"><i class="fa-solid fa-users"></i> Membres</a>
+                    <a class="nav-link" href="../profileGlobale.php" style="color:#fff;"><i class="fa-solid fa-users" style="color:#E60000;"></i> Membres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../recherche.php"><i class="fa-solid fa-magnifying-glass"></i> Recherche</a>
+                    <a class="nav-link" href="../recherche.php" style="color:#fff;"><i class="fa-solid fa-magnifying-glass" style="color:#E60000;"></i> Recherche</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-laptop-code"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-laptop-code" style="color:#E60000;"></i>
                         Utilitaire-frontend
                     </a>
                     <ul class="dropdown-menu">
@@ -39,7 +39,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-server"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-server" style="color:#E60000;"></i>
                         Utilitaire-backend
                     </a>
                     <ul class="dropdown-menu">
@@ -56,7 +56,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-euro-sign"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-euro-sign" style="color:#E60000;"></i>
                         Système-paiement-online
                     </a>
                     <ul class="dropdown-menu">
@@ -70,7 +70,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-network-wired"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-network-wired" style="color:#E60000;"></i>
                         Team-network
                     </a>
                     <ul class="dropdown-menu">
@@ -85,7 +85,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php">Sortie <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                    <a class="nav-link" href="../index.php" style="color:#fff;">Sortie <i class="fa-solid fa-arrow-right-from-bracket" style="color:#E60000;"></i></a>
                 </li>
             </ul>
         </div>
@@ -93,15 +93,15 @@
         if (isset($_SESSION['confirmkey'])) {
             if (isset($_SESSION['valideAuth'])) {
         ?>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" style="color:#fff;">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="asset/image/<?= $_SESSION['id']; ?>" class="img-fluid" style="width: 50px; height: 50px; border-radius: 50px;"></a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen"></i>Publier</a></li>
-                        <li><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open"></i>Mes Publications</a></li>
-                        <li><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments"></i>message privé</a></li>
-                        <li><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['id'] ?>"><i class="fa-solid fa-gear"></i>Géré profil</a></li>
-                        <li><a class="dropdown-item" href="actionback/users/logout.php"><i class="fa-solid fa-power-off"></i>Déconnexion</a></li>
+                        <li style="color:#333;"><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen" style="color:#333;"></i>Publier</a></li>
+                        <li style="color:#333;"><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open" style="color:#333;"></i>Mes Publications</a></li>
+                        <li style="color:#333;"><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments" style="color:#333;"></i>message privé</a></li>
+                        <li style="color:#333;"><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['id'] ?>"><i class="fa-solid fa-gear" style="color:#333;"></i>Géré profil</a></li>
+                        <li style="color:#333;"><a class="dropdown-item" href="actionback/users/logout.php"><i class="fa-solid fa-power-off" style="color:#333;"></i>Déconnexion</a></li>
                     </ul>
                 </li>
         <?php
@@ -113,7 +113,9 @@
         <?php
         if (isset($_SESSION['confirmkey'])) {
             if (isset($_SESSION['valideAuth'])) {
-                echo "<h5>  Bienvenue " . $_SESSION['userName'] . "</h5>";
+        ?>
+                <h5 style="color:#fff;">Bienvenue <?= $_SESSION['userName'] ?></h5>
+        <?php
             }
         }
         ?>

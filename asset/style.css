@@ -13,10 +13,15 @@ body {
   font-size: 1.2rem;
   font-family: "Orbitron", sans-serif;
 }
-.container-fluid {
+.navbar {
   background: url("../asset/wallpapper/texture.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
+.navbar > a,
+i {
+  text-shadow: 1px 2px 3px #000;
+}
+
 /*********NAVBAR******FIN*****/
 /*********SUBNAV***********/
 #subnav {
