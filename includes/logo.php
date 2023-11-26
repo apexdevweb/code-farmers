@@ -1,6 +1,6 @@
 <div class="titre_contenu">
     <a href="home.php"><img src="../asset/wallpapper/fondX.png" class="img-fluid"></a>
     <div class="vid_contain">
-        <video src="../asset/wallpapper/introCFRred(2160p).mp4" autoplay loop muted class="vid"></video>
+        <video src="../asset/wallpapper/cfrbrand.mp4" autoplay loop muted class="vid"></video>
     </div>
 </div>

@@ -59,6 +59,7 @@ i {
   height: 10vh;
   width: 100%;
   overflow: hidden;
+  box-shadow: inset 0px 0px 45px #fff;
 }
 .vid_contain {
   height: auto;
@@ -75,6 +76,7 @@ i {
   z-index: -1;
   height: auto;
   width: 100%;
+  transform: translateY(-40vh);
 }
 
 .section_contain {
