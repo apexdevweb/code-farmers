@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
   .titre_contenu {
-    margin-top: 1vh;
+    margin: 0;
     height: 10vh;
     width: 100%;
     box-shadow: 1px 2px 10px #000;

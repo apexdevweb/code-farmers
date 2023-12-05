@@ -26,7 +26,6 @@ include('includes/head.php');
         h6 {
             font-size: 1.1rem;
         }
-
     }
 </style>
 
@@ -46,7 +45,7 @@ include('includes/head.php');
                 <div class="row">
                     <div class="col">
                         <div class="container-sm">
-                            <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 300px; height: 300px">
+                            <img src="asset/image/<?= $user_avatar_select; ?>" style="width: 300px; height: 300px; border-radius: 10px;">
                         </div>
                     </div>
                     <div class="col">

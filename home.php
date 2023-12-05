@@ -10,13 +10,51 @@ require('actionback/publications/afficheRecherche.php');
 <?php
 include("includes/head.php");
 ?>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        opacity: 0;
+        animation: AnimeBody 0.5s 0.3s linear forwards;
+    }
+
+    /*animation body->Home*/
+    @keyframes AnimeBody {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            transition: 0.1s ease-out;
+            opacity: 0.3;
+        }
+
+        50% {
+            transition: 0.1s ease-out;
+            opacity: 0.6;
+        }
+
+        75% {
+            opacity: 0.8;
+        }
+
+        100% {
+            transition: 0.1s ease-out;
+            opacity: 1;
+            transform: translateZ(0px);
+        }
+    }
+
+    /*animation logo principale fin*/
+</style>
 
 <body>
     <?php
-    include("includes/navbar.php");
     include("includes/logo.php");
+    include("includes/navbar.php");
     ?>
-    <hr>
+    <br>
     <?php
     include("includes/slider.php");
     ?>

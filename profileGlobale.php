@@ -12,10 +12,8 @@ include("includes/head.php");
 
 <body>
     <?php
-    include("includes/navbar.php");
-    ?>
-    <?php
     include("includes/logo.php");
+    include("includes/navbar.php");
     ?>
     <!-- on fait un foreach en php pour afficher tout les utilisateur enregistré dans la database -->
     <section class="contenu_secondaire">
