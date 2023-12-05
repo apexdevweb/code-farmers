@@ -69,7 +69,7 @@ if (isset($_POST['signup'])) {
               <body>
                  <div align="center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                  <h3>Code-farmers secure</h3>
-                 <a href="http://code-farmer82//actionback/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a>                    
+                 <a href="http://code-farmer83//actionback/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a>                    
                  </div>
               </body>
              </html>
