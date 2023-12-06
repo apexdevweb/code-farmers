@@ -8,20 +8,6 @@ include("includes/head.php");
         background-color: #000;
     }
 
-    #M1 {
-        animation: 3s linear 1s infinite running forwards introTitre;
-    }
-
-    @keyframes introTitre {
-        from {
-            transform: perspective(200px) translateZ(-1500px);
-        }
-
-        to {
-            transform: translateZ(0px);
-        }
-    }
-
     @media only screen and (max-width: 600px) {
         .premier_contenu {
             margin-top: 8vh;
@@ -44,7 +30,7 @@ include("includes/head.php");
             <!--SECTION DES CARTES -->
             <br>
             <br>
-            <h4>Social networks for programmers</h4>
+            <h4 class="firstTitre">Social networks for programmers</h4>
             <section class="premier_contenu">
                 <div class="gltch">
                     <h5 class="crdsTitre">Home</h5>
