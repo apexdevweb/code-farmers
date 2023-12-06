@@ -23,14 +23,13 @@ include("includes/head.php");
                 echo "<p>" . $successMsg . "</p>";
             }
             ?>
-
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Titre de la publication</label>
-                <input type="text" class="form-control" name="titlePubli">
+                <input type="text" class="form-control" name="titlePubli" maxlength="25" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Contenu de la publication</label>
-                <textarea class="form-control" name="containPubli"></textarea>
+                <textarea class="form-control" name="containPubli" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" name="publish">Publier</button>
         </form>

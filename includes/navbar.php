@@ -85,7 +85,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php" style="color:#fff;">Sortie <i class="fa-solid fa-arrow-right-from-bracket" style="color:#E60000;"></i></a>
+                    <a class="nav-link" href="actionback/users/logout.php" style="color:#fff;">Sortie <i class="fa-solid fa-arrow-right-from-bracket" style="color:#E60000;"></i></a>
                 </li>
             </ul>
         </div>

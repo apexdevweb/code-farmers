@@ -15,10 +15,12 @@ include "includes/head.php";
     ?>
     <br>
     <br>
-    <?php
-    while ($publication = $publi_rescu->fetch()) {
-    ?>
-        <div class="myPubli_contain">
+    <div class="myPubli_contain">
+        <?php
+        while ($publication = $publi_rescu->fetch()) {
+        ?>
+            <br>
+
             <div class="card" style="width: 17rem; height: 20rem;">
                 <div class="card-body">
                     <h5 class="card-title"><?= $publication['titre'] ?></h5>
@@ -32,10 +34,11 @@ include "includes/head.php";
                     <a href="actionback/publications/supprimPubliScript.php?id=<?= $publication['id'] ?>" class="card-link">Supprimer</a>
                 </div>
             </div>
-        </div>
-    <?php
-    }
-    ?>
+
+        <?php
+        }
+        ?>
+    </div>
 </body>
 
 </html>
