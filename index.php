@@ -8,6 +8,11 @@ include("includes/head.php");
         background-color: #000;
     }
 
+    .ml2 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+
     @media only screen and (max-width: 600px) {
         .premier_contenu {
             margin-top: 8vh;
@@ -30,7 +35,7 @@ include("includes/head.php");
             <!--SECTION DES CARTES -->
             <br>
             <br>
-            <h4 class="firstTitre">Social networks for programmers</h4>
+            <h4 class="firstTitre ml2">Social networks for programmers</h4>
             <section class="premier_contenu">
                 <div class="gltch">
                     <h5 class="crdsTitre">Home</h5>
@@ -87,6 +92,7 @@ include("includes/head.php");
             </section>
     </div>
     <script src="asset/glitcher.js"></script>
+    <script src="asset/movletter.js"></script>
 </body>
 
 </html>

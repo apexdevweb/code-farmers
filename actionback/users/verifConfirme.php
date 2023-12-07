@@ -5,7 +5,7 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
     $get_id = $_GET['id'];
     $get_cle = $_GET['confirmkey'];
     $verif_user = $bdd->prepare("SELECT * FROM users WHERE `id` = ? AND confirmkey = ?");
-    $verif_user->execute(array($get_id,  $get_cle));
+    $verif_user->execute(array($get_id, $get_cle));
     if ($verif_user->rowCount() > 0) {
         $verif_user_info = $verif_user->fetch();
         if ($verif_user_info['confirm'] != 1) {

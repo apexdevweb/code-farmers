@@ -1,7 +1,6 @@
 <?php
 require('actionback/users/securityScript.php');
 require('actionback/users/profilScript.php');
-require('actionback/users/calculeDateNaissance.php');
 ?>
 
 <!DOCTYPE html>

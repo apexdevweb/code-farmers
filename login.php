@@ -51,7 +51,7 @@ include "includes/head.php";
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" name="userPassword">
+                <input type="password" class="form-control" name="UPassword">
             </div>
             <button type="submit" class="btn btn-primary" name="connexion">Connection</button>
         </form>
