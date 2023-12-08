@@ -9,21 +9,28 @@
     <title>test entry</title>
 </head>
 
+
 <body>
     <section>
+        <h2>Anime back-ground</h2>
         <div class="banner">
-            <div class="block"></div>
+            <div class="blocks"></div>
         </div>
     </section>
-    <br>
-    <button onclick="myAnime()">Animation</button>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script type="text/javascript">
-        const banner = document.getElementsByClassName('banner');
-        const block = document.getElementsByClassName('banner');
-
-
+    <hr>
+    <section>
+        <canvas id="canvas1"></canvas>
+        <img src="../asset/wallpapper/bgerrer2.jpg" id="projectImage">
+    </section>
+    <script>
+        const banner = document.getElementsByClassName('banner')[0];
+        const blocks = document.getElementsByClassName('blocks');
+        for (let i = 1; i < 400; i++) {
+            banner.innerHTML += "<div class='blocks'></div>";
+            blocks[i].style.animationDelay = `${i * 0.05}s`;
+        }
     </script>
+    <script src="app.js"></script>
 </body>
 
 </html>

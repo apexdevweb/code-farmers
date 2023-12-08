@@ -1,17 +1,23 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-body {
-  background-color: brown;
+
+h2 {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  font-size: 5.5rem;
 }
 section {
   position: relative;
-  height: 50vh;
   width: 100%;
-  transform-style: preserve-3d;
-  perspective: 500px;
+  height: 100vh;
+  background-color: #333;
 }
 .banner {
   position: absolute;
@@ -23,19 +29,53 @@ section {
   display: flex;
   flex-wrap: wrap;
 }
-.banner .block {
+.banner .blocks {
   position: relative;
   display: block;
-  height: 5vh;
   width: 5vw;
-  background-color: #fff;
-  animation: animate 2s ease-in-out forwards;
+  height: 5vw;
+  animation: myAnime 0.75s ease-in-out forwards;
 }
-@keyframes animate {
+.banner .blocks:nth-child(even) {
+  animation: myAnime 1s ease-in-out forwards;
+}
+.banner .blocks:nth-child(7n + 3) {
+  animation: myAnime 2.5s ease-in-out forwards;
+}
+.banner .blocks:nth-child(7n + 7) {
+  animation: myAnime 1.5s ease-in-out forwards;
+}
+@keyframes myAnime {
   0% {
-    transform: translateZ(2000px);
+    opacity: 0;
+    transform: scale(0) translateY(1000px);
+  }
+  50% {
+    opacity: 1;
+    background: url("../asset/wallpapper/bgerrer2.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   100% {
-    transform: translateZ(0px);
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    background: url("../asset/wallpapper/bgerrer2.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+}
+/*****************************************PIXELISATION********************************/
+#canvas1 {
+  border: 3px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+#projectImage {
+  display: none;
 }

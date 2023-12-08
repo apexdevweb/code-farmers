@@ -35,6 +35,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" target="_blank" href="https://app.rask.ai/auth">Rask</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://creator.nightcafe.studio/">Nightcafe</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://openai.com/gpt-4">GPT-4</a></li>
                     </ul>
                 </li>
                 <?php
