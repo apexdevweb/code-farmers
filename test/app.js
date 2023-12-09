@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
-canvas.width = 1500;
-canvas.height = 700;
+canvas.width = 1200;
+canvas.height = 900;
 
 class Cell {
   constructor(effect, x, y, index) {
@@ -10,8 +10,8 @@ class Cell {
     this.y = y;
     this.index = index;
     //change la position de départ de l'animation
-    this.positionX = this.effect.width;
-    this.positionY = this.effect.height;
+    this.positionX = this.effect.width * 0.5;
+    this.positionY = 0;
     this.speedX;
     this.speedY;
     this.width = this.effect.width;
@@ -22,9 +22,9 @@ class Cell {
     this.vx = 0;
     this.vy = 0;
     //change les effet de profondeur
-    this.ease = 0.01;
-    this.friction = 0.8;
-    this.randomize = Math.random() * 50 + 2;
+    this.ease = 0.1;
+    this.friction = 0.9;
+    this.randomize = Math.random() * 50 + 1;
     setTimeout(() => {
       this.start();
     }, this.index * 5);
@@ -41,7 +41,7 @@ class Cell {
       this.width,
       this.height
     );
-    context.strokeRect(this.positionX, this.positionY, this.width, this.height);
+    //context.strokeRect(this.positionX, this.positionY, this.width, this.height);
   }
 
   start() {
@@ -51,12 +51,12 @@ class Cell {
 
   update() {
     //cell position
-    if (Math.abs(this.speedX) > 0.01 || Math.abs(this.speedY > 0.1)) {
-      this.speedX = (this.x - this.positionX) / this.randomize;
-      this.speedY = (this.y - this.positionY) / this.randomize;
-      this.positionX += this.speedX;
-      this.positionY += this.speedY;
-    }
+    //if (Math.abs(this.speedX) > 0.01 || Math.abs(this.speedY > 0.1)) {
+    this.speedX = (this.x - this.positionX) / this.randomize;
+    this.speedY = (this.y - this.positionY) / this.randomize;
+    this.positionX += this.speedX;
+    this.positionY += this.speedY;
+    //}
 
     //crop
     const dx = this.effect.mouse.x - this.x;
@@ -69,8 +69,8 @@ class Cell {
       this.vy = force * Math.sin(angle);
     }
     //si on change les opérateur Mathématique cela change les effet de disloquance
-    this.slideX -= (this.vx *= this.friction) + this.slideX * this.ease;
-    this.slideY -= (this.vy *= this.friction) + this.slideY * this.ease;
+    this.slideX += (this.vx *= this.friction) - this.slideX * this.ease;
+    this.slideY += (this.vy *= this.friction) - this.slideY * this.ease;
   }
 }
 
