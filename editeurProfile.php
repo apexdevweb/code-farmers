@@ -40,7 +40,6 @@ include "includes/head.php";
                         <h6>Youtube: <?= $user_tube_select; ?></h6>
                         <h6>Site web: <?= $user_lien_select; ?></h6>
                         <hr>
-                        <button type="button" class="btn btn-danger"><a href="actionback/users/deleteCompteScript.php?id=<?= $_SESSION['id'] ?>" style="color: #fff;">Supprimer votre compte</a></button>
                     <?php
                     }
                     ?>
@@ -152,7 +151,12 @@ include "includes/head.php";
                                 </div>
                             </div>
                             <hr>
-                            <button type="submit" class="btn btn-primary" name="modifProfil">Enregistré les modifications</button>
+                            <div class="btnContainer">
+                                <button type="submit" class="btn btn-primary" name="modifProfil">Enregistré les modifications</button>
+                                <br>
+                                <br>
+                                <button type="button" class="btn btn-danger"><a href="actionback/users/deleteCompteScript.php?id=<?= $_SESSION['id'] ?>" style="color: #fff;">Supprimer votre compte</a></button>
+                            </div>
                         </form>
                     <?php
                     }

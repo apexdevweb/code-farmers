@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-        <button class="navbar-toggler" style="color:#555;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" style="color:#555;"></span>
+        <button class="navbar-toggler" style="color:#fff;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color:#fff;"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
@@ -83,41 +83,47 @@
                         <li><a class="dropdown-item" target="_blank" href="https://www.perforce.com/products/helix-core">Helix Core</a></li>
                     </ul>
                 </li>
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-images" style="color:#E60000;"></i>
+                        Image rework
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="https://photomosh.com/">Photomosh.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.text-image.com/convert/">Text-Image.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.remove.bg/fr">RemoveBG.fr</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://imageslidermaker.com/v2">SliderMaker.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.unscreen.com/upload">Unscreen.com</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-regular fa-image" style="color:#E60000;"></i>
+                        Wallpapper & icon
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="https://www.peakpx.com/">Peakpx.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://unsplash.com/fr">Unsplash.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.pngwing.com/">Pngwing.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://pixabay.com/fr/">Pixabay.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://fr.freepik.com/">Freepik.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.pexels.com/">Pexels.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://iconmonstr.com/">Iconmonstr.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://fontawesome.com/">Fontawesome.com</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-microchip" style="color:#E60000;"></i>
+                        A.i
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="https://app.rask.ai/auth">Rask</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://creator.nightcafe.studio/">Nightcafe</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://openai.com/gpt-4">GPT-4</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="actionback/users/logout.php" style="color:#fff;">Sortie <i class="fa-solid fa-arrow-right-from-bracket" style="color:#E60000;"></i></a>
                 </li>
             </ul>
         </div>
-        <?php
-        if (isset($_SESSION['confirmkey'])) {
-            if (isset($_SESSION['valideAuth'])) {
-        ?>
-                <li class="nav-item dropdown" style="color:#fff;">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="asset/image/<?= $_SESSION['id']; ?>" class="img-fluid" style="width: 50px; height: 50px; border-radius: 50px;"></a>
-                    <ul class="dropdown-menu">
-                        <li style="color:#333;"><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen" style="color:#333;"></i>Publier</a></li>
-                        <li style="color:#333;"><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open" style="color:#333;"></i>Mes Publications</a></li>
-                        <li style="color:#333;"><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments" style="color:#333;"></i>message privé</a></li>
-                        <li style="color:#333;"><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['id'] ?>"><i class="fa-solid fa-gear" style="color:#333;"></i>Géré profil</a></li>
-                        <li style="color:#333;"><a class="dropdown-item" href="actionback/users/logout.php"><i class="fa-solid fa-power-off" style="color:#333;"></i>Déconnexion</a></li>
-                    </ul>
-                </li>
-        <?php
-            }
-        }
-        ?>
-        <br>
-        <br>
-        <?php
-        if (isset($_SESSION['confirmkey'])) {
-            if (isset($_SESSION['valideAuth'])) {
-        ?>
-                <h5 style="color:#fff;">Bienvenue <?= $_SESSION['userName'] ?></h5>
-        <?php
-            }
-        }
-        ?>
     </div>
 </nav>

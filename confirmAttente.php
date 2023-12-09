@@ -7,6 +7,11 @@ include "includes/head.php";
     body {
         background-color: #000;
     }
+
+    h2,
+    h4 {
+        color: #fff;
+    }
 </style>
 
 <body>

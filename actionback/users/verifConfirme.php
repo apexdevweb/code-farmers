@@ -48,6 +48,12 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
                     width: 90%;
                 }
 
+                h4>a {
+                    text-decoration: underline;
+                    color: #fff;
+                    font-size: 1.2rem;
+                }
+
                 @media only screen and (max-width: 600px) {
 
                     .logoContent {
@@ -73,7 +79,10 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
                     <br>
                     <h2>Votre inscription est validé</h2>
                     <br>
-                    <h4>Bienvenue <?= $verif_user_info['userName']; ?> <i class="fa-solid fa-arrow-right"></i><a href="../../login.php"> Connexion</a></h4>
+                    <h4>Bienvenue
+                        <?= $verif_user_info['userName']; ?> <i class="fa-solid fa-arrow-right"></i><a href="../../login.php">
+                            Connexion</a>
+                    </h4>
                 </section>
             </body>
 

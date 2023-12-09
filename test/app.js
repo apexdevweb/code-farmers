@@ -24,7 +24,7 @@ class Cell {
     //change les effet de profondeur
     this.ease = 0.1;
     this.friction = 0.9;
-    this.randomize = Math.random() * 50 + 1;
+    this.randomize = Math.random() * 40 + 2;
     setTimeout(() => {
       this.start();
     }, this.index * 5);

@@ -15,6 +15,10 @@ include("includes/head.php");
     include("includes/logo.php");
     include("includes/navbar.php");
     ?>
+    <br>
+    <?php
+    include("includes/userpanel.php");
+    ?>
     <!-- on fait un foreach en php pour afficher tout les utilisateur enregistré dans la database -->
     <section class="contenu_secondaire">
         <?php
