@@ -49,8 +49,9 @@ body {
 }
 .userPanel_container > h5 {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: 0.5s;
+  backdrop-filter: blur(3px);
 }
 .sidepanel .closebtn {
   position: absolute;
@@ -60,12 +61,19 @@ body {
   transition: 0.5s;
 }
 .openbtn {
-  right: 0;
+  height: auto;
+  width: 5vw;
+  margin-left: 90%;
   cursor: pointer;
   background-color: #000;
   color: white;
   padding: 10px 15px;
   border: none;
+  border-radius: 5px;
+}
+.openbtn:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.05);
 }
 .openbtn > i {
   color: white;

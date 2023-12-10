@@ -16,7 +16,11 @@ include("includes/head.php");
     <?php
     include("includes/navbar.php");
     ?>
-
+    <br>
+    <?php
+    include("includes/userpanel.php");
+    ?>
+    <br>
     <?php
     while ($message_users = $req_users->fetch()) {
     ?>

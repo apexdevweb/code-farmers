@@ -1,4 +1,68 @@
 @media only screen and (max-width: 600px) {
+  /*********NAVBAR***********/
+  .navbar {
+    margin-top: -1.2vh;
+    height: auto;
+    width: 100%;
+    background-color: #000;
+    box-shadow: 1px 2px 10px #000;
+  }
+  /*********NAVBAR******FIN*****/
+  /********************USERPANEL********************************/
+  .userPanel_container {
+    padding: 5px;
+    height: auto;
+    width: 0px;
+    position: fixed;
+    display: block;
+    background-color: #000;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background: url("../asset/wallpapper/bg404.jpg") no-repeat;
+    background-size: cover;
+    right: 0;
+    z-index: 99;
+    box-shadow: 1px 2px 10px #000;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .userPanel_container a > i {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: 0.5s;
+  }
+  .userPanel_container > h5 {
+    color: #fff;
+    font-size: 1.3rem;
+    transition: 0.5s;
+    backdrop-filter: blur(3px);
+  }
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    transition: 0.5s;
+  }
+  .openbtn {
+    height: auto;
+    width: 20vw;
+    margin-left: 75%;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  .openbtn:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+  }
+  .openbtn > i {
+    color: white;
+  }
+
+  /********************USERPANEL FIN********************************/
   .titre_contenu {
     margin: 0;
     height: 10vh;
@@ -8,8 +72,8 @@
     z-index: 5;
   }
   .titre_contenu a > img {
-    margin-top: -5vh;
-    height: 20vh;
+    margin-top: -1vh;
+    height: 10vh;
     width: 100%;
   }
   .titre_contenu a {
@@ -31,21 +95,11 @@
   }
   .vid {
     position: relative;
-    height: auto;
     z-index: -1;
     height: auto;
     width: 100%;
-    transform: translateY(-9vh);
+    transform: translateY(-10vh);
   }
-  /*********SUBNAV***********/
-  #subnav {
-    height: 20vh;
-    width: 100%;
-  }
-  #subnav .nav-item > a {
-    color: #fff;
-  }
-  /*********SUB NAV******FIN*****/
   .section_contain {
     height: 100%;
     width: 100%;
@@ -98,32 +152,6 @@
     justify-content: space-evenly;
     border: 1px solid #444;
   }
-  .warnning {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: auto;
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Manrope", sans-serif;
-    border: 2px solid white;
-    background-color: red;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px #000;
-    color: #fff;
-    transform: translateY(50%);
-    text-shadow: 1px 2px 3px #000;
-  }
-  .warnning > h1 {
-    font-size: 1.6rem;
-  }
-  .warnning > h3 {
-    text-align: center;
-  }
-
   /*******swiperJS******/
   .swiper {
     height: auto;

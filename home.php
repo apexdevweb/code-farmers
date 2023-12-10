@@ -18,6 +18,7 @@ include("includes/head.php");
     ?>
     <br>
     <?php
+    var_dump($_SESSION);
     include("includes/userpanel.php");
     ?>
     <?php

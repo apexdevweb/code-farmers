@@ -17,7 +17,7 @@ if (isset($_POST['connexion'])) {
         $data_verif = $bdd->prepare("SELECT * FROM users WHERE mail = ?");
         $data_verif->execute(array($Umail));
 
-        if ($data_verif->rowcount() > 0) {
+        if ($data_verif->rowCount() > 0) {
 
             // on vérifie si les mot de passe rentrer par l'utilisateur correspond avec ceux de la database
             $Uinfos = $data_verif->fetch();
@@ -28,10 +28,10 @@ if (isset($_POST['connexion'])) {
                 $_SESSION['valideAuth'] = true;
                 $_SESSION['id'] = $Uinfos['id'];
                 $_SESSION['userName'] = $Uinfos['userName'];
+                $_SESSION['confirmkey'] = $Uinfos['confirmkey'];
 
                 header("Location: home.php");
                 //on redirige l'utilisateur vers la page d'acceuil
-
             } else {
                 $errorMsg = "Mot de passe incorrect!";
             }
