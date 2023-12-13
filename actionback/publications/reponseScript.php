@@ -8,5 +8,5 @@ if (isset($_POST['valideRepons']) && !empty($_POST['reponse'])) {
     $insertReponse = $bdd->prepare("INSERT INTO comentaire(id_auteur, name_auteur, id_coment, contenu) VALUES (?,?,?,?)");
     $insertReponse->execute(array($_SESSION['id'], $_SESSION['userName'],  $_GET['id'], $user_reponse));
 } else {
-    echo "Veuillez remplir tous les champs!";
+    $errormsg = "Veuillez remplir tous les champs!";
 }

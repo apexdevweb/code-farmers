@@ -17,6 +17,7 @@ include('includes/head.php');
     ?>
     <br>
     <div class="container">
+
         <?php
         if (isset($errorMsg)) {
             echo $errorMsg;
@@ -26,7 +27,23 @@ include('includes/head.php');
         ?>
             <h3><?= $publi_titre_select; ?></h3>
             <hr>
-            <img src="asset/publimage/<?= $publi_img_select; ?>" style="width: 250px; height: 250px">
+            <div class="sub_containerARTCL">
+                <div class="codeContainer">
+                    <img src="asset/publimage/<?= $publi_img_select; ?>" style="width: 330px; height: 285px">
+                </div>
+                <div class="codeContainer">
+                    <h4><span>H</span>TML</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas vero impedit, architecto accusamus officiis tenetur!</p>
+                </div>
+                <div class="codeContainer">
+                    <h4><span>C</span>SS</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas vero impedit, architecto accusamus officiis tenetur!</p>
+                </div>
+                <div class="codeContainer">
+                    <h4><span>J</span>AVASRCIPT</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas vero impedit, architecto accusamus officiis tenetur!</p>
+                </div>
+            </div>
             <hr>
             <p><?= $publi_contenu_select; ?></p>
             <hr>
@@ -34,6 +51,7 @@ include('includes/head.php');
             <br>
             <hr>
             <br>
+
             <!-- affichage des réponses-->
             <?php
             while ($reponses = $verifReponsExist->fetch()) {

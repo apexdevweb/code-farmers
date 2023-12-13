@@ -36,6 +36,7 @@
                         <li><a class="dropdown-item" target="_blank" href="https://d3-graph-gallery.com/">D3.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://dixonandmoe.com/rellax/">RellaxJs.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://michalsnik.github.io/aos/">AOSjs.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://jaetheme.com/balises-html5/#code">Balise-HTML-complete-liste</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

@@ -5,8 +5,10 @@ if (isset($_SESSION['confirmkey'])) {
         <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-chevron-left" style="color:#E60000;"></i><i class="fa-solid fa-chevron-left" style="color:#E60000;"></i> <i class="fa-regular fa-user"></i></button>
         <br>
         <br>
-        <div class="userPanel_container" id="mySidepanel">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+        <div class="Panel_container" id="mySidepanel">
+            <div class="Panel_containerSecond">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+            </div>
             <h5 style="text-shadow: 1px 2px 3px #000; text-align: center;">Bienvenue <?= $_SESSION['userName'] ?></h5>
             <li class="nav-item dropdown" style="color:#fff;">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 3.5rem; color:#E60000;">
@@ -21,6 +23,7 @@ if (isset($_SESSION['confirmkey'])) {
                 </ul>
             </li>
         </div>
+
 <?php
     }
 }

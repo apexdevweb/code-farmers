@@ -25,13 +25,18 @@ body {
 }
 /*********NAVBAR******FIN*****/
 /********************USERPANEL********************************/
-.userPanel_container {
+
+.Panel_container {
   padding: 5px;
   height: auto;
   width: 0px;
   position: fixed;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: #000;
+  border: 1px solid #fff;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   background: url("../asset/wallpapper/bg404.jpg") no-repeat;
@@ -42,12 +47,18 @@ body {
   transition: 0.5s;
   opacity: 0;
 }
-.userPanel_container a > i {
+.Panel_containerSecond {
+  padding-left: 3px;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+.Panel_container a > i {
   color: #fff;
   font-size: 1.2rem;
   transition: 0.5s;
 }
-.userPanel_container > h5 {
+.Panel_container > h5 {
   color: #fff;
   font-size: 1.3rem;
   transition: 0.5s;
@@ -57,7 +68,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 36px;
+  font-size: 40px;
   transition: 0.5s;
 }
 .openbtn {
@@ -80,6 +91,37 @@ body {
 }
 
 /********************USERPANEL FIN********************************/
+/********************PAGE ARTICLE PHP********************************/
+.sub_containerARTCL {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.codeContainer {
+  margin: 2px;
+  padding: 2px;
+  height: 30vh;
+  width: 100%;
+  display: block;
+  border: 1px solid #000;
+}
+.codeContainer > h4 {
+  text-align: center;
+  height: auto;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.codeContainer > h4 > span {
+  color: #e60000;
+}
+/********************PAGE ARTICLE PHP FIN********************************/
+
 /*********CARTES INDEX***********/
 .card-title {
   font-family: "Orbitron", sans-serif;
