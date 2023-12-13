@@ -16,3 +16,8 @@ try {
 </div>
 /////////////////////GLITCH 2///////////////////////////////////////////////////////////
 <div id="containerGlitch"></div>
+
+
+pour voir les erreur
+var_dump($_POST);
+print_r($_FILES);

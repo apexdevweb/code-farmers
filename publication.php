@@ -1,9 +1,6 @@
 <?php
 require('actionback/users/securityScript.php');
 require("actionback/publications/publicationScript.php");
-var_dump($_POST);
-var_dump($_FILES);
-print_r($_FILES);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
