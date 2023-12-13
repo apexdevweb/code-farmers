@@ -1,6 +1,7 @@
 <?php
 require('actionback/users/securityScript.php');
 require("actionback/publications/publicationScript.php");
+require("actionback/publications/imagePubliscript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -33,6 +34,12 @@ include("includes/head.php");
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Contenu de la publication</label>
                 <textarea class="form-control" name="containPubli" required></textarea>
+            </div>
+            <div class="mb-3">
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupFile01">Publier un fichier</label>
+                    <input type="file" class="form-control" name="publiImg">
+                </div>
             </div>
             <button type="submit" class="btn btn-primary" name="publish">Publier</button>
         </form>

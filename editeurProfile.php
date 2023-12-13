@@ -143,7 +143,6 @@ include "includes/head.php";
                             </div>
                             <br>
                             <br>
-
                             <div class="mb-3">
                                 <div class="input-group mb-3">
                                     <label class="input-group-text" for="inputGroupFile01">Modifier votre avatar</label>
