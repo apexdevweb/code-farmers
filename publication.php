@@ -2,6 +2,7 @@
 require('actionback/users/securityScript.php');
 require("actionback/publications/publicationScript.php");
 require("actionback/publications/imagePubliscript.php");
+var_dump($_POST);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,7 +20,7 @@ include("includes/head.php");
     include("includes/userpanel.php");
     ?>
     <div class="container">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <?php
             if (isset($errorMsg,)) {
                 echo "<p>" . $errorMsg . "</p>";
