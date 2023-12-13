@@ -35,6 +35,18 @@ include("includes/head.php");
                 <textarea class="form-control" name="containPubli" required></textarea>
             </div>
             <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Code-HTML</label>
+                <input type="text" class="form-control" name="cdhtml"></input>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Code-CSS</label>
+                <input type="text" class="form-control" name="cdcss"></input>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Code-JAVASCRIPT</label>
+                <input type="text" class="form-control" name="cdjavascript"></input>
+            </div>
+            <div class="mb-3">
                 <div class="input-group mb-3">
                     <label class="input-group-text">Publier un fichier</label>
                     <input type="file" class="form-control" name="publiImg">

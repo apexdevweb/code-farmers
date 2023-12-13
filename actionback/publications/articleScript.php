@@ -14,6 +14,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         //ON PLACE LA DATA RECUPERE DANS DES VARIABLES
         $publi_titre_select =  $publiSelectInfo['titre'];
         $publi_contenu_select =  $publiSelectInfo['contenu'];
+        $publi_html_select =  $publiSelectInfo['cd_html'];
+        $publi_css_select =  $publiSelectInfo['cd_css'];
+        $publi_js_select =  $publiSelectInfo['cd_js'];
         $publi_id_select = $publiSelectInfo['id_auteur'];
         $publi_auteur_select = $publiSelectInfo['nom_auteur'];
         $publi_date_select = $publiSelectInfo['date_publication'];

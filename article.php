@@ -31,17 +31,17 @@ include('includes/head.php');
                 <div class="codeContainer">
                     <img src="asset/publimage/<?= $publi_img_select; ?>" style="width: 330px; height: 285px">
                 </div>
-                <div class="codeContainer">
-                    <h4><span>H</span>TML</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas vero impedit, architecto accusamus officiis tenetur!</p>
+                <div class="codeContainer_code">
+                    <h4><span>H</span>tml</h4>
+                    <code class="language-html"><?= $publi_html_select ?></code>
                 </div>
-                <div class="codeContainer">
-                    <h4><span>C</span>SS</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas vero impedit, architecto accusamus officiis tenetur!</p>
+                <div class="codeContainer_code">
+                    <h4><span>C</span>ss</h4>
+                    <code class="language-css"><?= $publi_css_select ?></code>
                 </div>
-                <div class="codeContainer">
-                    <h4><span>J</span>AVASRCIPT</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas vero impedit, architecto accusamus officiis tenetur!</p>
+                <div class="codeContainer_code">
+                    <h4><span>J</span>avascript</h4>
+                    <code class="language-javascript"><?= $publi_js_select ?></code>
                 </div>
             </div>
             <hr>

@@ -3,11 +3,18 @@ require('actionback/database.php');
 
 if (isset($_POST['publish']) && isset($_FILES['publiImg'])) {
 
-    if (!empty($_POST['titlePubli']) && !empty($_POST['containPubli']) && !empty($_FILES['publiImg']['name'])) {
+    if (
+        !empty($_POST['titlePubli']) && !empty($_POST['containPubli']) && !empty($_POST['cdhtml'])
+        && !empty($_POST['cdcss']) && !empty($_POST['cdjavascript']) && !empty($_FILES['publiImg']['name'])
+    ) {
 
         $publiTitle = strip_tags($_POST['titlePubli']);
         //on rajoute nl2br() pour aller a la ligne par rapport au texte de la publication
         $publiContain = nl2br(strip_tags($_POST['containPubli']));
+        //on rajoute les 3 input de code dans la DB si besoin
+        $publiHtml = htmlspecialchars($_POST['cdhtml']);
+        $publiCss = htmlspecialchars($_POST['cdss']);
+        $publiJs = htmlspecialchars($_POST['cdjavascript']);
         //on rajoute date('jour/mois/année') pour définir la date de la publication
         $publidate = date('d/m/Y');
         $publiAuthorId = $_SESSION['id'];
@@ -19,8 +26,8 @@ if (isset($_POST['publish']) && isset($_FILES['publiImg'])) {
         $transitImgPubli = move_uploaded_file($dosTempo, $uploadPubliImg);
         //on prepare et execute la requête!
 
-        $insertionPubli = $bdd->prepare("INSERT INTO publications (titre , contenu, id_auteur, nom_auteur, date_publication, img_publication) VALUES (?,?,?,?,?,?)");
-        $insertionPubli->execute(array($publiTitle, $publiContain, $publiAuthorId, $publiAuthorName, $publidate, $imgName));
+        $insertionPubli = $bdd->prepare("INSERT INTO publications (titre , contenu, cd_html, cd_css, cd_js, id_auteur, nom_auteur, date_publication, img_publication) VALUES (?,?,?,?,?,?,?,?,?)");
+        $insertionPubli->execute(array($publiTitle, $publiContain, $publiHtml, $publiCss, $publiJs, $publiAuthorId, $publiAuthorName, $publidate, $imgName));
 
         $successMsg = "Publier avec succès";
     } else {

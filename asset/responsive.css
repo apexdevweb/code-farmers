@@ -72,6 +72,10 @@
     align-items: center;
     justify-content: space-evenly;
   }
+  .codeContainer > img {
+    height: 30vh;
+    width: 100%;
+  }
   /********************PAGE ARTICLE PHP FIN********************************/
   .titre_contenu {
     margin: 0;
