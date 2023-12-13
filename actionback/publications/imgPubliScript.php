@@ -16,6 +16,7 @@ if (isset($_POST['publish']) && isset($_FILES['publiImg']) && !empty($_FILES['pu
             //on définie le chemin pour que l'image soit placé dans un dossier avec un id via la database
             $cheminUpload = "asset/publimage/" . $_SESSION['id'] . "." . $extensionUpload;
             $transferImg = move_uploaded_file($_FILES['publiImg']['tmp_name'], $cheminUpload);
+
             if ($transferImg) {
                 $updateImg = $bdd->prepare("UPDATE publications SET img_publication = :img_publication WHERE `id_auteur` = :id_auteur");
                 $updateImg->execute(array(

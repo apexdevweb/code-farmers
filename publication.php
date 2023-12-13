@@ -1,8 +1,9 @@
 <?php
 require('actionback/users/securityScript.php');
 require("actionback/publications/publicationScript.php");
-require("actionback/publications/imagePubliscript.php");
 var_dump($_POST);
+var_dump($_FILES);
+print_r($_FILES);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -38,7 +39,7 @@ include("includes/head.php");
             </div>
             <div class="mb-3">
                 <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupFile01">Publier un fichier</label>
+                    <label class="input-group-text">Publier un fichier</label>
                     <input type="file" class="form-control" name="publiImg">
                 </div>
             </div>

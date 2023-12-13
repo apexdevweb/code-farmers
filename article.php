@@ -26,7 +26,7 @@ include('includes/head.php');
         ?>
             <h3><?= $publi_titre_select; ?></h3>
             <hr>
-            <img src="asset/publimage/<?= $publi_img_select; ?>" style="width: 150px; height: 150px">
+            <img src="asset/publimage/<?= $publi_img_select; ?>" style="width: 250px; height: 250px">
             <hr>
             <p><?= $publi_contenu_select; ?></p>
             <hr>
