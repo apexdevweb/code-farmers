@@ -29,19 +29,25 @@ include('includes/head.php');
             <hr>
             <div class="sub_containerARTCL">
                 <div class="codeContainer">
-                    <img src="asset/publimage/<?= $publi_img_select; ?>" style="width: 330px; height: 285px">
+                    <img src="asset/publimage/<?= $publi_img_select; ?>">
                 </div>
-                <div class="codeContainer_code">
+                <div class="mastercode_container">
                     <h4><span>H</span>tml</h4>
-                    <code class="language-html"><?= $publi_html_select ?></code>
+                    <div class="codeContainer_code">
+                        <code class="language-html"><?= $publi_html_select ?></code>
+                    </div>
                 </div>
-                <div class="codeContainer_code">
+                <div class="mastercode_container">
                     <h4><span>C</span>ss</h4>
-                    <code class="language-css"><?= $publi_css_select ?></code>
+                    <div class="codeContainer_code">
+                        <code class="language-css"><?= $publi_css_select ?></code>
+                    </div>
                 </div>
-                <div class="codeContainer_code">
+                <div class="mastercode_container">
                     <h4><span>J</span>avascript</h4>
-                    <code class="language-javascript"><?= $publi_js_select ?></code>
+                    <div class="codeContainer_code">
+                        <code class="language-javascript"><?= $publi_js_select ?></code>
+                    </div>
                 </div>
             </div>
             <hr>

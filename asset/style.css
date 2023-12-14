@@ -99,6 +99,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .codeContainer {
@@ -107,14 +108,23 @@ body {
   width: 100%;
   display: block;
   border: 1px solid #000;
+}
+.mastercode_container {
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  width: 100%;
+  overflow: hidden;
   background-color: #333;
+  border: 1px solid #000;
 }
 .codeContainer_code {
-  margin: 2px;
   height: 30vh;
   width: 100%;
   display: block;
-  border: 1px solid #000;
   background-color: #333;
   overflow: scroll;
 }
@@ -122,7 +132,7 @@ body {
   height: 30vh;
   width: 100%;
 }
-.codeContainer_code > h4 {
+.mastercode_container > h4 {
   text-align: center;
   height: auto;
   width: 100%;
@@ -132,11 +142,10 @@ body {
   font-family: "Orbitron", sans-serif;
 }
 .codeContainer_code > code {
-  text-align: inherit;
+  text-align: center;
   padding: 5px;
-  color: #fff;
 }
-.codeContainer_code > h4 > span {
+.mastercode_container > h4 > span {
   color: #e60000;
   font-family: "Orbitron", sans-serif;
 }

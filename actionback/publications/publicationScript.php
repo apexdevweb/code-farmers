@@ -13,7 +13,7 @@ if (isset($_POST['publish']) && isset($_FILES['publiImg'])) {
         $publiContain = nl2br(strip_tags($_POST['containPubli']));
         //on rajoute les 3 input de code dans la DB si besoin
         $publiHtml = htmlspecialchars($_POST['cdhtml']);
-        $publiCss = htmlspecialchars($_POST['cdss']);
+        $publiCss = htmlspecialchars($_POST['cdcss']);
         $publiJs = htmlspecialchars($_POST['cdjavascript']);
         //on rajoute date('jour/mois/année') pour définir la date de la publication
         $publidate = date('d/m/Y');
