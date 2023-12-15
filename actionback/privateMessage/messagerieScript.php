@@ -14,7 +14,7 @@ if (isset($_POST['envoi_pv'])) {
         echo "Aucun message trouvé";
     }
 } else {
-    echo "vous n'avez pas encore envoyer votre message";
+    $errormsg = "vous n'avez pas encore envoyer votre message";
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 //RECUPERATION DES UTILISATEUR

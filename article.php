@@ -51,6 +51,24 @@ include('includes/head.php');
                 </div>
             </div>
             <hr>
+            <div class="progressBarAlpha">
+                <div class="progressBarBeta">
+                    <div class="progHtml">
+                        <p><span>H</span>tml</p><span data-width="90%">90%</span>
+                    </div>
+                </div>
+                <div class="progressBarBeta">
+                    <div class="progCss">
+                        <p><span>C</span>ss</p><span data-width="75%">75%</span>
+                    </div>
+                </div>
+                <div class="progressBarBeta">
+                    <div class="progJs">
+                        <p><span>J</span>avascript</p><span data-width="40%">40%</span>
+                    </div>
+                </div>
+            </div>
+            <hr>
             <p><?= $publi_contenu_select; ?></p>
             <hr>
             <small><?= $publi_date_select . " " . $publi_auteur_select; ?></small>

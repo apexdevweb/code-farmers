@@ -24,7 +24,7 @@ if (isset($_POST['publish']) && isset($_FILES['publiImg'])) {
         $imgName = $_FILES['publiImg']['name'];
         $uploadPubliImg = "asset/publimage/" . $imgName;
         $transitImgPubli = move_uploaded_file($dosTempo, $uploadPubliImg);
-        //on prepare et execute la requête!
+        //on prepare et on execute la requête!
 
         $insertionPubli = $bdd->prepare("INSERT INTO publications (titre , contenu, cd_html, cd_css, cd_js, id_auteur, nom_auteur, date_publication, img_publication) VALUES (?,?,?,?,?,?,?,?,?)");
         $insertionPubli->execute(array($publiTitle, $publiContain, $publiHtml, $publiCss, $publiJs, $publiAuthorId, $publiAuthorName, $publidate, $imgName));

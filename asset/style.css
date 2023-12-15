@@ -149,6 +149,54 @@ body {
   color: #e60000;
   font-family: "Orbitron", sans-serif;
 }
+.progressBarAlpha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 15vh;
+  width: 100%;
+  overflow: hidden;
+}
+.progressBarBeta {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+.progressBarBeta > div > p {
+  margin-left: 0.5vw;
+  height: auto;
+  width: 100%;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 5px #000;
+}
+.progressBarBeta > div > p > span {
+  color: #e60000;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.progHtml {
+  height: 3vh;
+  width: 100%;
+  background: linear-gradient(to right, #000000 0%, #00cccc 100%);
+  border-radius: 25px;
+}
+.progCss {
+  height: 3vh;
+  width: 100%;
+  background: linear-gradient(to right, #000000 0%, #ff3333 100%);
+  border-radius: 25px;
+}
+.progJs {
+  height: 3vh;
+  width: 100%;
+  background: linear-gradient(to right, #000000 0%, #979797 100%);
+  border-radius: 25px;
+}
 /********************PAGE ARTICLE PHP FIN********************************/
 
 /*********CARTES INDEX***********/
