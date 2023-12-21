@@ -54,17 +54,17 @@ include('includes/head.php');
             <div class="progressBarAlpha">
                 <div class="progressBarBeta">
                     <div class="progHtml">
-                        <p><span>H</span>tml</p><span data-width="90%">90%</span>
+                        <p><span>H</span>tml</p><span data-width="90%"></span>
                     </div>
                 </div>
                 <div class="progressBarBeta">
                     <div class="progCss">
-                        <p><span>C</span>ss</p><span data-width="75%">75%</span>
+                        <p><span>C</span>ss</p><span data-width="75%"></span>
                     </div>
                 </div>
                 <div class="progressBarBeta">
                     <div class="progJs">
-                        <p><span>J</span>avascript</p><span data-width="40%">40%</span>
+                        <p><span>J</span>avascript</p><span data-width="40%"></span>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@ include('includes/head.php');
         }
         ?>
     </div>
-
+    <script src="asset/progressBar.js"></script>
 </body>
 
 </html>
