@@ -61,7 +61,7 @@ include('includes/head.php');
                 <div class="progressBarBeta">
                     <p><span>C</span>ss</p>
                     <div class="progCss">
-                        <span data-width="15%"></span>
+                        <span data-width="53%"></span>
                     </div>
                 </div>
                 <div class="progressBarBeta">
