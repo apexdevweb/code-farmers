@@ -53,18 +53,21 @@ include('includes/head.php');
             <hr>
             <div class="progressBarAlpha">
                 <div class="progressBarBeta">
+                    <p><span>H</span>tml</p>
                     <div class="progHtml">
-                        <p><span>H</span>tml</p><span data-width="90%"></span>
+                        <span data-width="35%"></span>
                     </div>
                 </div>
                 <div class="progressBarBeta">
+                    <p><span>C</span>ss</p>
                     <div class="progCss">
-                        <p><span>C</span>ss</p><span data-width="75%"></span>
+                        <span data-width="15%"></span>
                     </div>
                 </div>
                 <div class="progressBarBeta">
+                    <p><span>J</span>avascript</p>
                     <div class="progJs">
-                        <p><span>J</span>avascript</p><span data-width="40%"></span>
+                        <span data-width="25%"></span>
                     </div>
                 </div>
             </div>

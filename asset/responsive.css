@@ -78,6 +78,26 @@
     width: 100%;
     overflow: hidden;
   }
+  .progressBarAlpha {
+    height: 25vh;
+  }
+  .progHtml,
+  .progCss,
+  .progJs {
+    height: 3vh;
+    text-align: start;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  .progHtml > span {
+    height: 2.8vh;
+  }
+  .progCss > span {
+    height: 2.8vh;
+  }
+  .progJs > span {
+    height: 2.8vh;
+  }
   /********************PAGE ARTICLE PHP FIN********************************/
   .titre_contenu {
     margin: 0;
