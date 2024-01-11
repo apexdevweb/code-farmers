@@ -16,6 +16,9 @@ include('includes/head.php');
     include('includes/navbar.php');
     ?>
     <br>
+    <?php
+    include("includes/userpanel.php");
+    ?>
     <div class="container">
 
         <?php
