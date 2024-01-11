@@ -149,7 +149,18 @@ body {
   color: #e60000;
   font-family: "Orbitron", sans-serif;
 }
-/*Progress Bar*/
+/*conteneur de code*/
+.language-html {
+  color: #00cccc;
+}
+.language-css {
+  color: #ff3333;
+}
+.language-javascript {
+  color: #979797;
+}
+/*conteneur de code FIN*/
+/***********Progress Bar*******************/
 .progressBarAlpha {
   display: flex;
   flex-direction: column;
@@ -222,7 +233,7 @@ body {
   background: linear-gradient(to right, #000000 0%, #979797 100%);
   border-radius: 25px;
 }
-/*Progress Bar FIN*/
+/*************************Progress Bar FIN****************/
 /********************PAGE ARTICLE PHP FIN********************************/
 
 /*********CARTES INDEX***********/

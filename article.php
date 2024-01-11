@@ -61,13 +61,13 @@ include('includes/head.php');
                 <div class="progressBarBeta">
                     <p><span>C</span>ss</p>
                     <div class="progCss">
-                        <span data-width="53%"></span>
+                        <span data-width="60%"></span>
                     </div>
                 </div>
                 <div class="progressBarBeta">
                     <p><span>J</span>avascript</p>
                     <div class="progJs">
-                        <span data-width="25%"></span>
+                        <span data-width="48%"></span>
                     </div>
                 </div>
             </div>
