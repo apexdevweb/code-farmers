@@ -118,16 +118,31 @@ body {
   height: 30vh;
   width: 100%;
   overflow: hidden;
-  background-color: #333;
+  background-color: #222;
   border: 1px solid #000;
 }
 .codeContainer_code {
   height: 30vh;
   width: 100%;
   display: block;
-  background-color: #333;
+  background-color: #222;
   overflow: scroll;
 }
+/*scrollbar custom*/
+.mastercode_container ::-webkit-scrollbar {
+  height: 5px;
+  width: 7px;
+  border-radius: 15px;
+}
+.mastercode_container ::-webkit-scrollbar-track {
+  background-color: #000;
+  border-radius: 15px;
+}
+.mastercode_container ::-webkit-scrollbar-thumb {
+  background: linear-gradient(#000, #e60000, #000);
+  border-radius: 15px;
+}
+/*scrollbar custom FIN*/
 .codeContainer > img {
   height: 30vh;
   width: 100%;
@@ -157,7 +172,7 @@ body {
   color: #ff3333;
 }
 .language-javascript {
-  color: #979797;
+  color: #deb44a;
 }
 /*conteneur de code FIN*/
 /***********Progress Bar*******************/
@@ -230,7 +245,7 @@ body {
   color: #fff;
   font-size: 0.8rem;
   transition: width 0.5s linear;
-  background: linear-gradient(to right, #000000 0%, #979797 100%);
+  background: linear-gradient(to right, #000000 0%, #deb44a 100%);
   border-radius: 25px;
 }
 /*************************Progress Bar FIN****************/
