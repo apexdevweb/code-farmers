@@ -8,7 +8,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
+textarea {
+  resize: none;
+}
 /*********NAVBAR***********/
 .nav-link {
   font-size: 0.9rem;
@@ -175,80 +177,6 @@ body {
   color: #deb44a;
 }
 /*conteneur de code FIN*/
-/***********Progress Bar*******************/
-.progressBarAlpha {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 20vh;
-  width: 100%;
-  overflow: hidden;
-}
-.progressBarBeta {
-  height: auto;
-  width: 100%;
-  overflow: hidden;
-}
-.progressBarBeta > p {
-  height: auto;
-  width: 100%;
-  color: #000;
-  font-family: "Orbitron", sans-serif;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-shadow: 1px 2px 5px #000;
-}
-.progressBarBeta > p > span {
-  color: #e60000;
-  font-family: "Orbitron", sans-serif;
-  text-shadow: 2px 2px 5px #000;
-}
-
-.progHtml,
-.progCss,
-.progJs {
-  height: 2vh;
-  width: 100%;
-  background-color: #c8c4c4;
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.progHtml > span {
-  position: absolute;
-  height: 2vh;
-  width: 0;
-  text-align: start;
-  color: #fff;
-  font-size: 0.8rem;
-  transition: width 0.5s linear;
-  background: linear-gradient(to right, #000000 0%, #00cccc 100%);
-  border-radius: 25px;
-}
-.progCss > span {
-  position: absolute;
-  height: 2vh;
-  width: 0;
-  text-align: start;
-  color: #fff;
-  font-size: 0.8rem;
-  transition: width 0.5s linear;
-  background: linear-gradient(to right, #000000 0%, #ff3333 100%);
-  border-radius: 25px;
-}
-.progJs > span {
-  position: absolute;
-  height: 2vh;
-  width: 0;
-  text-align: start;
-  color: #fff;
-  font-size: 0.8rem;
-  transition: width 0.5s linear;
-  background: linear-gradient(to right, #000000 0%, #deb44a 100%);
-  border-radius: 25px;
-}
-/*************************Progress Bar FIN****************/
 /********************PAGE ARTICLE PHP FIN********************************/
 
 /*********CARTES INDEX***********/

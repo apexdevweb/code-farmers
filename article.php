@@ -54,34 +54,12 @@ include('includes/head.php');
                 </div>
             </div>
             <hr>
-            <div class="progressBarAlpha">
-                <div class="progressBarBeta">
-                    <p><span>H</span>tml</p>
-                    <div class="progHtml">
-                        <span data-width="35%"></span>
-                    </div>
-                </div>
-                <div class="progressBarBeta">
-                    <p><span>C</span>ss</p>
-                    <div class="progCss">
-                        <span data-width="60%"></span>
-                    </div>
-                </div>
-                <div class="progressBarBeta">
-                    <p><span>J</span>avascript</p>
-                    <div class="progJs">
-                        <span data-width="48%"></span>
-                    </div>
-                </div>
-            </div>
-            <hr>
             <p><?= $publi_contenu_select; ?></p>
             <hr>
             <small><?= $publi_date_select . " " . $publi_auteur_select; ?></small>
             <br>
             <hr>
             <br>
-
             <!-- affichage des réponses-->
             <?php
             while ($reponses = $verifReponsExist->fetch()) {
