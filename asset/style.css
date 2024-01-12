@@ -94,6 +94,95 @@ textarea {
 
 /********************USERPANEL FIN********************************/
 /********************PAGE ARTICLE PHP********************************/
+/****************lightbox image*****************/
+.codeContainer > i {
+  position: absolute;
+  height: auto;
+  width: auto;
+  color: #e60000;
+  z-index: 1;
+  visibility: hidden;
+}
+#myImg {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 0;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* fond ecrans lightbox */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* contenue lightbox "L'image" */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* animation de la lightbox en zoom */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*********lightbox image FIN**************/
 .sub_containerARTCL {
   height: auto;
   width: 100%;
@@ -110,6 +199,7 @@ textarea {
   width: 100%;
   display: block;
   border: 1px solid #000;
+  overflow: hidden;
 }
 .mastercode_container {
   margin: 2px;

@@ -32,7 +32,13 @@ include('includes/head.php');
             <hr>
             <div class="sub_containerARTCL">
                 <div class="codeContainer">
-                    <img src="asset/publimage/<?= $publi_img_select; ?>">
+                    <i class="fa-solid fa-maximize" id="croix"></i>
+                    <img id="myImg" src="asset/publimage/<?= $publi_img_select; ?>">
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" src="asset/publimage/<?= $publi_img_select; ?>" id="img01">
+                        <div id="caption"></div>
+                    </div>
                 </div>
                 <div class="mastercode_container">
                     <h4><span>H</span>tml</h4>
@@ -91,7 +97,7 @@ include('includes/head.php');
         }
         ?>
     </div>
-    <script src="asset/copyclip.js"></script>
+    <script src="asset/modalJs.js"></script>
 </body>
 
 </html>
