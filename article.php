@@ -37,19 +37,19 @@ include('includes/head.php');
                 <div class="mastercode_container">
                     <h4><span>H</span>tml</h4>
                     <div class="codeContainer_code">
-                        <code class="language-html"><?= $publi_html_select ?></code>
+                        <code class="language-html" id="myCopy1"><?= $publi_html_select ?></code>
                     </div>
                 </div>
                 <div class="mastercode_container">
                     <h4><span>C</span>ss</h4>
                     <div class="codeContainer_code">
-                        <code class="language-css"><?= $publi_css_select ?></code>
+                        <code class="language-css" id="myCopy2"><?= $publi_css_select ?></code>
                     </div>
                 </div>
                 <div class="mastercode_container">
                     <h4><span>J</span>avascript</h4>
                     <div class="codeContainer_code">
-                        <code class="language-javascript"><?= $publi_js_select ?></code>
+                        <code class="language-javascript" id="myCopy3"><?= $publi_js_select ?></code>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@ include('includes/head.php');
         }
         ?>
     </div>
-    <script src="asset/progressBar.js"></script>
+    <script src="asset/copyclip.js"></script>
 </body>
 
 </html>
