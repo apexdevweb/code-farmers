@@ -21,16 +21,6 @@ include("includes/head.php");
             <div class="container-sm">
                 <h5>Discussion avec : <img src="asset/image/<?= $_GET['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"></h5>
                 <hr>
-                <!--on récupère et affiche le message de l'expéditeur-->
-                <?php
-                $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
-                $recupMsg->execute(array($_SESSION['id'], $_GET['id']));
-                while ($message = $recupMsg->fetch()) {
-                ?>
-                    <p><?= $message['msg_date'] . " " ?><img src="asset/image/<?= $_SESSION['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><?= " " . $message['message']; ?></p>
-                <?php
-                }
-                ?>
                 <!--on récupère et affiche le message du destinataire-->
                 <?php
                 $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
@@ -41,6 +31,18 @@ include("includes/head.php");
                 <?php
                 }
                 ?>
+                <!--on récupère et affiche le message du destinataire FIN-->
+                <!--on récupère et affiche le message de l'expéditeur-->
+                <?php
+                $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
+                $recupMsg->execute(array($_SESSION['id'], $_GET['id']));
+                while ($message = $recupMsg->fetch()) {
+                ?>
+                    <p><?= $message['msg_date'] . " " ?><img src="asset/image/<?= $_SESSION['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><?= " " . $message['message']; ?></p>
+                <?php
+                }
+                ?>
+                <!--on récupère et affiche le message de l'expéditeur FIN-->
                 <hr>
             </div>
         </section>
