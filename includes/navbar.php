@@ -55,6 +55,7 @@
                         <li><a class="dropdown-item" target="_blank" href="https://www.mamp.info/en/windows/">Mamp.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.minifier.org/">Minifier.org</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.toptal.com/developers/cssminifier">Toptal.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.chartjs.org/">ChartJs.org</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
