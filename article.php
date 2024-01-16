@@ -60,6 +60,10 @@ include('includes/head.php');
                 </div>
             </div>
             <hr>
+            <?php
+            include("includes/statistique.php");
+            ?>
+            <hr>
             <p><?= $publi_contenu_select; ?></p>
             <hr>
             <small><?= $publi_date_select . " " . $publi_auteur_select; ?></small>
