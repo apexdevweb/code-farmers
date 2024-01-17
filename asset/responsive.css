@@ -146,7 +146,7 @@
   .firstTitre {
     text-align: center;
     font-family: "Orbitron", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .logoContent {
     height: auto;
@@ -267,6 +267,29 @@
     justify-content: space-evenly;
   }
   /**********************EDITEUR DE PROFILE FIN************************************/
+  /*********************MESSAGERIE********************************/
+  .GlobalMsg {
+    margin-top: 2vh;
+  }
+  #messages > .containermsg {
+    padding: 3px;
+    height: 50vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #messages > h5 {
+    padding: 2px 0 0 15px;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .GlobalMsg > form {
+    padding: 5px;
+    height: 15vh;
+    width: 100%;
+  }
   /****************FOOTER******************************************/
   footer {
     height: auto;

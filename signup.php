@@ -71,7 +71,7 @@ include "includes/head.php";
             <button type="submit" class="btn btn-primary" name="signup">Inscription</button>
         </form>
         <br>
-        <a href="login.php" class="btnRetour">J'ai déjà un compte, je me connecte <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="login.php" class="btnRetour">Login <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 </body>
 

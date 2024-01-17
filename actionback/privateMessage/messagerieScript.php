@@ -1,5 +1,10 @@
 <?php
 require("actionback/database.php");
+//RECUPERATION DES UTILISATEUR
+
+$user4tchat = $bdd->prepare("SELECT * FROM `users` WHERE `id`");
+$user4tchat->execute(array());
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 //TRAITEMENT DE LA MESSAGERIE
 if (isset($_POST['envoi_pv'])) {
@@ -17,7 +22,3 @@ if (isset($_POST['envoi_pv'])) {
     $errormsg = "vous n'avez pas encore envoyer votre message";
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
-//RECUPERATION DES UTILISATEUR
-
-$user4tchat = $bdd->prepare("SELECT * FROM `users` WHERE `id`");
-$user4tchat->execute(array());

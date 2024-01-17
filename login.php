@@ -56,7 +56,7 @@ include "includes/head.php";
             <button type="submit" class="btn btn-primary" name="connexion">Connection</button>
         </form>
         <br>
-        <a href="signup.php" class="btnRetour">Je n'ai pas encore de compte, je m'inscris <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="signup.php" class="btnRetour">Signup <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 </body>
 
