@@ -14,7 +14,7 @@ include "includes/head.php";
         <img src="asset/wallpapper/Logo2.png" style="width: 99%; height: auto;">
         <br>
         <br>
-        <a href="index.php"><i class="fa-solid fa-arrow-left"></i>Retour</a>
+        <a href="index.php" class="btnRetour"><i class="fa-solid fa-arrow-left"></i> Retour</a>
         <br>
         <br>
         <form method="POST">
@@ -71,7 +71,7 @@ include "includes/head.php";
             <button type="submit" class="btn btn-primary" name="signup">Inscription</button>
         </form>
         <br>
-        <a href="login.php">J'ai déjà un compte, je me connecte<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="login.php" class="btnRetour">J'ai déjà un compte, je me connecte <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 </body>
 

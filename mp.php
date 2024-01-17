@@ -14,13 +14,13 @@ include("includes/head.php");
     include("includes/navbar.php");
     ?>
     <br>
-    <a href="messagerie.php"><i class="fa-solid fa-arrow-left"></i>Retour</a>
+    <a href="messagerie.php" class="btnRetour"><i class="fa-solid fa-arrow-left"></i> Retour</a>
     <br>
     <div class="container GlobalMsg">
         <section id="messages">
             <h5>Discussion avec : <img src="asset/image/<?= $_GET['id']; ?>" style="width: 60px; height: 60px; border-radius: 50px; border: 2px solid #fff;"></h5>
             <hr>
-            <div class="container-msg">
+            <div class="containermsg">
                 <!--on récupère et affiche le message du destinataire-->
                 <?php
                 $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");

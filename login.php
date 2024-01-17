@@ -35,7 +35,7 @@ include "includes/head.php";
         <img src="asset/wallpapper/Logo2.png" style="width: 99%; height: auto;">
         <br>
         <br>
-        <a href="index.php"><i class="fa-solid fa-arrow-left"></i>Retour</a>
+        <a href="index.php" class="btnRetour"><i class="fa-solid fa-arrow-left"></i> Retour</a>
         <br>
         <br>
         <form method="POST">
@@ -56,7 +56,7 @@ include "includes/head.php";
             <button type="submit" class="btn btn-primary" name="connexion">Connection</button>
         </form>
         <br>
-        <a href="signup.php">Je n'ai pas encore de compte, je m'inscris<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="signup.php" class="btnRetour">Je n'ai pas encore de compte, je m'inscris <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 </body>
 
