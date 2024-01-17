@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="asset/responsive.css">
     <!--ChartJs-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
     <!--ChartJs fin-->
     <title>Code-Farmers</title>
 </head>

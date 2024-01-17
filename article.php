@@ -41,28 +41,25 @@ include('includes/head.php');
                     </div>
                 </div>
                 <div class="mastercode_container">
-                    <h4><span>H</span>tml</h4>
+                    <h4><span>H</span>tml <span id="codemeter1"></span></h4>
                     <div class="codeContainer_code">
                         <code class="language-html" id="myCopy1"><?= $publi_html_select ?></code>
                     </div>
                 </div>
                 <div class="mastercode_container">
-                    <h4><span>C</span>ss</h4>
+                    <h4><span>C</span>ss <span id="codemeter2"></span></h4>
+
                     <div class="codeContainer_code">
                         <code class="language-css" id="myCopy2"><?= $publi_css_select ?></code>
                     </div>
                 </div>
                 <div class="mastercode_container">
-                    <h4><span>J</span>avascript</h4>
+                    <h4><span>J</span>avascript <span id="codemeter3"></span></h4>
                     <div class="codeContainer_code">
                         <code class="language-javascript" id="myCopy3"><?= $publi_js_select ?></code>
                     </div>
                 </div>
             </div>
-            <hr>
-            <?php
-            include("includes/statistique.php");
-            ?>
             <hr>
             <p><?= $publi_contenu_select; ?></p>
             <hr>
@@ -102,6 +99,7 @@ include('includes/head.php');
         ?>
     </div>
     <script src="asset/modalJs.js"></script>
+    <script src="asset/codemeter.js"></script>
 </body>
 
 </html>

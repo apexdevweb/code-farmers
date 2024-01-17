@@ -268,11 +268,24 @@ textarea {
   color: #deb44a;
 }
 /*conteneur de code FIN*/
-/*graphique chartJs*/
-#myChart {
-  height: 20vh !important;
-  width: 100%;
+/*compteur statistique*/
+
+#codemeter1 {
+  color: #00cccc;
+  font-family: "Orbitron", sans-serif;
 }
+#codemeter2 {
+  color: #ff3333;
+  font-family: "Orbitron", sans-serif;
+}
+#codemeter3 {
+  color: #deb44a;
+  font-family: "Orbitron", sans-serif;
+}
+
+/*compteur statistique FIN*/
+/*graphique chartJs*/
+
 /*graphique chartJs FIN*/
 /********************PAGE ARTICLE PHP FIN********************************/
 

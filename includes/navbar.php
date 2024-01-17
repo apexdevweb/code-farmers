@@ -50,7 +50,7 @@
                         <li><a class="dropdown-item" target="_blank" href="https://cakephp.org/">CakePHP.org</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.djangoproject.com/">Djangoproject.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://flask.palletsprojects.com/en/3.0.x/">Flask.com</a></li>
-                        <li><a class="dropdown-item" target="_blank" href="https://www.wampserver.com/">Wampserver.com</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.wampserver.com/">Wamp.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.apachefriends.org/fr/download.html">Xampp.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.mamp.info/en/windows/">Mamp.com</a></li>
                         <li><a class="dropdown-item" target="_blank" href="https://www.minifier.org/">Minifier.org</a></li>
