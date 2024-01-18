@@ -567,7 +567,7 @@ p {
 }
 /**************editeur profil FIN*********************/
 /*********************MESSAGERIE********************************/
-#messages > .containermsg {
+#messages > .containerMsgPv {
   padding: 3px;
   height: 50vh;
   width: 100%;
@@ -604,17 +604,17 @@ p {
   border-bottom-right-radius: 10px;
 }
 /*scrollbar custom message*/
-.containermsg ::-webkit-scrollbar {
+.containerMsgPv::-webkit-scrollbar {
   height: 5px;
   width: 7px;
   border-radius: 15px;
 }
-.containermsg ::-webkit-scrollbar-track {
+.containerMsgPv::-webkit-scrollbar-track {
   background-color: #000;
   border-radius: 15px;
 }
-.containermsg ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#000, #e60000, #000);
+.containerMsgPv::-webkit-scrollbar-thumb {
+  background: linear-gradient(#000 0%, #00cccc 50%, #000 100%);
   border-radius: 15px;
 }
 /*scrollbar custom message FIN*/
@@ -658,6 +658,7 @@ p {
   justify-content: end;
   flex-wrap: wrap;
   height: auto;
+  width: 100%;
   max-width: fit-content;
   min-width: 10%;
   background-color: #c4c4c4;
