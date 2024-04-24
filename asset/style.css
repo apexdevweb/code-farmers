@@ -650,7 +650,7 @@ p {
 }
 /************DESTINATAIRE***********************/
 .containerDesti {
-  margin: 5px 5px 5px 50vw;
+  margin: 5px 5px 5px auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -701,3 +701,64 @@ footer {
   color: #fff;
 }
 /****************FOOTER FIN************************************/
+/**************************************************************/
+/**************************************************************/
+/******************PUBLICATION.PHP********************************************/
+
+/******************PUBLICATION.PHP FIN********************************************/
+
+/***titre & description***/
+.txt_bloc {
+  padding: 3px;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px #000;
+}
+.txt_bloc > .mb-3 > label {
+  padding: 5px;
+  text-align: left;
+  height: auto;
+  width: 100%;
+  background-color: #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+}
+/***titre & description fin***/
+/***éditeur de code***/
+.code_bloc {
+  padding: 3px;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px #000;
+}
+.code_bloc > .mb-3 > label {
+  padding: 5px;
+  text-align: left;
+  height: auto;
+  width: 100%;
+  background-color: #333;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+}
+.code_bloc > .mb-3 > label > i {
+  color: #ff3333;
+}
+.code_bloc > .mb-3 > textarea {
+  padding: 5px;
+}
+.code_bloc > iframe {
+  padding: 10px;
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 1.2rem;
+  overflow: scroll;
+  resize: vertical;
+  min-height: 17vh;
+}
+/***éditeur de code fin***/
