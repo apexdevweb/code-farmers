@@ -25,7 +25,7 @@ include("includes/head.php");
         foreach ($affiche_users as $afu) {
         ?>
 
-            <div class="card carte_hov" style="width: 15rem; height: 20rem; margin-top: 10px;  background: url('asset/wallpapper/bgerre.jpg') no-repeat 50% -5%;  background-size: 100%;">
+            <div class="card carte_hov" style="width: 15rem; height: auto; margin-top: 10px;  background: url('asset/wallpapper/bgerre.jpg') no-repeat 50% -5%;  background-size: 100%;">
                 <img src="asset/image/<?= $afu['avatar'] ?>" class="card-img-top-fluid" style="width: cover; height: 150px; border-radius: 5px">
                 <div class="card-body">
                     <h5 class="card-title" style="color: #fff;  text-shadow: 1px 2px 5px #000; font-size: 1.5rem; backdrop-filter: blur(2px);"><?= $afu['userName'] ?></h5>

@@ -35,7 +35,7 @@ include("includes/head.php");
         foreach ($affiche_publi as $afp) {
         ?>
             <div class="responsive_carte">
-                <div class="card carte_hov" style="width: 15rem; height: 13rem; margin-top: 10px;background: url('asset/wallpapper/symbolehtml.jpg') no-repeat 50% 57%;background-size: cover;">
+                <div class="card carte_hov" style="width: 15rem; height: auto; margin-top: 10px;background: url('asset/wallpapper/symbolehtml.jpg') no-repeat 50% 57%;background-size: cover;">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #fff; backdrop-filter: blur(3px); text-shadow: 1px 2px 5px #000; font-size: 1.4rem; backdrop-filter: blur(2px);"><?= $afp['titre'] ?></h5>
                         <div style="color: #fff; border:1px solid #fff; box-shadow: 1px 2px 5px #000; border-radius:5px;"></div>

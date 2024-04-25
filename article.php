@@ -43,24 +43,24 @@ include('includes/head.php');
                 <div class="mastercode_container">
                     <h4><span>H</span>tml <span id="codemeter1"></span></h4>
                     <div class="codeContainer_code">
-                        <code class="language-html" id="myCopy1"><?= $publi_html_select ?></code>
+                        <textarea class="language-html" id="myCopy1" oninput="refreshpub()"><?= $publi_html_select ?></textarea>
                     </div>
                 </div>
                 <div class="mastercode_container">
                     <h4><span>C</span>ss <span id="codemeter2"></span></h4>
-
                     <div class="codeContainer_code">
-                        <code class="language-css" id="myCopy2"><?= $publi_css_select ?></code>
+                        <textarea class="language-css" id="myCopy2" oninput="refreshpub()"><?= $publi_css_select ?></textarea>
                     </div>
                 </div>
                 <div class="mastercode_container">
                     <h4><span>J</span>avascript <span id="codemeter3"></span></h4>
                     <div class="codeContainer_code">
-                        <code class="language-javascript" id="myCopy3"><?= $publi_js_select ?></code>
+                        <textarea class="language-javascript" id="myCopy3" oninput="refreshpub()"><?= $publi_js_select ?></textarea>
                     </div>
                 </div>
             </div>
             <hr>
+            <iframe id="res2"></iframe>
             <p><?= $publi_contenu_select; ?></p>
             <hr>
             <small><?= $publi_date_select . " " . $publi_auteur_select; ?></small>
@@ -98,6 +98,19 @@ include('includes/head.php');
         }
         ?>
     </div>
+    <!--script de l'éditeur de code de publication-->
+    <script>
+        function refreshpub() {
+            const cdepub_html = document.getElementById('myCopy1').value;
+            const cdepub_css = "<style>" + document.getElementById('myCopy2').value + "</style>";
+            const cdepub_js = "<scri" + "pt>" + document.getElementById('myCopy3').value + "</scri" + "pt>";
+            const page = document.getElementById('res2').contentWindow.document;
+            page.open();
+            page.write(cdepub_html + cdepub_css + cdepub_js);
+            page.close();
+        }
+    </script>
+    <!--script de l'éditeur de code de publication fin-->
     <script src="asset/modalJs.js"></script>
     <script src="asset/codemeter.js"></script>
 </body>

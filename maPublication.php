@@ -24,7 +24,7 @@ include "includes/head.php";
         ?>
             <br>
 
-            <div class="card" style="width: 17rem; height: 20rem;">
+            <div class="card" style="width: 17rem; height: auto;">
                 <div class="card-body">
                     <h5 class="card-title"><?= $publication['titre'] ?></h5>
                     <hr>
