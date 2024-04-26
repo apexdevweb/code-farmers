@@ -99,17 +99,7 @@ include('includes/head.php');
         ?>
     </div>
     <!--script de l'éditeur de code de publication-->
-    <script>
-        function refreshpub() {
-            const cdepub_html = document.getElementById('myCopy1').value;
-            const cdepub_css = "<style>" + document.getElementById('myCopy2').value + "</style>";
-            const cdepub_js = "<scri" + "pt>" + document.getElementById('myCopy3').value + "</scri" + "pt>";
-            const page = document.getElementById('res2').contentWindow.document;
-            page.open();
-            page.write(cdepub_html + cdepub_css + cdepub_js);
-            page.close();
-        }
-    </script>
+    <script src="asset/editcodepubli.js"></script>
     <!--script de l'éditeur de code de publication fin-->
     <script src="asset/modalJs.js"></script>
     <script src="asset/codemeter.js"></script>

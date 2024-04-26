@@ -30,7 +30,7 @@ include("includes/head.php");
                     <div class="containerDesti">
                         <img src="asset/image/<?= $_GET['id']; ?>">
                         <p><?= " " . $message['message']; ?></p>
-                        <small><?= $message['msg_date'] . " " ?></small>
+                        <small><?= $message['msg_date'] . " "; ?></small>
                     </div>
                 <?php
                 }
