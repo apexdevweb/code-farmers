@@ -30,6 +30,17 @@ include("includes/head.php");
     <br>
     <br>
     <!-- on fait un foreach en php pour afficher toutes les publications enregistré dans la database -->
+    <div class="affichage_mode">
+        <h4>Publications</h4>
+        <div class="btnAff_container">
+            <select name="dateOrder" id="">
+                <option value="" selected>Publication la plus récente</option>
+                <option value="">Publication la plus ancienne</option>
+            </select>
+            <button class="listeAffiche" onclick="changeAfflist()"><i class="fa-solid fa-list"></i></button>
+            <button class="grilleAffiche" onclick="changeAffgrille()"><i class="fa-solid fa-table-cells"></i></button>
+        </div>
+    </div>
     <section class="contenu_secondaire">
         <?php
         foreach ($affiche_publi as $afp) {
@@ -53,6 +64,7 @@ include("includes/head.php");
     <?php
     include("includes/footer.php");
     ?>
+    <script src="asset/displayPubli.js"></script>
 </body>
 
 </html>
