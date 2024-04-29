@@ -23,7 +23,7 @@ include("includes/head.php");
             <div class="containerMsgPv">
                 <!--on récupère et affiche le message du destinataire-->
                 <?php
-                $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
+                $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ? ");
                 $recupMsg->execute(array($_GET['id'], $_SESSION['id']));
                 while ($message = $recupMsg->fetch()) {
                 ?>
