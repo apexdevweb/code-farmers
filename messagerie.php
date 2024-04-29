@@ -22,9 +22,6 @@ include("includes/head.php");
     <br>
     <?php
     while ($message_users = $req_users->fetch()) {
-        // if (isset($_GET['id'])) {
-        //     # code...
-
     ?>
         <br>
         <div class="container-sm">

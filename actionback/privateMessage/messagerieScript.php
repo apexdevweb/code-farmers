@@ -1,10 +1,5 @@
 <?php
 require("actionback/database.php");
-//RECUPERATION DES UTILISATEUR
-
-//$user4tchat = $bdd->prepare("SELECT * FROM `users` WHERE `id`");
-//$user4tchat->execute(array());
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 //TRAITEMENT DE LA MESSAGERIE
 if (isset($_POST['envoi_pv'])) {
