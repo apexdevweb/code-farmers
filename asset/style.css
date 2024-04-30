@@ -107,6 +107,15 @@ textarea {
 .openbtn > i {
   color: white;
 }
+.notif_design {
+  padding: 5px;
+  height: auto;
+  width: 2rem;
+  font-size: 0.7rem;
+  background-color: #e60000;
+  color: #fff;
+  border-radius: 50px;
+}
 
 /********************USERPANEL FIN********************************/
 /********************PAGE ARTICLE PHP********************************/
