@@ -21,21 +21,6 @@ include("includes/head.php");
             <h5>Discussion avec : <img src="asset/image/<?= $_GET['id']; ?>" style="width: 60px; height: 60px; border-radius: 50px; border: 2px solid #fff;"></h5>
             <hr>
             <div class="containerMsgPv">
-                <!--on récupère et affiche le message du destinataire-->
-                <?php
-                $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ? ");
-                $recupMsg->execute(array($_GET['id'], $_SESSION['id']));
-                while ($message = $recupMsg->fetch()) {
-                ?>
-                    <div class="containerDesti">
-                        <img src="asset/image/<?= $_GET['id']; ?>">
-                        <p><?= " " . $message['message']; ?></p>
-                        <small><?= $message['msg_date'] . " "; ?></small>
-                    </div>
-                <?php
-                }
-                ?>
-                <!--on récupère et affiche le message du destinataire FIN-->
                 <!--on récupère et affiche le message de l'expéditeur-->
                 <?php
                 $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
@@ -47,10 +32,26 @@ include("includes/head.php");
                         <p><?= " " . $message['message']; ?></p>
                         <small><?= $message['msg_date'] . " " ?></small>
                     </div>
+
                 <?php
                 }
                 ?>
                 <!--on récupère et affiche le message de l'expéditeur FIN-->
+                <!--on récupère et affiche le message du destinataire-->
+                <?php
+                $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ?");
+                $recupMsg->execute(array($_GET['id'], $_SESSION['id']));
+                while ($message = $recupMsg->fetch()) {
+                ?>
+                    <div class="containerDesti">
+                        <img src="asset/image/<?= $_GET['id']; ?>" style=" width: 50px; height: 50px; border-radius: 50px;">
+                        <p><?= " " . $message['message']; ?></p>
+                        <small><?= $message['msg_date'] . " "; ?></small>
+                    </div>
+                <?php
+                }
+                ?>
+                <!--on récupère et affiche le message du destinataire FIN-->
             </div>
             <hr>
         </section>

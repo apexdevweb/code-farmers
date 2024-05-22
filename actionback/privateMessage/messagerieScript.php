@@ -4,7 +4,6 @@ require("actionback/database.php");
 //TRAITEMENT DE LA MESSAGERIE
 if (isset($_POST['envoi_pv'])) {
     if (isset($_POST['msg_pv']) && !empty($_POST['msg_pv'])) {
-
         $message = strip_tags($_POST['msg_pv']);
         $message_date = date('Y-m-d H:i:s');
 
