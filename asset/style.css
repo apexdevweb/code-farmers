@@ -439,12 +439,8 @@ textarea {
   box-shadow: 1px 2px 10px #000;
   overflow: hidden;
 }
-.affichage_mode > .btnAff_container {
-  height: auto;
-  width: 50%;
-}
 .affichage_mode > h4 {
-  text-align: right;
+  text-align: center;
   font-family: "Orbitron", sans-serif;
   color: #fff;
   height: auto;
@@ -453,32 +449,7 @@ textarea {
 .affichage_mode > h4 > span {
   color: #e60000;
 }
-.affichage_mode > .btnAff_container > button {
-  margin-right: 10px;
-  float: right;
-  height: 3vh;
-  width: 3vw;
-  border-radius: 5px;
-  background-color: #000;
-  border: 1px solid #fff;
-}
-.affichage_mode > .btnAff_container > button:hover {
-  transform: scale(1.09);
-}
 
-.affichage_mode > .btnAff_container > button > i {
-  color: #e60000;
-}
-.btnAff_container > select {
-  margin-right: 10px;
-  float: right;
-  height: 3vh;
-  width: auto;
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #fff;
-}
 /***********CARTE RESPONSIVE PUBLICATION****************************************/
 
 .carte_hov:hover {

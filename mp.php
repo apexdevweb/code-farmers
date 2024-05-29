@@ -25,14 +25,14 @@ include("includes/head.php");
             <h5>Discussion avec : <img src="asset/image/<?= $_GET['id']; ?>" style="width: 60px; height: 60px; border-radius: 50px; border: 2px solid #fff;"></h5>
             <hr>
             <div class="containerMsgPv">
-                <!--on récupère et affiche le message de l'expéditeur-->
+                <!--on récupère et affiche le message -->
                 <?php
                 $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ? OR id_expediteur = ? AND id_destinataire = ? ");
                 $recupMsg->execute(array($session, $getid, $_GET['id'], $_SESSION['id']));
                 while ($message = $recupMsg->fetch()) {
                     if ($message['id_destinataire'] == $_SESSION['id']) {
                 ?>
-                        <div class="containerExpe">
+                        <div class="containerDesti">
                             <img src="asset/image/<?= $_GET['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;">
                             <p><?= " " . $message['message']; ?></p>
                             <small><?= $message['msg_date'] . " " ?></small>
@@ -50,10 +50,7 @@ include("includes/head.php");
                     }
                 }
                 ?>
-                <!--on récupère et affiche le message de l'expéditeur FIN-->
-                <!--on récupère et affiche le message du destinataire-->
-
-                <!--on récupère et affiche le message du destinataire FIN-->
+                <!--on récupère et affiche le message FIN-->
             </div>
             <hr>
         </section>

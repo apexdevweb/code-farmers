@@ -28,10 +28,6 @@ include("includes/head.php");
  decroissant ou croissant avec le menu select-->
     <div class="affichage_mode">
         <h4><span>P</span>ublications</h4>
-        <div class="btnAff_container">
-            <button class="listeAffiche" onclick="changeAfflist()"><i class="fa-solid fa-list"></i></button>
-            <button class="grilleAffiche" onclick="changeAffgrille()"><i class="fa-solid fa-table-cells"></i></button>
-        </div>
     </div>
     <section class="contenu_secondaire">
         <?php
