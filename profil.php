@@ -99,6 +99,9 @@ include('includes/head.php');
             ?>
         </div>
     </div>
+    <?php
+    include("includes/graph.php");
+    ?>
 </body>
 
 </html>

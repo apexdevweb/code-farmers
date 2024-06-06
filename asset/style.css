@@ -844,3 +844,12 @@ footer {
   border-radius: 10px;
 }
 /**********************Profile personel publi FIN*********************************/
+/*************************GRAPHIQUE************************************************/
+#myChart {
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*************************GRAPHIQUE FIN************************************************/

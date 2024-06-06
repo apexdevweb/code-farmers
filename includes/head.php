@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="asset/responsiveMobile.css">
     <link rel="stylesheet" href="asset/responsiveLandscape.css">
     <!--ChartJs-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!--ChartJs fin-->
     <title>Code-Farmers</title>
 </head>
