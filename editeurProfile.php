@@ -47,6 +47,11 @@ include "includes/head.php";
                     <?php
                     }
                     ?>
+                    <div class="graphContainer" style="color:#fff;">
+                        <?php
+                        include("includes/graph.php");
+                        ?>
+                    </div>
                 </div>
             </div>
             <div class="col">

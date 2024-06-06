@@ -2,6 +2,7 @@
 require('actionback/users/securityScript.php');
 require('actionback/users/profilScript.php');
 require('actionback/users/personalPubliUser.php');
+include('includes/visite.php')
 ?>
 
 <!DOCTYPE html>
@@ -99,9 +100,6 @@ include('includes/head.php');
             ?>
         </div>
     </div>
-    <?php
-    include("includes/graph.php");
-    ?>
 </body>
 
 </html>

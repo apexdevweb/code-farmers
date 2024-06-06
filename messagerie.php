@@ -1,8 +1,16 @@
 <?php
 require("actionback/users/securityScript.php");
 require("actionback/database.php");
-// ON RECUPERE LES MEMBRE INSCRIT DANS LA TABLE USERS POUR LES AFFICHER SUR LES SITE
-$req_users = $bdd->query("SELECT * FROM users ORDER BY `id` DESC");
+// Récupération de l'ID de l'utilisateur connecté depuis la session
+$sessionUser = $_SESSION['id'];
+// Préparation de la requête pour récupérer les utilisateurs sauf celui connecté
+$req_users = $bdd->prepare("SELECT * FROM users WHERE id != :sessionUser ORDER BY id DESC");
+// Liaison du paramètre
+$req_users->bindParam(':sessionUser', $sessionUser, PDO::PARAM_INT);
+// Exécution de la requête
+$req_users->execute();
+// Récupération des résultats
+$users = $req_users->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -23,16 +31,17 @@ include("includes/head.php");
     ?>
     <br>
     <?php
-    while ($message_users = $req_users->fetch()) {
+    if (!empty($users)) {
+        foreach ($users as $message_users) {
     ?>
-        <br>
-        <div class="container-sm">
-            <h6><img src="asset/image/<?= $message_users['avatar']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><a href="mp.php?id=<?= $message_users['id']; ?>"><?= $message_users['userName']; ?></a></h6>
-        </div>
+            <br>
+            <div class="container-sm">
+                <h6><img src="asset/image/<?= $message_users['avatar']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><a href="mp.php?id=<?= $message_users['id']; ?>"><?= $message_users['userName']; ?></a></h6>
+            </div>
 
     <?php
+        }
     }
-    //}
     ?>
 
 </body>
