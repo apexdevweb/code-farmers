@@ -1,6 +1,6 @@
 <br>
 <footer>
     <div class="foot_contain">
-        <p>© by apex-dev</p>
+        <p>© by Script'Enjøyer</p>
     </div>
 </footer>
