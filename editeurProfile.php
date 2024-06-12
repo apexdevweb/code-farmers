@@ -48,6 +48,7 @@ include "includes/head.php";
                     }
                     ?>
                     <div class="graphContainer" style="color:#fff;">
+                        <h4 style="text-decoration: underline;">Statistiques de visite</h4>
                         <?php
                         include("includes/graph.php");
                         ?>
