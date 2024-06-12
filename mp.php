@@ -1,10 +1,7 @@
 <?php
 require("actionback/users/securityScript.php");
 require("actionback/privateMessage/messagerieScript.php");
-if (isset($_GET['id'], $_SESSION['id']) && !empty($_GET['id']) && !empty($_SESSION['id'])) {
-    $getid = $_GET['id'];
-    $session = $_SESSION['id'];
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,8 +24,7 @@ include("includes/head.php");
             <div class="containerMsgPv">
                 <!--on récupère et affiche le message -->
                 <?php
-                $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ? OR id_expediteur = ? AND id_destinataire = ? ");
-                $recupMsg->execute(array($session, $getid, $_GET['id'], $_SESSION['id']));
+
                 while ($message = $recupMsg->fetch()) {
                     if ($message['id_destinataire'] == $_SESSION['id']) {
                 ?>

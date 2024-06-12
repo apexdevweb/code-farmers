@@ -16,4 +16,11 @@ if (isset($_POST['envoi_pv'])) {
 } else {
     $errormsg = "vous n'avez pas encore envoyer votre message";
 }
+//récupère les message pour les afficher
+if (isset($_GET['id'], $_SESSION['id']) && !empty($_GET['id']) && !empty($_SESSION['id'])) {
+    $getid = $_GET['id'];
+    $session = $_SESSION['id'];
+    $recupMsg = $bdd->prepare("SELECT * FROM msgprive WHERE id_expediteur = ? AND id_destinataire = ? OR id_expediteur = ? AND id_destinataire = ? ");
+    $recupMsg->execute(array($session, $getid, $_GET['id'], $_SESSION['id']));
+}
 /////////////////////////////////////////////////////////////////////////////////////////////
