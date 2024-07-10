@@ -2,7 +2,9 @@
 require('actionback/users/securityScript.php');
 require('actionback/users/profilScript.php');
 require('actionback/users/personalPubliUser.php');
-include('includes/visite.php')
+if ($_SESSION['id'] != $_GET['id']) {
+    include('includes/visite.php');
+}
 ?>
 
 <!DOCTYPE html>
