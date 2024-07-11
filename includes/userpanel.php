@@ -2,7 +2,7 @@
 if (isset($_SESSION['confirmkey'])) {
     if (isset($_SESSION['valideAuth'])) {
 ?>
-        <button class="openbtn" onclick="openNav()" style=" max-width: fit-content;"><i class="fa-solid fa-chevron-left" style="color:#E60000;"></i><i class="fa-solid fa-chevron-left" style="color:#E60000;"></i> <i class="fa-regular fa-user"></i></button>
+        <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-chevron-left" style="color:#E60000;"></i><i class="fa-solid fa-chevron-left" style="color:#E60000;"></i> <i class="fa-regular fa-user"></i></button>
         <br>
         <br>
         <div class="Panel_container" id="mySidepanel">

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 720px) {
+@media screen and (max-width: 500px) {
   /*********NAVBAR***********/
   .navbar {
     margin-top: -1.2vh;
@@ -158,7 +158,7 @@
     background-color: #000;
   }
   .affichage_mode > h4 {
-    text-align: right;
+    text-align: center;
     font-family: "Orbitron", sans-serif;
     color: #fff;
     height: auto;
@@ -217,6 +217,10 @@
     border: 1px solid #444;
   }
   /*******swiperJS******/
+  .mySwiper {
+    height: auto;
+    width: 100%;
+  }
   .swiper {
     height: auto;
     width: 100%;
