@@ -53,6 +53,7 @@ include "includes/head.php";
                         include("includes/graph.php");
                         ?>
                     </div>
+                    <hr>
                 </div>
             </div>
             <div class="col">

@@ -1,0 +1,23 @@
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=codefarmer;charset=utf8;', 'root', '');
+} catch (Exception $e) {
+    die('Une erreur a été trouver : ' . $e->getmessage());
+}
+
+/////////////////////GLITCH///////////////////////////////////////////////////////////
+
+<div class="glitch">
+	<img src="https://images.unsplash.com/photo-1561019733-a84b4e023910?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="">
+	<div class="glitch__layers">
+		<div class="glitch__layer"></div>
+		<div class="glitch__layer"></div>
+		<div class="glitch__layer"></div>
+	</div>
+</div>
+/////////////////////GLITCH 2///////////////////////////////////////////////////////////
+<div id="containerGlitch"></div>
+
+
+pour voir les erreur
+var_dump($_POST);
+print_r($_FILES);
