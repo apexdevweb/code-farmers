@@ -12,7 +12,7 @@
 }
 .crdsTitre {
   position: absolute;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: "Orbitron", sans-serif;
   color: #fff;
   text-shadow: 1px 2px 5px #000;
@@ -275,8 +275,10 @@
   }
 }
 /*experimentale keyframe*/
-/*******************RESPONSIVE*******************************/
-@media only screen and (max-width: 600px) {
+/***********************************************************************/
+/*******************RESPONSIVE SMARTPHONE*******************************/
+/***********************************************************************/
+@media only screen and (max-width: 768px) {
   .premier_contenu {
     margin-top: 20vh;
     height: auto;
@@ -284,7 +286,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     overflow: hidden;
   }
   .gltch,
@@ -296,7 +298,7 @@
     justify-content: space-around;
     margin-left: auto;
     margin-right: auto;
-    height: 15vh;
+    height: 18vh;
     width: 50vw;
     clip-path: polygon();
     overflow: hidden;
@@ -364,7 +366,7 @@
       transform: translateY(0px);
     }
     100% {
-      transform: translateY(-50px);
+      transform: translateY(-65px);
     }
   }
   /*experimentale keyframe*/
