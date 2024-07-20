@@ -72,7 +72,7 @@ if (isset($_POST['signup'])) {
                  <br />
                  <img src="" alt="code-farmers-banner">
                  <br />
-                 <a href="http://codefarmers01//actionback/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a>                    
+                 <a href="http://codefarmers02//actionback/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a>                    
                  </div>
               </body>
              </html>

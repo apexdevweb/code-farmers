@@ -1,4 +1,4 @@
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
   /*********NAVBAR***********/
   .navbar {
     height: auto;
@@ -54,4 +54,119 @@
     border-radius: 10px;
   }
   /*************************GRAPHIQUE FIN************************************************/
+}
+@media screen and (max-width: 768px) {
+  /*********************MESSAGERIE********************************/
+  #messages > .containerMsgPv {
+    padding: 3px;
+    height: 50vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: url("wallpapper/symbolehtml.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    box-shadow: 1px 2px 10px #000;
+  }
+  #messages > h5 {
+    padding: 2px 0 0 15px;
+    height: 10vh;
+    width: 100%;
+    color: #fff;
+    background: url("wallpapper/bgone.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    font-family: "Orbitron", sans-serif;
+    box-shadow: 1px 2px 10px #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .GlobalMsg > form {
+    padding: 5px;
+    height: 15vh;
+    width: 100%;
+    color: #fff;
+    background: url("wallpapper/bgone.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    font-family: "Orbitron", sans-serif;
+    box-shadow: 1px 2px 10px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  /*scrollbar custom message*/
+  .containerMsgPv::-webkit-scrollbar {
+    height: 5px;
+    width: 7px;
+    border-radius: 15px;
+  }
+  .containerMsgPv::-webkit-scrollbar-track {
+    background-color: #000;
+    border-radius: 15px;
+  }
+  .containerMsgPv::-webkit-scrollbar-thumb {
+    background: linear-gradient(#000 0%, #00cccc 50%, #000 100%);
+    border-radius: 15px;
+  }
+  /*scrollbar custom message FIN*/
+  /************EXPEDITEUR***********************/
+  .containerExpe {
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    flex-wrap: wrap;
+    height: auto;
+    max-width: fit-content;
+    min-width: 10%;
+    background-color: #0088cc;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px #000;
+  }
+  .containerExpe > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+  .containerExpe > small {
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 3px #000;
+  }
+  /************DESTINATAIRE***********************/
+  .containerDesti {
+    margin: 5px 5px 5px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    max-width: fit-content;
+    min-width: 10%;
+    background-color: #c4c4c4;
+    border-radius: 10px;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px #000;
+  }
+  .containerDesti > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+  .containerDesti > small {
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 3px #000;
+  }
+  /*********************MESSAGERIE FIN********************************/
 }
