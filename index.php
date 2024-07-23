@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php
+include("includes/cryptageUrl.php");
 include("includes/head.php");
 ?>
 <style>
