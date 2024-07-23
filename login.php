@@ -26,6 +26,7 @@ if (isset($_POST['connexion'])) {
 <html lang="fr">
 
 <?php
+
 include "includes/head.php";
 ?>
 
@@ -56,7 +57,7 @@ include "includes/head.php";
             <button type="submit" class="btn btn-primary" name="connexion">Connection</button>
         </form>
         <br>
-        <a href="signup.php" class="btnRetour">Signup <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="<?= isset($url[1]) ?>" class="btnRetour">Signup <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 </body>
 

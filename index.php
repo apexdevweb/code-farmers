@@ -40,7 +40,7 @@ include("includes/head.php");
             <section class="premier_contenu">
                 <div class="gltch">
                     <h5 class="crdsTitre">Home</h5>
-                    <a href="home.php" style="display: none;" class="sub_title">Visite</a>
+                    <a href="<?= $url[0] ?>" style="display: none;" class="sub_title">Visite</a>
                     <div class="glitch">
                         <img src="../asset/wallpapper/bgfive.jpg" style="border-radius: 10px;">
                         <div style="display: none;" class="glitch__layers">
@@ -57,7 +57,7 @@ include("includes/head.php");
                 </div>
                 <div class="gltch2">
                     <h5 class="crdsTitre">Signup</h5>
-                    <a href="signup.php" style="display: none;" class="sub_title2">Inscription</a>
+                    <a href="<?= $url[1] ?>" style="display: none;" class="sub_title2">Inscription</a>
                     <div class="glitch">
                         <img src="../asset/wallpapper/bgerrer2.jpg">
                         <div style="display: none;" class="glitch__layers2">
@@ -74,7 +74,7 @@ include("includes/head.php");
                 </div>
                 <div class="gltch3">
                     <h5 class="crdsTitre">Login</h5>
-                    <a href="login.php" style="display: none;" class="sub_title3">Connexion</a>
+                    <a href="<?= $url[2] ?>" style="display: none;" class="sub_title3">Connexion</a>
                     <div class="glitch">
                         <img src="../asset/wallpapper/bgtree.jpg">
                         <div style="display: none;" class="glitch__layers3">
