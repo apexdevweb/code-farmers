@@ -1,12 +1,12 @@
 <?php
-require "actionback/users/signupScript.php";
+require("actionback/users/signupScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
+include("includes/head.php");
 include("includes/cryptageUrl.php");
-include "includes/head.php"
 ?>
 
 <body>

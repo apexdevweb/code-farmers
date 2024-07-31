@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-include "includes/head.php";
+include("includes/head.php");
 ?>
 <style>
     body {

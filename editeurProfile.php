@@ -9,12 +9,12 @@ require("actionback/users/updateProfilScript.php");
 <html lang="fr">
 
 <?php
-include "includes/head.php";
+include("includes/head.php");
 ?>
 
 <body>
     <?php
-    include "includes/navbar.php";
+    include("includes/navbar.php");
     ?>
     <br>
     <?php

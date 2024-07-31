@@ -26,8 +26,8 @@ if (isset($_POST['connexion'])) {
 <html lang="fr">
 
 <?php
-
-include "includes/head.php";
+include("includes/head.php");
+include("includes/cryptageUrl.php");
 ?>
 
 <body>
