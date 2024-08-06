@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   /*********NAVBAR***********/
   .navbar {
     margin-top: -1.2vh;
