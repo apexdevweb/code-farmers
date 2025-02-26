@@ -24,8 +24,8 @@ if (isset($_GET['data'])) {
     // $decrypted_data = decrypt($encrypted_data);
     //echo "Données décryptées : " . htmlspecialchars($decrypted_data);
 } else {
-    $data_to_encrypt = ["http://code-farmers999/home.php", "http://code-farmers999/signup.php", "http://code-farmers999/login.php"];
+    $data_to_encrypt = ["http://code-farmers999/home.php", "http://code-farmers999/signupOption.php", "http://code-farmers999/login.php"];
     $encrypted_data = encrypt($data_to_encrypt[0], [1], [2]);
-    $url = ["http://code-farmers999/home.php?data=" . urlencode($encrypted_data), "http://code-farmers999/signup.php?data=" . urlencode($encrypted_data), "http://code-farmers999/login.php?data=" . urlencode($encrypted_data)];
+    $url = ["http://code-farmers999/home.php?data=" . urlencode($encrypted_data), "http://code-farmers999/signupOption.php?data=" . urlencode($encrypted_data), "http://code-farmers999/login.php?data=" . urlencode($encrypted_data)];
     //echo "URL chiffrée : <a href=\"$url\">$url</a>";
 }
