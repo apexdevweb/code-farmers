@@ -11,17 +11,17 @@ function encrypt($data)
     return base64_encode(openssl_encrypt($data, 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $iv));
 }
 
-function decrypt($data)
-{
-    $key = hash('sha256', ENCRYPTION_KEY, true);
-    $iv = IV;
-    return openssl_decrypt(base64_decode($data), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $iv);
-}
+// function decrypt($data)
+// {
+//     $key = hash('sha256', ENCRYPTION_KEY, true);
+//     $iv = IV;
+//     return openssl_decrypt(base64_decode($data), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $iv);
+// }
 
 // Exemple d'utilisation
 if (isset($_GET['data'])) {
     $encrypted_data = $_GET['data'];
-    $decrypted_data = decrypt($encrypted_data);
+    // $decrypted_data = decrypt($encrypted_data);
     //echo "Données décryptées : " . htmlspecialchars($decrypted_data);
 } else {
     $data_to_encrypt = ["http://code-farmers999/home.php", "http://code-farmers999/signup.php", "http://code-farmers999/login.php"];
