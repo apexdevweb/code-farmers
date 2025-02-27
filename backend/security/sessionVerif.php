@@ -1,5 +1,4 @@
 <?php
-
 function is_connected()
 {
     if (session_status() === PHP_SESSION_NONE) {
@@ -7,3 +6,4 @@ function is_connected()
     }
     return !empty($_SESSION['connected']);
 }
+is_connected();

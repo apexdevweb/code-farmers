@@ -16,9 +16,7 @@
     <!--AnimeJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!--AnimeJS fin-->
-    <link rel="stylesheet" href="asset/style.css">
-    <link rel="stylesheet" href="asset/responsiveMobile.css">
-    <link rel="stylesheet" href="asset/responsiveLandscape.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
     <!--ChartJs-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!--ChartJs fin-->

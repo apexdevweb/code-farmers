@@ -17,10 +17,12 @@ include("includes/head.php");
         <div class="sub__container">
             <p>You are ...</p>
             <h3 class="sub__container--title">Freelance</h3>
+            <a href="userSignup.php"></a>
         </div>
         <div class="sub__container">
             <p>You are ...</p>
             <h3 class="sub__container--title">Enterprise</h3>
+            <a href="proSignup.php"></a>
         </div>
     </div>
 </body>

@@ -4,13 +4,13 @@ class Administrateur
 {
     private string $admin_name;
     private string $admin_mail;
-    private  int $admin_age;
+    private string $admin_pass;
 
-    public function __construct(string $admName, string $admMail, int $admAge)
+    public function __construct(string $admName, string $admMail, string $admPass)
     {
         $this->admin_name = $admName;
         $this->admin_mail = $admMail;
-        $this->admin_age = $admAge;
+        $this->admin_pass = $admPass;
     }
 
     public function get_name_admin(): string
@@ -21,16 +21,18 @@ class Administrateur
     {
         return $this->admin_mail;
     }
-    public function get_age_admin(): int
+    public function get_pass_admin(): string
     {
-        return $this->admin_age;
+        return $this->admin_pass;
     }
 }
 
 
 $admName = "scriptenjoyer";
 $admMail = "scriptenjoyer@gmail.com";
-$admAge = $date->diff($date_naiss)->y;
+$admPass = "%K4l2mV4ZdrTv5#10";
 
 
-$supremeAdmin = new Administrateur($admName, $admin_mail, $admAge);
+$supremeAdmin = new Administrateur($admName, $admMail, $admPass);
+
+$_SESSION["admin"] = $supremeAdmin->get_name_admin();
