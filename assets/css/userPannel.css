@@ -1,0 +1,65 @@
+/********************USERPANEL********************************/
+.Panel_container {
+  padding: 5px;
+  height: auto;
+  width: 0px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  background: url("../asset/wallpapper/bg404.jpg") no-repeat;
+  background-size: cover;
+  right: 0;
+  z-index: 99;
+  box-shadow: 1px 2px 10px #000;
+  transition: 0.5s;
+  opacity: 0;
+}
+.Panel_containerSecond {
+  padding-left: 3px;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+.Panel_container a > i {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.Panel_container > h5 {
+  color: #fff;
+  font-size: 1.3rem;
+  transition: 0.5s;
+  backdrop-filter: blur(3px);
+}
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+  transition: 0.5s;
+}
+.openbtn {
+  height: auto;
+  width: 5vw;
+  margin-left: 90%;
+  cursor: pointer;
+  background-color: #000;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+.openbtn:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+.openbtn > i {
+  color: white;
+}
+/********************USERPANEL FIN********************************/

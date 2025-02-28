@@ -1,26 +1,26 @@
 <?php
 session_start();
-require('actionback/publications/affichepubliScript.php');
-require('actionback/publications/afficheRecherche.php');
+require('backend/script/publications/affichepubliScript.php');
+require('backend/script/publications/afficheRecherche.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
     <?php
-    include("includes/logo.php");
-    include("includes/navbar.php");
+    include("include/logo.php");
+    include("include/nav.php");
     ?>
     <br>
     <?php
-    include("includes/userpanel.php");
-    include("includes/slider.php");
-    include("includes/primaryBande.php");
+    include("include/userpanel.php");
+    include("include/slider.php");
+    include("include/primaryBande.php");
     ?>
     <br>
     <br>
@@ -51,7 +51,7 @@ include("includes/head.php");
         ?>
     </section>
     <?php
-    include("includes/footer.php");
+    include("include/footer.php");
     ?>
     <script src="asset/displayPubli.js"></script>
 </body>

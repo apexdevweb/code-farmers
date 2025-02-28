@@ -1,5 +1,5 @@
 <?php
-require("backend/script/loginScript.php");
+require("backend/script/users/loginScript.php");
 require("backend/security/logMailVerif.php");
 ?>
 <!DOCTYPE html>

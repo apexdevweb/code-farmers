@@ -82,7 +82,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: url("../asset/wallpapper/bgfive.jpg") no-repeat 50% 50%;
+  background: url("../images/bgfive.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
 .sub__layer2 {
@@ -91,7 +91,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: url("../asset/wallpapper/bgerrer2.jpg") no-repeat 50% 50%;
+  background: url("../images/bgerrer2.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
 .sub__layer3 {
@@ -100,7 +100,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: url("../asset/wallpapper/bgtree.jpg") no-repeat 50% 50%;
+  background: url("../images/bgtree.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
 /*LIGNE ORIGINEL*/

@@ -3,7 +3,7 @@ class Connectdb
 {
 
     private $host = "localhost";
-    private $dbname = "codefarmers";
+    private $dbname = "codefarmer";
     private $username = "root";
     private $password = "";
     private $connexion;

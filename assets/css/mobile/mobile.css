@@ -1,0 +1,394 @@
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  /*********NAVBAR***********/
+  .navbar {
+    margin-top: -1.2vh;
+    height: auto;
+    width: 100%;
+    background-color: #000;
+    box-shadow: 1px 2px 10px #000;
+  }
+  /*********NAVBAR******FIN*****/
+  /********************USERPANEL********************************/
+  .userPanel_container {
+    padding: 5px;
+    height: auto;
+    width: 0px;
+    position: fixed;
+    display: block;
+    background-color: #000;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background: url("../asset/wallpapper/bg404.jpg") no-repeat;
+    background-size: cover;
+    right: 0;
+    z-index: 99;
+    box-shadow: 1px 2px 10px #000;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .userPanel_container a > i {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: 0.5s;
+  }
+  .userPanel_container > h5 {
+    color: #fff;
+    font-size: 1.3rem;
+    transition: 0.5s;
+    backdrop-filter: blur(3px);
+  }
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    transition: 0.5s;
+  }
+  .openbtn {
+    height: auto;
+    width: 20vw;
+    margin-left: 75%;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  .openbtn:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+  }
+  .openbtn > i {
+    color: white;
+  }
+  .notif_design {
+    padding: 5px;
+    height: auto;
+    width: 2rem;
+    font-size: 0.7rem;
+    background-color: #e60000;
+    color: #fff;
+    border-radius: 50px;
+  }
+  /********************USERPANEL FIN********************************/
+  /********************PAGE ARTICLE PHP********************************/
+  .sub_containerARTCL {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .codeContainer > img {
+    height: 30vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  .progressBarAlpha {
+    height: 25vh;
+  }
+  .progHtml,
+  .progCss,
+  .progJs {
+    height: 3vh;
+    text-align: start;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  .progHtml > span {
+    height: 2.8vh;
+  }
+  .progCss > span {
+    height: 2.8vh;
+  }
+  .progJs > span {
+    height: 2.8vh;
+  }
+  /********************PAGE ARTICLE PHP FIN********************************/
+  .titre_contenu {
+    margin: 0;
+    height: 10vh;
+    width: 100%;
+    box-shadow: 1px 2px 10px #000;
+    overflow: hidden;
+    z-index: 5;
+  }
+  .titre_contenu a > img {
+    margin-top: -1vh;
+    height: 10vh;
+    width: 100%;
+  }
+  .titre_contenu a {
+    position: absolute;
+    margin: 0;
+    height: 10vh;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 45px #fff;
+  }
+  .vid_contain {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: -2;
+    overflow: hidden;
+  }
+  .vid {
+    position: relative;
+    z-index: -1;
+    height: auto;
+    width: 100%;
+    transform: translateY(-10vh);
+  }
+  .section_contain {
+    height: 100%;
+    width: 100%;
+  }
+  .contenu_secondaire {
+    margin-top: 5vh;
+  }
+  .affichage_mode {
+    float: left;
+    height: auto;
+    width: 100%;
+    background-color: #000;
+  }
+  .affichage_mode > h4 {
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    color: #fff;
+    height: auto;
+    width: 100%;
+  }
+  .affichage_mode > h4 > span {
+    color: #e60000;
+  }
+  .affichage_mode > .btnAff_container > button {
+    display: none;
+  }
+
+  .firstTitre {
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+  }
+  .logoContent {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+  }
+  .logoContent > img {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 100%;
+  }
+
+  .container_downform {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .subcontainer_downform {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .skill_contain {
+    height: auto;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #444;
+  }
+  /*******swiperJS******/
+  .mySwiper {
+    height: auto;
+    width: 100%;
+  }
+  .swiper {
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .title_Slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 2px 5px #000;
+  }
+  .title_Slider i {
+    color: #fff;
+    text-shadow: 1px 2px 5px #000;
+  }
+
+  .swiper-slide {
+    height: 7vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide i {
+    font-size: 1.5rem;
+    text-shadow: 1px 2px 5px #000;
+    color: #fff;
+    letter-spacing: 5px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-pagination {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+
+  /*******swiperJS fin******/
+  /**************Primary bande*********************/
+
+  #primary_bande ul {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #slrn {
+    height: 150px;
+    width: 150px;
+  }
+  #codedemy {
+    height: 100px;
+    width: 170px;
+  }
+  #tryhack {
+    height: 120px;
+    width: 180px;
+  }
+  #cdwrs {
+    height: 100px;
+    width: 100px;
+  }
+  #w3schl {
+    height: 100px;
+    width: 100px;
+  }
+  /**************primary bande FIN*********************/
+  /**********************EDITEUR DE PROFILE************************************/
+  .btnContainer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  /**********************EDITEUR DE PROFILE FIN************************************/
+  /*********************MESSAGERIE********************************/
+  .GlobalMsg {
+    margin-top: 2vh;
+  }
+  #messages > .containermsg {
+    padding: 3px;
+    height: 50vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #messages > h5 {
+    padding: 2px 0 0 15px;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .GlobalMsg > form {
+    padding: 5px;
+    height: 15vh;
+    width: 100%;
+  }
+  /**********************Profile personel publi*********************************/
+  .cntrPubli {
+    padding: 5px;
+    height: auto;
+    width: auto;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 1px 2px 10px #000;
+    border-radius: 10px;
+  }
+  /**********************Profile personel publi FIN*********************************/
+  /*************************GRAPHIQUE************************************************/
+  .graphContainer {
+    padding: 13px;
+    height: auto;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  #myChart {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  /*************************GRAPHIQUE FIN************************************************/
+  /****************FOOTER******************************************/
+  footer {
+    height: auto;
+    width: 100%;
+    background-color: #000;
+  }
+  .foot_contain {
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 50vw;
+  }
+  .foot_contain > p {
+    font-family: "Orbitron", sans-serif;
+    color: #fff;
+  }
+  .foot_contain > p {
+    font-size: 1.2rem;
+    font-family: "Orbitron", sans-serif;
+    color: #fff;
+  }
+  /****************FOOTER FIN************************************/
+}

@@ -1,0 +1,580 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import "header.css";
+@import "main.css";
+@import "nav.css";
+@import "footer.css";
+@import "profil.css";
+@import "glitch.css";
+@import "profil.css";
+@import "userPannel.css";
+@import "lightbox.css";
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*LOGO BANNER*/
+.titre_contenu {
+  margin: 0;
+  height: 10vh;
+  width: 100%;
+  box-shadow: 1px 2px 10px #000;
+  overflow: hidden;
+}
+
+.titre_contenu a > img {
+  margin-top: -10vh;
+  height: 30vh;
+  width: 100%;
+}
+.titre_contenu a {
+  position: absolute;
+  margin: 0;
+  height: 10vh;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 45px #fff;
+}
+.vid_contain {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: -2;
+  overflow: hidden;
+}
+.vid {
+  position: relative;
+  height: auto;
+  z-index: -1;
+  height: auto;
+  width: 100%;
+  transform: translateY(-40vh);
+}
+/*LOGO BANNER FIN*/
+/*petit liens de retour*/
+.btnRetour {
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  padding: 4px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+}
+.btnRetour > i {
+  color: #e60000;
+}
+/*petit liens de retour FIN*/
+/***********CARTE RESPONSIVE PUBLICATION****************************************/
+.section_contain {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.premier_contenu {
+  margin-top: 20vh;
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+.logoContent {
+  text-align: center;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+.firstTitre {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.logoContent > a {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.logoContent > img {
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 100%;
+}
+.contenu_secondaire {
+  margin-top: 5vh;
+  margin-bottom: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.affichage_mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3px;
+  height: auto;
+  width: 100%;
+  background-color: #000;
+  box-shadow: 1px 2px 10px #000;
+  overflow: hidden;
+}
+.affichage_mode > h4 {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  height: auto;
+  width: 50%;
+}
+.affichage_mode > h4 > span {
+  color: #e60000;
+}
+
+.carte_hov:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+  box-shadow: 1px 1px 5px #000;
+}
+/***********CARTE RESPONSIVE PUBLICATION FIN****************************************/
+textarea {
+  resize: none;
+}
+
+/*********CARTES INDEX***********/
+.card-title {
+  font-family: "Orbitron", sans-serif;
+}
+/*********CARTES INDEX******FIN*****/
+
+i {
+  margin: auto;
+  font-size: 1.2rem;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+a:hover {
+  text-decoration: underline;
+}
+.container_recherche {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+li {
+  list-style-type: none;
+}
+.container_downform {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.subcontainer_downform {
+  height: auto;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+p {
+  font-family: "Manrope", sans-serif;
+}
+.myPubli_contain {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/*******swiperJS******/
+.mySwiper {
+  height: auto;
+  width: 100%;
+}
+.swiper {
+  width: 50vw;
+  height: 100%;
+  border-radius: 10px;
+  background: url("/asset/wallpapper/bgtwo.jpg") no-repeat 50% 57%;
+  background-size: cover;
+}
+.title_Slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 2px 5px #000;
+}
+.title_Slider i {
+  color: #fff;
+  text-shadow: 1px 2px 5px #000;
+}
+
+.swiper-slide {
+  height: 7vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide i {
+  font-size: 2rem;
+  text-shadow: 1px 2px 5px #000;
+  color: #fff;
+  letter-spacing: 5px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+/*******swiperJS fin******/
+
+/**************MODAL*********************/
+
+/**************MODAL FIN*********************/
+
+/**************skill*********************/
+.skill_contain {
+  height: auto;
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/**************skill fin*********************/
+/*****************HOME publication********************/
+
+/*****************HOME publication FIN********************/
+/**************Primary bande*********************/
+#primary_bande {
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#primary_bande ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#primary_bande ul li:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  border-radius: 5px;
+  mix-blend-mode: difference;
+}
+#slrn {
+  height: 200px;
+  width: 200px;
+}
+#codedemy {
+  height: 150px;
+  width: 270px;
+}
+#tryhack {
+  height: 180px;
+  width: 300px;
+}
+#cdwrs {
+  height: 140px;
+  width: 140px;
+}
+#w3schl {
+  height: 140px;
+  width: 140px;
+}
+
+/**************primary bande FIN*********************/
+/**************editeur profile*********************/
+.btnContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/**************editeur profil FIN*********************/
+/*********************MESSAGERIE********************************/
+#messages > .containerMsgPv {
+  padding: 3px;
+  height: 50vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: url("wallpapper/symbolehtml.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  box-shadow: 1px 2px 10px #000;
+}
+#messages > h5 {
+  padding: 2px 0 0 15px;
+  height: 7vh;
+  width: 100%;
+  color: #fff;
+  background: url("wallpapper/bgone.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  font-family: "Orbitron", sans-serif;
+  box-shadow: 1px 2px 10px #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.GlobalMsg > form {
+  padding: 5px;
+  height: 12vh;
+  width: 100%;
+  color: #fff;
+  background: url("wallpapper/bgone.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  font-family: "Orbitron", sans-serif;
+  box-shadow: 1px 2px 10px #000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/*scrollbar custom message*/
+.containerMsgPv::-webkit-scrollbar {
+  height: 5px;
+  width: 7px;
+  border-radius: 15px;
+}
+.containerMsgPv::-webkit-scrollbar-track {
+  background-color: #000;
+  border-radius: 15px;
+}
+.containerMsgPv::-webkit-scrollbar-thumb {
+  background: linear-gradient(#000 0%, #00cccc 50%, #000 100%);
+  border-radius: 15px;
+}
+/*scrollbar custom message FIN*/
+/************EXPEDITEUR***********************/
+.containerExpe {
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  flex-wrap: wrap;
+  height: auto;
+  max-width: fit-content;
+  min-width: 10%;
+  background-color: #0088cc;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px #000;
+}
+.containerExpe > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.containerExpe > small {
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 3px #000;
+}
+/************DESTINATAIRE***********************/
+.containerDesti {
+  margin: 5px 5px 5px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  max-width: fit-content;
+  min-width: 10%;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px #000;
+}
+.containerDesti > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.containerDesti > small {
+  border-radius: 5px;
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 3px #000;
+}
+/*********************MESSAGERIE FIN********************************/
+/**************************************************************/
+/**************************************************************/
+/******************PUBLICATION.PHP********************************************/
+
+/***titre & description***/
+.txt_bloc {
+  padding: 3px;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px #000;
+}
+.txt_bloc > .mb-3 > label {
+  font-family: "Orbitron", sans-serif;
+  padding: 5px;
+  text-align: left;
+  height: auto;
+  width: 100%;
+  background-color: #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+}
+/***titre & description fin***/
+/***éditeur de code***/
+.code_bloc {
+  padding: 3px;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px #000;
+}
+.code_bloc > .mb-3 > label {
+  font-family: "Orbitron", sans-serif;
+  padding: 5px;
+  text-align: left;
+  height: auto;
+  width: 100%;
+  background-color: #333;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+}
+.code_bloc > .mb-3 > label > i {
+  color: #ff3333;
+}
+.code_bloc > .mb-3 > textarea {
+  padding: 5px;
+}
+.code_bloc > iframe {
+  padding: 10px;
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 1.2rem;
+  overflow: scroll;
+  resize: vertical;
+  min-height: 17vh;
+}
+/***éditeur de code fin***/
+/******************PUBLICATION.PHP FIN********************************************/
+/**********************Profile personel publi*********************************/
+.cntrPubli {
+  padding: 5px;
+  height: auto;
+  width: auto;
+  background: url("../asset/wallpapper/texture.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 1px 2px 10px #000;
+  border-radius: 10px;
+}
+/**********************Profile personel publi FIN*********************************/
+/*************************GRAPHIQUE************************************************/
+.graphContainer {
+  padding: 13px;
+  padding-bottom: 330px;
+  height: 40vh;
+  width: 35vw;
+  background-color: #000;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#myChart {
+  height: auto;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+/*************************GRAPHIQUE FIN************************************************/
+/****************FOOTER******************************************/
+footer {
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  background-color: #000;
+  box-shadow: 1px 2px 10px #000;
+}
+.foot_contain {
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 90vw;
+}
+
+.foot_contain > p {
+  font-size: 0.7rem;
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+}
+/****************FOOTER FIN************************************/
