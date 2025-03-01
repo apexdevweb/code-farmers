@@ -19,4 +19,4 @@
     <br>
     <div class="swiper-pagination"></div>
 </div>
-<script src="../asset/initSlider.js"></script>
+<script src="../assets/js/initSlider.js"></script>

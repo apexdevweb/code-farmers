@@ -1,23 +1,23 @@
 <?php
 session_start();
-require('actionback/users/afficheUserScript.php');
+require('backend/script/users/afficheUserScript.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
     <?php
-    include("includes/logo.php");
-    include("includes/navbar.php");
+    include("include/logo.php");
+    include("include/nav.php");
     ?>
     <br>
     <?php
-    include("includes/userpanel.php");
+    include("include/userpanel.php");
     ?>
     <!-- on fait un foreach en php pour afficher tout les utilisateur enregistré dans la database -->
     <section class="contenu_secondaire">

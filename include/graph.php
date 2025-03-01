@@ -1,5 +1,5 @@
 <?php
-include("includes/compteurVisite.php");
+include("include/compteurVisite.php");
 ?>
 <div>
     <canvas id="myChart"></canvas>

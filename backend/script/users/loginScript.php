@@ -1,5 +1,8 @@
 <?php
 require("../../connection/connexionDB.php");
+require("../../class/userClass.php");
+require("../../class/proClass.php");
+require("../../class/adminClass.php");
 
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE
 if (isset($_POST['connexion'])) {
@@ -22,6 +25,29 @@ if (isset($_POST['connexion'])) {
             $Uinfos = $data_verif->fetch();
             $passhash = $Uinfos['userPassword'];
             if (password_verify($Upasse, $passhash)) {
+
+
+
+                // $user = new Utilisateur(
+                //     $logInfo["user_first_name"],
+                //     $logInfo["user_last_name"],
+                //     $logInfo["user_mail"],
+                //     new DateTime($logInfo["date_of_birth"]),
+                //     $logInfo["user_city"],
+                // );
+
+
+                // $_SESSION["auth"] = true;
+                // $_SESSION['data'] = [
+                //     "USR_firstName" => $user->getFirstName(),
+                //     "USR_pseudo" => $user->getLastName(),
+                //     "USR_mail" => $user->getEmail(),
+                //     "USR_city" => $user->getCityName(),
+                //     //ici je format la date en years-month-day
+                //     "USR_dtofbrth" => $user->getBirthDate()->format('Y-m-d'),
+                // ];
+
+
 
                 //ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
                 $_SESSION['valideAuth'] = true;

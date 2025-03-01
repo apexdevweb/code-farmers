@@ -226,7 +226,7 @@ p {
   width: 50vw;
   height: 100%;
   border-radius: 10px;
-  background: url("/asset/wallpapper/bgtwo.jpg") no-repeat 50% 57%;
+  background: url("../images/bgtwo.jpg") no-repeat 50% 57%;
   background-size: cover;
 }
 .title_Slider {

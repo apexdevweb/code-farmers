@@ -1,24 +1,24 @@
 <?php
 session_start();
-require('actionback/publications/affichepubliScript.php');
-require('actionback/publications/afficheRecherche.php');
+require('backend/script/publications/affichepubliScript.php');
+require('backend/script/publications/afficheRecherche.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
     <?php
-    include("includes/logo.php");
-    include("includes/navbar.php");
+    include("include/logo.php");
+    include("include/nav.php");
     ?>
     <br>
     <?php
-    include("includes/userpanel.php");
+    include("include/userpanel.php");
     ?>
     <br>
     <section>

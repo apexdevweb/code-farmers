@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
