@@ -103,8 +103,28 @@ class Utilisateur
         return $this->user_confirm_key;
     }
     //setters
-    public function setUsrName(string $newName): string
+    public function setUsrLocation(string $newLocation): string
     {
-        return $this->user_name = $newName;
+        return $this->user_location = $newLocation;
+    }
+    public function setUsrAvatar(string $newAvatar): string
+    {
+        return $this->user_avatar = $newAvatar;
+    }
+    public function setUsrSkill(string $newSkill): string
+    {
+        return $this->user_skill = $newSkill;
+    }
+    public function setUsrLinkGit(string $newLinkGit): string
+    {
+        return $this->user_link_git = $newLinkGit;
+    }
+    public function setUsrLinkWeb(string $newLinkWeb): string
+    {
+        return $this->user_link_web = $newLinkWeb;
+    }
+    public function setUsrLinkYtube(string $newLinkYtube): string
+    {
+        return $this->user_link_ytube = $newLinkYtube;
     }
 }
