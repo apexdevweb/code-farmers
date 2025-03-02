@@ -1,5 +1,5 @@
 <?php
-require("backend/script/proSignupScript.php");
+require("backend/script/users/proSignupScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,7 +11,7 @@ include("include/head.php");
 <body>
     <div class="container">
         <br>
-        <img src="asset/wallpapper/Logo2.png" style="width: 99%; height: auto;">
+        <img src="assets/images/Logo2.png" style="width: 99%; height: auto;">
         <br>
         <br>
         <a href="index.php" class="btnRetour"><i class="fa-solid fa-arrow-left"></i> Retour</a>

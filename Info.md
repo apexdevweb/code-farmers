@@ -12,7 +12,6 @@ Création & integration d'une interface d'administration.
 
 ## ↓↓DESIGN & RESPONSIVE↓↓
 
-Suppression de Bootstrap,
 Possible utilisation de sass.
 
 ## ↓↓API↓↓

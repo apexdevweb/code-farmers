@@ -1,0 +1,111 @@
+/*CRYPTO*/
+.crypto__container {
+  padding: 5px;
+  margin-top: 5vh;
+  margin-left: auto;
+  height: auto;
+  width: 50vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #000;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.crypto__title--container {
+  height: auto;
+  width: 100%;
+}
+.crypto__title--container > h4,
+h5 {
+  text-align: center;
+  letter-spacing: 3px;
+  text-decoration: underline;
+}
+.crypto__title--container > h4 > span,
+h5 > span {
+  color: #e60000;
+  font-family: "Orbitron", sans-serif;
+}
+.crypto__txt--container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.crypto__txt--container > p {
+  text-align: center;
+  width: 45ch;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.crypto__txt--container > a {
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+.crypto__txt--container > a:hover {
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+}
+.crypto__txt--container > a:hover i {
+  color: #fff;
+}
+.crypto__txt--graph {
+  margin: 0;
+  height: 8vh;
+  width: auto;
+  filter: drop-shadow(0px 0px 2px #000);
+}
+.crypto__fig--ctnr {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.crypto__fig--container {
+  height: auto;
+  width: 25vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.crypto__fig--container > img {
+  height: auto;
+  width: 15vw;
+  border-radius: 10px;
+}
+.crypto__fig--container > figcaption {
+  width: 25ch;
+}
+/*CRYPTO FIN*/
+/* CRYPTO TRENDS */
+.crypto__container--trends {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.crypto__subcontainer--trends {
+  height: 38vh;
+  width: 25vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.crypto__subcontainer--trends > h2 {
+}
+.crypto__subcontainer--trends {
+  border: 1px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* CRYPTO TRENDS FIN*/

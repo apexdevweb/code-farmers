@@ -38,7 +38,7 @@ if (isset($_POST['connexion'])) {
 
 
                 // $_SESSION["auth"] = true;
-                // $_SESSION['data'] = [
+                // $_SESSION['user_data'] = [
                 //     "USR_firstName" => $user->getFirstName(),
                 //     "USR_pseudo" => $user->getLastName(),
                 //     "USR_mail" => $user->getEmail(),

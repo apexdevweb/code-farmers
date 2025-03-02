@@ -12,10 +12,12 @@ include("include/head.php");
 ?>
 
 <body>
-    <?php
-    include("include/logo.php");
-    include("include/nav.php");
-    ?>
+    <header>
+        <?php
+        include("include/logo.php");
+        include("include/nav.php");
+        ?>
+    </header>
     <br>
     <?php
     include("include/userpanel.php");

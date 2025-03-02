@@ -11,9 +11,12 @@ include("includes/head.php");
 ?>
 
 <body>
-    <?php
-    include("includes/navbar.php");
-    ?>
+    <header>
+        <?php
+        include("include/logo.php");
+        include("include/nav.php");
+        ?>
+    </header>
     <br>
     <div class="container">
         <?php

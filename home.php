@@ -12,14 +12,17 @@ include("include/head.php");
 ?>
 
 <body>
-    <?php
-    include("include/logo.php");
-    include("include/nav.php");
-    ?>
+    <header>
+        <?php
+        include("include/logo.php");
+        include("include/nav.php");
+        ?>
+    </header>
     <br>
     <?php
     include("include/userpanel.php");
     include("include/slider.php");
+    include("include/crypto.php");
     include("include/primaryBande.php");
     ?>
     <br>
@@ -53,7 +56,6 @@ include("include/head.php");
     <?php
     include("include/footer.php");
     ?>
-    <script src="asset/displayPubli.js"></script>
 </body>
 
 </html>

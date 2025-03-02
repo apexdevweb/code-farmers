@@ -33,9 +33,12 @@ include('includes/head.php');
 </style>
 
 <body>
-    <?php
-    include('includes/navbar.php');
-    ?>
+    <header>
+        <?php
+        include("include/logo.php");
+        include("include/nav.php");
+        ?>
+    </header>
     <br>
     <div class="container">
         <?php
