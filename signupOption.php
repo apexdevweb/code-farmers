@@ -14,15 +14,20 @@ include("include/head.php");
         <a href="index.php" class="btnRetour"><i class="fa-solid fa-arrow-left"></i> Retour</a>
         <br>
         <br>
-        <div class="sub__container">
-            <p>You are ...</p>
-            <h3 class="sub__container--title">Freelance</h3>
-            <a href="userSignup.php">signup</a>
-        </div>
-        <div class="sub__container">
-            <p>You are ...</p>
-            <h3 class="sub__container--title">Enterprise</h3>
-            <a href="proSignup.php">signup</a>
+        <div class="main__subcontainer">
+            <strong>You are ...</strong>
+            <div class="sub__container">
+                <blockquote class="contain__txt--block">
+                    <h3 class="container__txt--title">Freelance</h3>
+                    <p class="container__txt--text">You are a freelance coder and you are starting out in programming</p>
+                    <a href="userSignup.php" class="btnRetour">signup</a>
+                </blockquote>
+                <blockquote class="contain__txt--block">
+                    <h3 class="container__txt--title">Agency</h3>
+                    <p class="container__txt--text">You are a company that innovates in the IT sector and you are looking for new talents.</p>
+                    <a href="proSignup.php" class="btnRetour">Signup</a>
+                </blockquote>
+            </div>
         </div>
     </div>
 </body>

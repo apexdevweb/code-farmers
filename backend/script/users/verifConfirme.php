@@ -15,7 +15,7 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
             <!DOCTYPE html>
             <html lang="fr">
             <?php
-            include "../../includes/head.php";
+            include "../../../include/head.php";
             ?>
             <style>
                 body {

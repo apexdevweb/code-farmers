@@ -16,6 +16,7 @@
   text-shadow: 1px 2px 5px #000;
   z-index: 3;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 .sub_title,
 .sub_title2,
@@ -330,6 +331,7 @@
     text-shadow: 1px 2px 5px #000;
     z-index: 3;
     letter-spacing: 2px;
+    text-decoration: none;
   }
   .sub_title,
   .sub_title2,

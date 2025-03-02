@@ -127,4 +127,41 @@
   min-height: 17vh;
 }
 /*iframe publication FIN*/
+/* signup option */
+.main__subcontainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main__subcontainer > strong {
+  font-size: 2rem;
+}
+.sub__container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contain__txt--block {
+  height: auto;
+  width: 25vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+}
+.container__txt--text {
+  text-align: center;
+  width: 25ch;
+}
+
+/* signup option fin*/
 /********************PAGE ARTICLE PHP FIN********************************/

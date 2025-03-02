@@ -25,22 +25,22 @@ include("include/head.php");
             ?>
             <div class="mb-3">
                 <label for="userName" class="form-label">User-name</label>
-                <input type="text" class="form-control" name="userName">
+                <input type="text" class="form-control" name="userName" required>
             </div>
             <div class="input-group mb-3">
-                <input type="email" class="form-control" name="mail" placeholder="E-mail">
+                <input type="email" class="form-control" name="mail" placeholder="E-mail" required>
                 <span class="input-group-text">@example.com</span>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" name="userPassword">
+                <input type="password" class="form-control" name="userPassword" required>
             </div>
             <div class="mb-3">
                 <label for="confirmPassword" class="form-label">Confirme password</label>
-                <input type="password" class="form-control" name="confirmPassword">
+                <input type="password" class="form-control" name="confirmPassword" required>
             </div>
             <label for="city" class="form-label">Choisir une province</label>
-            <select class="form-select form-select-sm" name="city">
+            <select class="form-select form-select-sm" name="city" required>
                 <option selected>...</option>
                 <option value="Anvers">Anvers</option>
                 <option value="Limbourg">Limbourg</option>
@@ -56,7 +56,7 @@ include("include/head.php");
             <br>
             <div class="container_downform">
                 <label for="dateNaissance" class=" form-label">Votre date de naissance</label>
-                <input type="date" name="dateNaissance">
+                <input type="date" name="dateNaissance" required>
                 <br>
                 <label for="Homme" class=" form-label">Votre genre <i class="fa-solid fa-arrow-right"></i></label>
                 <div class="subcontainer_downform">
