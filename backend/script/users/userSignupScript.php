@@ -2,8 +2,6 @@
 session_start();
 require('backend/connection/connexionDB.php');
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE
-var_dump($_POST);
-print_r($_POST);
 if (isset($_POST['signup'])) {
 
     // ON VERIFIE QUE LES CHAMPS NE SONT PAS VIDE
@@ -78,7 +76,7 @@ if (isset($_POST['signup'])) {
                  <br />
                  <img src="" alt="code-farmers-banner">
                  <br />
-                 <a href="http://codefarmersfinal//backend/script/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a>                    
+                 <a href="http://codefarmersfinal/backend/script/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a>                    
                  </div>
               </body>
              </html>
