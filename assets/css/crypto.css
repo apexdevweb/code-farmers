@@ -85,6 +85,12 @@ h5 > span {
 }
 /*CRYPTO FIN*/
 /* CRYPTO TRENDS */
+.cryto-logo {
+  margin-left: 45%;
+  height: 15vh;
+  width: auto;
+  filter: drop-shadow(0px 0px 3px #000);
+}
 .crypto__container--trends {
   height: auto;
   width: 100%;
@@ -100,8 +106,15 @@ h5 > span {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
+  background-color: #000;
+  margin: 8px;
 }
 .crypto__subcontainer--trends > h2 {
+  color: #fff;
+}
+.crypto__subcontainer--trends > h2 > span {
+  font-family: "Orbitron", sans-serif;
+  color: #e60000;
 }
 .crypto__subcontainer--trends {
   border: 1px solid #000;

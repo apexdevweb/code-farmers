@@ -1,7 +1,5 @@
 <?php
 session_start();
-require('backend/script/publications/affichepubliScript.php');
-require('backend/script/publications/afficheRecherche.php');
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +20,7 @@ include("include/head.php");
     <?php
     include("include/userpanel.php");
     ?>
+    <img src="assets/images/crypto.png" alt="cryptoLogo" class="cryto-logo">
     <br>
     <br>
     <div class="affichage_mode">
@@ -29,7 +28,7 @@ include("include/head.php");
     </div>
     <section class="crypto__container--trends">
         <div class="crypto__subcontainer--trends">
-            <h2>Bitcoin (BTC/EUR)</h2>
+            <h2><span>B</span>itcoin (BTC/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -75,7 +74,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>Ethereum (ETH/EUR)</h2>
+            <h2><span>E</span>thereum (ETH/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -121,7 +120,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>BNB (BNB/EUR)</h2>
+            <h2><span>B</span>NB (BNB/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -167,7 +166,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>Solana (SOL/EUR)</h2>
+            <h2><span>S</span>olana (SOL/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -213,7 +212,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>XRP (XRP/EUR)</h2>
+            <h2><span>X</span>RP (XRP/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -259,7 +258,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>Cardano (ADA/EUR)</h2>
+            <h2><span>C</span>ardano (ADA/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -305,7 +304,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>Dogecoin (DOGE/EUR)</h2>
+            <h2><span>D</span>ogecoin (DOGE/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -351,7 +350,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>Polkadot (DOT/EUR)</h2>
+            <h2><span>P</span>olkadot (DOT/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -397,7 +396,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>Litecoin (LTC/EUR)</h2>
+            <h2><span>L</span>itecoin (LTC/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
@@ -443,7 +442,7 @@ include("include/head.php");
             </script>
         </div>
         <div class="crypto__subcontainer--trends">
-            <h2>Shiba Inu (SHIB/EUR)</h2>
+            <h2><span>S</span>hiba Inu (SHIB/EUR)</h2>
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                 {
                     "symbols": [
