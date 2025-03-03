@@ -2,9 +2,8 @@
 .crypto__container {
   padding: 5px;
   margin-top: 5vh;
-  margin-left: auto;
-  height: auto;
-  width: 50vw;
+  min-height: 45vh;
+  min-width: 45vw;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -82,6 +81,65 @@ h5 > span {
 }
 .crypto__fig--container > figcaption {
   width: 25ch;
+}
+/*ai*/
+.ai__fig--ctnr {
+  margin: 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.ai__fig--container {
+  height: auto;
+  width: 25vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.ai__fig--container > img {
+  height: 22vh;
+  width: auto;
+  border-radius: 10px;
+}
+/*ethical*/
+.ethical__container {
+  padding: 5px;
+  margin-top: 5vh;
+  height: 45vh;
+  width: 97vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #000;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.ethical__fig--ctnr {
+  margin: 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.ethical__fig--container {
+  height: auto;
+  width: 25vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.ethical__fig--container > img {
+  height: 28vh;
+  width: auto;
+  border-radius: 10px;
 }
 /*CRYPTO FIN*/
 /* CRYPTO TRENDS */

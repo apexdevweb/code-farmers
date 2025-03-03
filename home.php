@@ -22,7 +22,19 @@ include("include/head.php");
     <?php
     include("include/userpanel.php");
     include("include/slider.php");
-    include("include/crypto.php");
+    ?>
+    <div class="wrapper">
+        <?php
+        include("include/artificialintel.php");
+        include("include/crypto.php");
+        ?>
+    </div>
+    <div class="wrapper">
+        <?php
+        include("include/ethicalH4ck.php");
+        ?>
+    </div>
+    <?php
     include("include/primaryBande.php");
     ?>
     <br>

@@ -39,7 +39,7 @@ function sendAutoMail($destinataire, $userId, $confirmkey)
         // Contenu du mail
         $mail->isHTML(true);
         $mail->Subject = 'Account confirmation';
-        $mail->Body = '   <a href="http://codefarmersfinal/backend/script/users/verifConfirme.php?id=' . $userId . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a> ';
+        $mail->Body = '   <a href="http://codefarmers/backend/script/users/verifConfirme.php?id=' . $userId . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a> ';
         $mail->AltBody = 'Cliquez sur le lien pour activer votre compte.';
 
         return $mail->send();

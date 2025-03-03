@@ -1,5 +1,6 @@
 <?php
 require_once('backend/connection/connexionDB.php');
+require("backend/class/userClass.php");
 
 //VERIFIE SI L'ID EST BIENS PASSER EN PARAMETRE DANS L'URL
 if (isset($_GET['id']) && !empty($_GET['id'])) {
@@ -18,7 +19,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
         //VERIFIE QUE LES DONNEES DEMANDER SOIT EGALE A LA SESSION DU PROFILE AVANT DE LES STOCKE
         if ($profilInfos['id'] == $_SESSION['id']) {
-
             $profil_name = $profilInfos['userName'];
             $profil_avatar = $profilInfos['avatar'];
             $profil_age = $profilInfos['date_naissance'];
@@ -29,7 +29,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             $profil_webLien = $profilInfos['lien_web'];
             $profil_tubeLien = $profilInfos['youtube'];
         } else {
-            $errorMsg = "Vous n'êtes pas le propriétaire de se profil!!!";
+            $errorMsg = "Vous n'êtes pas le propriétaire de se profil!";
         }
     }
 } else {

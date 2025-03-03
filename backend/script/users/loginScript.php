@@ -1,9 +1,7 @@
 <?php
 session_start();
-var_dump($_POST);
-print_r($_POST);
 require("backend/connection/connexionDB.php");
-require("backend/security/logMailVerif.php");
+// require("backend/security/logMailVerif.php");
 require("backend/class/userClass.php");
 require("backend/class/proClass.php");
 require("backend/class/adminClass.php");
@@ -29,26 +27,6 @@ if (isset($_POST['connexion'])) {
             $Uinfos = $data_verif->fetch();
             $passhash = $Uinfos['userPassword'];
             if (password_verify($Upasse, $passhash)) {
-
-                // $user = new Utilisateur(
-                //     $logInfo["user_first_name"],
-                //     $logInfo["user_last_name"],
-                //     $logInfo["user_mail"],
-                //     new DateTime($logInfo["date_of_birth"]),
-                //     $logInfo["user_city"],
-                // );
-
-
-                // $_SESSION["auth"] = true;
-                // $_SESSION['user_data'] = [
-                //     "USR_firstName" => $user->getFirstName(),
-                //     "USR_pseudo" => $user->getLastName(),
-                //     "USR_mail" => $user->getEmail(),
-                //     "USR_city" => $user->getCityName(),
-                //     //ici je format la date en years-month-day
-                //     "USR_dtofbrth" => $user->getBirthDate()->format('Y-m-d'),
-                // ];
-
 
 
                 //ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION

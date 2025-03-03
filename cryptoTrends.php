@@ -1,5 +1,5 @@
 <?php
-session_start();
+require("backend/security/securityScript.php");
 ?>
 
 <!DOCTYPE html>

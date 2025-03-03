@@ -6,4 +6,3 @@ function is_connected()
     }
     return !empty($_SESSION['connected']);
 }
-is_connected();

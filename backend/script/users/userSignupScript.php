@@ -15,9 +15,10 @@ if (isset($_POST['signup'])) {
     ) {
         // Nettoyage des données et sécurisation
         $confirmkey = mt_rand(3000000, 9000000);
-        $Uname = strip_tags($_POST['userName']);
+        $Uname = htmlspecialchars(strip_tags($_POST['userName']));
         $Umail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
-        $Upasse = password_hash($_POST['userPassword'], PASSWORD_ARGON2ID);
+        $Upasse = htmlspecialchars(strip_tags($_POST['userPassword']));
+        $confirmPasse = htmlspecialchars(strip_tags($_POST['confirmPassword']));
         $Ubirthday = $_POST['dateNaissance'];
         $Ucity = $_POST['city'];
         $Usex = $_POST['genre'];
@@ -28,12 +29,13 @@ if (isset($_POST['signup'])) {
         $data_verif->execute([$Uname]);
 
         // Vérifie que les mots de passe correspondent
-        if ($_POST['userPassword'] === $_POST['confirmPassword']) {
+        if ($Upass === $confirmPasse) {
+            $Upasse_crypted = password_hash($_POST['userPassword'], PASSWORD_ARGON2ID);
             // Insère l'utilisateur en base de données
             if ($data_verif->rowCount() == 0) {
                 $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey, confirm) 
                                               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                $user_insert->execute([$Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey, 0]);
+                $user_insert->execute([$Uname, $Umail,  $Upasse_crypted, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey, 0]);
 
                 // Récupère les infos de l'utilisateur
                 $rescu_user_info = $bdd->prepare("SELECT `id`, userName FROM users WHERE userName = ? AND mail = ?");
