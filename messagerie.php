@@ -1,6 +1,6 @@
 <?php
-require("actionback/users/securityScript.php");
-require("actionback/database.php");
+require("backend/security/securityScript.php");
+require("backend/connection/connexionDB.php");
 // Récupération de l'ID de l'utilisateur connecté depuis la session
 $sessionUser = $_SESSION['id'];
 // Préparation de la requête pour récupérer les utilisateurs sauf celui connecté
@@ -18,7 +18,7 @@ $users = $req_users->fetchAll(PDO::FETCH_ASSOC);
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
@@ -30,7 +30,7 @@ include("includes/head.php");
     </header>
     <br>
     <?php
-    include("includes/userpanel.php");
+    include("include/userpanel.php");
     ?>
     <br>
     <?php

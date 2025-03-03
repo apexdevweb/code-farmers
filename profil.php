@@ -1,16 +1,16 @@
 <?php
-require('actionback/users/securityScript.php');
-require('actionback/users/profilScript.php');
-require('actionback/users/personalPubliUser.php');
+require('backend/security/securityScript.php');
+require('backend/script/users/profilScript.php');
+require('backend/script/users/personalPubliUser.php');
 if ($_SESSION['id'] != $_GET['id']) {
-    include('includes/visite.php');
+    include('include/visite.php');
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-include('includes/head.php');
+include('include/head.php');
 ?>
 <style>
     h6>p>a {
@@ -43,7 +43,7 @@ include('includes/head.php');
     <div class="container">
         <?php
         if (isset($userSelectInfo)) {
-            include("includes/agecalcule.php");
+            include("include/agecalcule.php");
         ?>
             <h3><i class="fa-solid fa-hashtag"></i><?= $user_name_select; ?></h3>
             <hr>

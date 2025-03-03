@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 <style>
     body {
@@ -16,7 +16,7 @@ include("includes/head.php");
 
 <body>
     <section class="logoContent">
-        <img src="asset/wallpapper/Logo1.png">
+        <img src="assets/images/Logo1.png">
         <br>
         <br>
         <h2>En attente de validation...</h2>

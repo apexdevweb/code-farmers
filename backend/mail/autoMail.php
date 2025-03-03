@@ -1,47 +1,50 @@
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
+
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-//Load Composer's autoloader
-// require 'vendor/autoload.php';
+// Charger PHPMailer
+require_once __DIR__ . '/PHPMailer/src/Exception.php';
+require_once __DIR__ . '/PHPMailer/src/PHPMailer.php';
+require_once __DIR__ . '/PHPMailer/src/SMTP.php';
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
+/**
+ * Fonction pour envoyer un email de confirmation
+ * 
+ * @param string $destinataire L'adresse email du destinataire
+ * @param int $userId ID de l'utilisateur dans la base de données
+ * @param string $confirmkey La clé de confirmation
+ * @return bool Retourne true si l'email est envoyé, false sinon
+ */
+function sendAutoMail($destinataire, $userId, $confirmkey)
+{
+    $userId = $_SESSION['id'];
+    $mail = new PHPMailer(true);
 
-try {
-    //Server settings
-    $mail->SMTPDebug = 0;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'apexdevweb@gmail.com';                     //SMTP username
-    $mail->Password   = 'Apex1389';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    try {
+        // Paramètres SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'apexdevweb@gmail.com';
+        $mail->Password = 'gduljheoebakocjx';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port = 465;
 
-    //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-    $mail->addAddress('ellen@example.com');               //Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->addCC('cc@example.com');
-    $mail->addBCC('bcc@example.com');
+        // Destinataire
+        $mail->setFrom('apexdevweb@gmail.com', 'Code-Farmers');
+        $mail->addAddress($destinataire);
 
-    //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+        // Contenu du mail
+        $mail->isHTML(true);
+        $mail->Subject = 'Account confirmation';
+        $mail->Body = '   <a href="http://codefarmersfinal/backend/script/users/verifConfirme.php?id=' . $userId . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a> ';
+        $mail->AltBody = 'Cliquez sur le lien pour activer votre compte.';
 
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        return $mail->send();
+    } catch (Exception $e) {
+        error_log("Erreur d'envoi d'email : " . $mail->ErrorInfo);
+        return false;
+    }
 }

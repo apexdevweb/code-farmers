@@ -1,5 +1,5 @@
 <?php
-require('backend/connection/connexionDB.php');
+require_once('backend/connection/connexionDB.php');
 
 //on rajoute une condition pour pouvoir upload une image
 if (isset($_POST['modifProfil']) && isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])) {

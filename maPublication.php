@@ -1,12 +1,12 @@
 <?php
-require('actionback/users/securityScript.php');
-require("actionback/publications/mesPublicationScript.php");
+require('backend/security/securityScript.php');
+require("backend/script/publications/mesPublicationScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
@@ -18,7 +18,7 @@ include("includes/head.php");
     </header>
     <br>
     <?php
-    include("includes/userpanel.php");
+    include("include/userpanel.php");
     ?>
     <br>
     <div class="myPubli_contain">

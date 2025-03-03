@@ -1,15 +1,15 @@
 <?php
-require('actionback/users/securityScript.php');
-require("actionback/users/editeurInfoProfilScript.php");
-require('actionback/users/profilScript.php');
-require("actionback/users/avatarProfilScript.php");
-require("actionback/users/updateProfilScript.php");
+require('backend/security/securityScript.php');
+require("backend/script/users/editeurInfoProfilScript.php");
+require('backend/script/users/profilScript.php');
+require("backend/script/users/avatarProfilScript.php");
+require("backend/script/users/updateProfilScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
@@ -21,7 +21,7 @@ include("includes/head.php");
     </header>
     <br>
     <?php
-    include("includes/userpanel.php");
+    include("include/userpanel.php");
     ?>
     <br>
     <div class="container text-center">
@@ -33,7 +33,7 @@ include("includes/head.php");
                         echo $errorMsg;
                     }
                     if (isset($userSelectInfo)) {
-                        include("includes/agecalcule.php");
+                        include("include/agecalcule.php");
                     ?>
                         <h3><?= $user_name_select; ?></h3>
                         <hr>
@@ -53,7 +53,7 @@ include("includes/head.php");
                     <div class="graphContainer" style="color:#fff;">
                         <h4 style="text-decoration: underline;">Statistiques de visite</h4>
                         <?php
-                        include("includes/graph.php");
+                        include("include/graph.php");
                         ?>
                     </div>
                     <hr>

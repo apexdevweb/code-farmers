@@ -1,8 +1,12 @@
 <?php
-require("../../connection/connexionDB.php");
-require("../../class/userClass.php");
-require("../../class/proClass.php");
-require("../../class/adminClass.php");
+session_start();
+var_dump($_POST);
+print_r($_POST);
+require("backend/connection/connexionDB.php");
+require("backend/security/logMailVerif.php");
+require("backend/class/userClass.php");
+require("backend/class/proClass.php");
+require("backend/class/adminClass.php");
 
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE
 if (isset($_POST['connexion'])) {
@@ -25,8 +29,6 @@ if (isset($_POST['connexion'])) {
             $Uinfos = $data_verif->fetch();
             $passhash = $Uinfos['userPassword'];
             if (password_verify($Upasse, $passhash)) {
-
-
 
                 // $user = new Utilisateur(
                 //     $logInfo["user_first_name"],
@@ -56,6 +58,7 @@ if (isset($_POST['connexion'])) {
                 $_SESSION['confirmkey'] = $Uinfos['confirmkey'];
 
                 header("Location: home.php");
+                exit;
                 //on redirige l'utilisateur vers la page d'acceuil
             } else {
                 $errorMsg = "Mot de passe incorrect!";

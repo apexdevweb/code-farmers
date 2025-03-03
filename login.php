@@ -1,6 +1,5 @@
 <?php
-require("backend/connection/connexionDB.php");
-require("backend/security/logMailVerif.php");
+require("backend/script/users/loginScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">

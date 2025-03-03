@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('backend/connection/connexionDB.php');
+require('../../connection/connexionDB.php');
 if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !empty($_GET['id'])) {
     $get_id = $_GET['id'];
     $get_cle = $_GET['confirmkey'];
@@ -74,13 +74,13 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
 
             <body>
                 <section class="logoContent">
-                    <img src="../../asset/wallpapper/Logo1.png">
+                    <img src="../../../assets/images/Logo1.png">
                     <br>
                     <br>
                     <h2>Votre inscription est validé</h2>
                     <br>
                     <h4>Bienvenue
-                        <?= $verif_user_info['userName']; ?> <i class="fa-solid fa-arrow-right"></i><a href="../../login.php">
+                        <?= $verif_user_info['userName']; ?> <i class="fa-solid fa-arrow-right"></i><a href="../../../login.php">
                             Connexion</a>
                     </h4>
                 </section>
@@ -91,7 +91,8 @@ if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['confirmkey']) && !
         } else {
             //SI L'UTILISATEUR EST DEJA CONFIRMER ON L'ENVOI SUR LA SESSION
             $_SESSION['confirmkey'] = $get_cle;
-            header('Location: ../../home.php');
+            header('Location: home.php');
+            exit;
         }
     } else {
         echo "Votre clé ou identifiant est incorrecte";

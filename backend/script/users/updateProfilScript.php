@@ -1,5 +1,5 @@
 <?php
-require('backend/connection/connexionDB.php');
+require_once('backend/connection/connexionDB.php');
 //VALIDATION DU FORMULAIRE
 if (isset($_POST['modifProfil'])) {
     //ON VERIFIE QUE LES CHAMPS NE SONT PAS VIDE

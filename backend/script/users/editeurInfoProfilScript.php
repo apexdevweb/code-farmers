@@ -1,5 +1,5 @@
 <?php
-require('backend/connection/connexionDB.php');
+require_once('backend/connection/connexionDB.php');
 
 //VERIFIE SI L'ID EST BIENS PASSER EN PARAMETRE DANS L'URL
 if (isset($_GET['id']) && !empty($_GET['id'])) {

@@ -1,18 +1,20 @@
 <?php
 session_start();
 require('backend/connection/connexionDB.php');
-// ON VERIFIE SI LE FORMULAIRE EST VALIDE
+require('backend/mail/autoMail.php');
+
+use PHPMailer\PHPMailer\PHPMailer;
+
+// Vérifie si le formulaire est soumis
 if (isset($_POST['signup'])) {
 
-    // ON VERIFIE QUE LES CHAMPS NE SONT PAS VIDE
-
+    // Vérifie que tous les champs sont remplis
     if (
-        !empty($_POST['userName']) && !empty($_POST['mail']) && !empty($_POST['userPassword']) && !empty($_POST['confirmPassword'])
-        && !empty($_POST['city']) && !empty($_POST['dateNaissance'])
+        !empty($_POST['userName']) && !empty($_POST['mail']) && !empty($_POST['userPassword']) &&
+        !empty($_POST['confirmPassword']) && !empty($_POST['city']) && !empty($_POST['dateNaissance'])
     ) {
-
-        // ON PLACE LA SUPERGLOBALE DANS UNE VARIABLE ET ON SECURISE LES CHAMP AVEC UN STRIPTAGS ET ON CRYPTE LE MDP
-        $confirmkey = mt_rand(9000000, 10000000);
+        // Nettoyage des données et sécurisation
+        $confirmkey = mt_rand(3000000, 9000000);
         $Uname = strip_tags($_POST['userName']);
         $Umail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
         $Upasse = password_hash($_POST['userPassword'], PASSWORD_ARGON2ID);
@@ -21,79 +23,55 @@ if (isset($_POST['signup'])) {
         $Usex = $_POST['genre'];
         $date_inscription = date("Y-m-d");
 
-        // ON VERIFIE QUE L'UTILISATEUR N'EXISTE PAS DEJA 
-
+        // Vérifie si l'utilisateur existe déjà
         $data_verif = $bdd->prepare("SELECT userName FROM users WHERE userName = ?");
-        $data_verif->execute(array($Uname));
+        $data_verif->execute([$Uname]);
 
-        // ON VERIFIE QUE LES MOT DE PASSE CORRESPONDENT 
+        // Vérifie que les mots de passe correspondent
         if ($_POST['userPassword'] === $_POST['confirmPassword']) {
+            // Insère l'utilisateur en base de données
+            if ($data_verif->rowCount() == 0) {
+                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey, confirm) 
+                                              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                $user_insert->execute([$Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey, 0]);
 
-            // ON INSERT LE NOUVEL UTILISATEUR DANS LA DATABASE
-
-            if ($data_verif->rowcount() == 0) {
-                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey, confirm) VALUES (?,?,?,?,?,?,?,?,?)");
-                $user_insert->execute(array($Uname, $Umail, $Upasse, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey, 0));
-
-                // ON RECUPERE LES INFORMATION DE L'UTILISATEUR
-
+                // Récupère les infos de l'utilisateur
                 $rescu_user_info = $bdd->prepare("SELECT `id`, userName FROM users WHERE userName = ? AND mail = ?");
-                $rescu_user_info->execute(array($Uname, $Umail));
-
+                $rescu_user_info->execute([$Uname, $Umail]);
                 $userInfo = $rescu_user_info->fetch();
-
-                // ON AUTHENTIFIE L'UTILISATEUR SUR LE SITE ET RECUPERER LES DONNEES DANS DES SUPERGLOBALE SESSION
 
                 if ($userInfo) {
                     $_SESSION['valideAuth'] = true;
                     $_SESSION['id'] = $userInfo['id'];
                     $_SESSION['userName'] = $userInfo['userName'];
                 } else {
-                    $errorMsg = "Impossible de recupere les information utilisateur";
+                    $errorMsg = "Impossible de récupérer les informations utilisateur.";
                 }
             } else {
-                $errorMsg = " Se compte éxiste déjà!";
+                $errorMsg = "Ce compte existe déjà !";
             }
 
-            // ON RECUPERE LES INFORMATION DE L'UTILISATEUR POUR LE MAIL DE CONFIRMATION
+            // Récupère les informations utilisateur pour envoyer le mail de confirmation
             $recupUserInfo = $bdd->prepare("SELECT * FROM users WHERE mail = ?");
-            $recupUserInfo->execute(array($Umail));
+            $recupUserInfo->execute([$Umail]);
+
             if ($recupUserInfo->rowCount() > 0) {
                 $userCrf_Info = $recupUserInfo->fetch();
                 $_SESSION['id'] = $userCrf_Info['id'];
 
-                // ON ENVOI UN MAIL DE CONFIRMATION
-                $header = "MIME-Version: 1.0\r\n";
-                $header .= 'From:"Code-Farmers"<apexdevweb@gmail.com>' . "\r\n";
-                $header .= 'Content-type: text/html; charset="utf-8"' . "\r\n";
-                $header .= 'Content-transfert-encoding: 8bit';
-
-                $message = '
-             <html>
-              <body>
-                 <div align="center">
-                 <h3>Code-farmers-support</h3>
-                 <br />
-                 <img src="" alt="code-farmers-banner">
-                 <br />
-                 <a href="http://codefarmersfinal/backend/script/users/verifConfirme.php?id=' . $_SESSION['id'] . '&confirmkey=' . $confirmkey . '">Activation de votre compte</a>                    
-                 </div>
-              </body>
-             </html>
-             ';
-                mail($Umail, "Confirmation de compte", $message, $header);
-                //ON FAIS UNE CONDITION POUR VERIFIER QUE L'EMAIL A BIEN ETE ENVOYE
-                if (mail($Umail, "Confirmation de compte", $message, $header)) {
-                    //SI LE MAIL EST ENVOYE ON REDIRIGE L'UTILISATEUR VERS LA PAGE D'ATTENTE DE CONFIRMATION
+                // Envoie l'email de confirmation
+                sendAutoMail($Umail, $_SESSION['id'], $confirmkey);
+                if (sendAutoMail($Umail, $_SESSION['id'], $confirmkey)) {
                     header('Location: confirmAttente.php');
+                    exit();
                 } else {
-                    echo "L'email de confirmation n'as pas pu être envoyer";
+                    echo "L'email de confirmation n'a pas pu être envoyé.";
                 }
             }
         } else {
-            $errorMsg = "Les mot de passe ne correspondent pas!";
+            $errorMsg = "Les mots de passe ne correspondent pas !";
         }
     } else {
-        $errorMsg = "Tous les champs sont obligatoire!";
+        $errorMsg = "Tous les champs sont obligatoires !";
     }
 }

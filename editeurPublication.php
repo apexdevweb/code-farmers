@@ -1,13 +1,13 @@
 <?php
-require('actionback/users/securityScript.php');
-require("actionback/publications/editeurInfoPubliScript.php");
-require("actionback/publications/updatePubliScript.php");
+require('backend/security/securityScript.php');
+require("backend/script/publications/editeurInfoPubliScript.php");
+require("backend/script/publications/updatePubliScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
