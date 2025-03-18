@@ -8,7 +8,7 @@
     </blockquote>
     <div class="ethical__fig--ctnr">
         <figure class="ethical__fig--container">
-            <img src="../assets/images/ransom.jpg" alt="AiImgA">
+            <img src="../assets/images/ransom.webp" alt="AiImgA">
         </figure>
     </div>
 </article>

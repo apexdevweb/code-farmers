@@ -9,7 +9,7 @@
     </blockquote>
     <div class="ai__fig--ctnr">
         <figure class="ai__fig--container">
-            <img src="../assets/images/AiWallpapper.jpg" alt="AiImgA">
+            <img src="../assets/images/AiWallpapper.webp" alt="AiImgA">
         </figure>
     </div>
 </article>
