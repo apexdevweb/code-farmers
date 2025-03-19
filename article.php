@@ -1,14 +1,14 @@
 <?php
-require('actionback/users/securityScript.php');
-require('actionback/publications/articleScript.php');
-require('actionback/publications/reponseScript.php');
-require('actionback/publications/reponsInfoScript.php');
+require('backend/security/securityScript.php');
+require('backend/script/publications/articleScript.php');
+require('backend/script/publications/reponseScript.php');
+require('backend/script/publications/reponsInfoScript.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-include('includes/head.php');
+include('include/head.php');
 ?>
 
 <body>
@@ -20,7 +20,7 @@ include('includes/head.php');
     </header>
     <br>
     <?php
-    include("includes/userpanel.php");
+    include("include/userpanel.php");
     ?>
     <div class="container">
 
@@ -36,10 +36,10 @@ include('includes/head.php');
             <div class="sub_containerARTCL">
                 <div class="codeContainer">
                     <i class="fa-solid fa-maximize" id="croix"></i>
-                    <img id="myImg" src="asset/publimage/<?= $publi_img_select; ?>">
+                    <img id="myImg" src="assets/userimgpubli/<?= $publi_img_select; ?>">
                     <div id="myModal" class="modal">
                         <span class="close">&times;</span>
-                        <img class="modal-content" src="asset/publimage/<?= $publi_img_select; ?>" id="img01">
+                        <img class="modal-content" src="assets/userimgpubli/<?= $publi_img_select; ?>" id="img01">
                         <div id="caption"></div>
                     </div>
                 </div>
@@ -102,10 +102,10 @@ include('includes/head.php');
         ?>
     </div>
     <!--script de l'éditeur de code de publication-->
-    <script src="asset/editcodepubli.js"></script>
+    <script src="assets/js/editcodepubli.js"></script>
     <!--script de l'éditeur de code de publication fin-->
-    <script src="asset/modalJs.js"></script>
-    <script src="asset/codemeter.js"></script>
+    <script src="assets/js/modalJs.js"></script>
+    <script src="assets/js/codemeter.js"></script>
 </body>
 
 </html>

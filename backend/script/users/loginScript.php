@@ -3,8 +3,6 @@ session_start();
 require("backend/connection/connexionDB.php");
 // require("backend/security/logMailVerif.php");
 require("backend/class/userClass.php");
-require("backend/class/proClass.php");
-require("backend/class/adminClass.php");
 
 // ON VERIFIE SI LE FORMULAIRE EST VALIDE
 if (isset($_POST['connexion'])) {

@@ -15,7 +15,10 @@ include("include/head.php");
         <br>
         <br>
         <div class="main__subcontainer">
+            <br>
             <strong>You are ...</strong>
+            <br>
+            <br>
             <div class="sub__container">
                 <blockquote class="contain__txt--block">
                     <h3 class="container__txt--title">Freelance</h3>

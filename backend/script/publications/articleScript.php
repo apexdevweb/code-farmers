@@ -1,5 +1,5 @@
 <?php
-require('backend/connection/connexionDB.php');
+require_once('backend/connection/connexionDB.php');
 //ON VERIFIE LA METHODE GET EST EXISTANTE ET QUE LE CHAMPS EST REMPLI
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 

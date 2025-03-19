@@ -6,7 +6,7 @@ if (isset($_POST['modifProfil']) && isset($_FILES['avatar']) && !empty($_FILES['
 
     //on définie la taille de l'image et les extension autorisé    
     $tailleMax = 2097152;
-    $extensionValide = array('jpg', 'jpeg', 'png');
+    $extensionValide = array('jpg', 'jpeg', 'png', 'webp');
 
     if ($_FILES['avatar']['size'] <= $tailleMax) {
 
@@ -14,7 +14,7 @@ if (isset($_POST['modifProfil']) && isset($_FILES['avatar']) && !empty($_FILES['
         if (in_array($extensionUpload, $extensionValide)) {
 
             //on définie le chemin pour que l'image soit placé dans un dossier avec un id via la database
-            $cheminUpload = "asset/image/" . $_SESSION['id'] . "." . $extensionUpload;
+            $cheminUpload = "assets/usersimg/" . $_SESSION['id'] . "." . $extensionUpload;
             $transferImg = move_uploaded_file($_FILES['avatar']['tmp_name'], $cheminUpload);
 
             if ($transferImg) {

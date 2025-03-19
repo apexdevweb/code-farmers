@@ -9,10 +9,10 @@ if (isset($_SESSION['confirmkey'])) {
             <div class="Panel_containerSecond">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
             </div>
-            <h5 style="text-shadow: 1px 2px 3px #000;text-decoration: none; text-align: center;">Bienvenue <?= $_SESSION['userName'] ?></h5>
+            <h5 style="text-shadow: 1px 2px 3px #000;text-decoration: none; text-align: center;">Bonjour <?= $_SESSION['userName'] ?></h5>
             <li class="nav-item dropdown" style="color:#fff;">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 3.5rem; color:#E60000;">
-                    <img src="asset/image/<?= $_SESSION['id']; ?>" class="img-fluid" style="width: 60px; height: 60px; border-radius: 50px; border: 2px solid #fff;"></a>
+                    <img src="assets/usersimg/<?= $_SESSION['id']; ?>" class="img-fluid" style="width: 60px; height: 60px; border-radius: 50px; border: 2px solid #fff;"></a>
                 <ul class="dropdown-menu">
                     <li style="color:#333;"><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen" style="color:#333;"></i>Publier</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open" style="color:#333;"></i>Mes Publications</a></li>

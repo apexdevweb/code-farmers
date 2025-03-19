@@ -2,12 +2,12 @@
 //ON PLACE UN SESSION_START() VU QUE LE FICHIER N'EST PAS RELIE A UN AUTRE QUI CONTIEN DEJA 
 //CELUI CI
 session_start();
-if (isset($_SESSION['valideAuth'])) {
-    header('Location: ../../login.php');
+var_dump($_SESSION);
+if (!isset($_SESSION['valideAuth'])) {
+    header('Location: ../../../login.php');
 }
 
-
-require('backend/connection/connexionDB.php');
+require_once('../../connection/connexionDB.php');
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
@@ -26,9 +26,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             $supr_publi->execute(array($id_publi));
             echo "Publications supprimer!";
 
-            header('Location: ../../maPublication.php');
+            header('Location: ../../../maPublication.php');
         } else {
-            echo "Vous n'avez pas l'autorisation de supprimer une publication qui ne vous appartient pas!";
+            echo "Vous n'avez pas l'autorisation de supprimer une publication qui ne vous appartient pas";
         }
     } else {
         echo "La publication n'éxiste pas";

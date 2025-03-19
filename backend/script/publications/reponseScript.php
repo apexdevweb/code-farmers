@@ -1,5 +1,5 @@
 <?php
-require('backend/connection/connexionDB.php');
+require_once('backend/connection/connexionDB.php');
 
 if (isset($_POST['valideRepons']) && !empty($_POST['reponse'])) {
 

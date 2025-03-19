@@ -26,7 +26,6 @@ include("include/head.php");
         while ($publication = $publi_rescu->fetch()) {
         ?>
             <br>
-
             <div class="card" style="width: 17rem; height: auto;">
                 <div class="card-body">
                     <h5 class="card-title"><?= $publication['titre'] ?></h5>
@@ -37,7 +36,7 @@ include("include/head.php");
                     <!--on récupère dans le lien l'id de la publication afin d'acceder à la publication de l'utilisateur qui l'a creer: php?id=...  -->
                     <a href="article.php?id=<?= $publication['id'] ?>" class="card-link">Voir</a>
                     <a href="editeurPublication.php?id=<?= $publication['id'] ?>" class="card-link">Modifier</a>
-                    <a href="actionback/publications/supprimPubliScript.php?id=<?= $publication['id'] ?>" class="card-link">Supprimer</a>
+                    <a href="backend/script/publications/supprimPubliScript.php?id=<?= $publication['id'] ?>" class="card-link">Supprimer</a>
                 </div>
             </div>
 

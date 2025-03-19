@@ -37,7 +37,7 @@ include("include/head.php");
                     ?>
                         <h3><?= $user_name_select; ?></h3>
                         <hr>
-                        <img src="asset/image/<?= $user_avatar_select; ?>" class="img-fluid" style="width: 250px; height: 250px; border-radius: 10px;">
+                        <img src="assets/usersimg/<?= $user_avatar_select; ?>" class="img-fluid" style="width: 250px; height: 250px; border-radius: 10px;">
                         <hr>
                         <h6>âge: <?= age($user_age_select); ?></h6>
                         <h6>Genre: <?= $user_genre_select; ?></h6>

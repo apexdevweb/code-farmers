@@ -28,11 +28,11 @@ class Administrateur
 }
 
 
-$admName = "scriptenjoyer";
-$admMail = "scriptenjoyer@gmail.com";
-$admPass = "%K4l2mV4ZdrTv5#10";
+// $admName = "scriptenjoyer";
+// $admMail = "scriptenjoyer@gmail.com";
+// $admPass = "%K4l2mV4ZdrTv5#10";
 
 
-$supremeAdmin = new Administrateur($admName, $admMail, $admPass);
+// $supremeAdmin = new Administrateur($admName, $admMail, $admPass);
 
-$_SESSION["admin"] = $supremeAdmin->get_name_admin();
+// $_SESSION["admin"] = $supremeAdmin->get_name_admin();

@@ -1,5 +1,5 @@
 <?php
-require('backend/connection/connexionDB.php');
+require_once('backend/connection/connexionDB.php');
 
 if (isset($_POST['publish']) && isset($_FILES['publiImg'])) {
 
@@ -22,7 +22,7 @@ if (isset($_POST['publish']) && isset($_FILES['publiImg'])) {
         //pour ajouter une image a la publication
         $dosTempo = $_FILES['publiImg']['tmp_name'];
         $imgName = $_FILES['publiImg']['name'];
-        $uploadPubliImg = "asset/publimage/" . $imgName;
+        $uploadPubliImg = "assets/userimgpubli/" . $imgName;
         $transitImgPubli = move_uploaded_file($dosTempo, $uploadPubliImg);
         //on prepare et on execute la requête!
 
