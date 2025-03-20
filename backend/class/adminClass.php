@@ -26,13 +26,3 @@ class Administrateur
         return $this->admin_pass;
     }
 }
-
-
-// $admName = "scriptenjoyer";
-// $admMail = "scriptenjoyer@gmail.com";
-// $admPass = "%K4l2mV4ZdrTv5#10";
-
-
-// $supremeAdmin = new Administrateur($admName, $admMail, $admPass);
-
-// $_SESSION["admin"] = $supremeAdmin->get_name_admin();

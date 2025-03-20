@@ -11,6 +11,7 @@
 @import "userPannel.css";
 @import "lightbox.css";
 @import "crypto&Ai.css";
+@import "adminPannel.css";
 
 *::before,
 *::after {

@@ -1,6 +1,5 @@
 <?php
-session_start();
-require("backend/connection/connexionDB.php");
+require_once("backend/connection/connexionDB.php");
 // require("backend/security/logMailVerif.php");
 require("backend/class/userClass.php");
 
