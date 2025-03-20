@@ -37,17 +37,17 @@ include("../include/head.php");
                 } else if ($admin_view_users->rowCount() != 0 || $admin_view_users->rowCount() > 0) {
                     foreach ($admin_view_users as $view_users) {
                     ?>
-                        <div class="card carte_hov" style="width: 15rem; height: auto; margin-top: 10px;  background: url('assets/images/bgerre.jpg') no-repeat 50% -5%;  background-size: 100%;">
+                        <div class="card carte_hov">
                             <img src="../assets/usersimg/<?= $view_users['avatar'] ?>" class="card-img-top-fluid" style="width: cover; height: 150px; border-radius: 5px">
                             <div class="card-body">
-                                <h5 class="card-title" style="color: #fff;  text-shadow: 1px 2px 5px #000; font-size: 1.5rem; backdrop-filter: blur(2px);"><?= $view_users['userName'] ?></h5>
+                                <h5 class="card-title"><?= $view_users['userName'] ?></h5>
                                 <hr>
-                                <h6 class="card-title" style="font-family: Share Tech Mono, monospace; color: #fff; text-shadow: 1px 2px 5px #000; font-size: 1.3rem;"><?= $view_users['ville'] ?></h6>
+                                <h6 class="card-title"><?= $view_users['ville'] ?></h6>
                                 <p class="card-text"></p>
-                                <button type="button" class="btn btn-info"><a href="../profil.php?id=<?= $view_users['id']; ?>" style="font-family: Share Tech Mono, monospace; color: #000">Voir le profil</a></button>
+                                <button type="button" class="btn btn-info"><a href="../profil.php?id=<?= $view_users['id']; ?>">Voir le profil</a></button>
                                 <br>
                                 <br>
-                                <button type="button" class="btn btn-info"><a href="banneScript.php?id=<?= $view_users['id']; ?>" style="font-family: Share Tech Mono, monospace; color: #000">Bannir</a></button>
+                                <button type="button" class="btn btn-info"><a href="banneScript.php?id=<?= $view_users['id']; ?>">Bannir</a></button>
                             </div>
                         </div>
             <?php

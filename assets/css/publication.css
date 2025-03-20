@@ -1,0 +1,147 @@
+/**********************Profile personel publi*********************************/
+.cntrPubli {
+  padding: 5px;
+  height: auto;
+  width: auto;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 1px 2px 10px #000;
+  border-radius: 10px;
+}
+/**********************Profile personel publi FIN*********************************/
+/********************PAGE ARTICLE PHP********************************/
+
+.sub_containerARTCL {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.codeContainer {
+  margin: 2px;
+  height: 30vh;
+  width: 100%;
+  display: block;
+  border: 1px solid #000;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.mastercode_container {
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #222;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.codeContainer_code {
+  height: 30vh;
+  width: 100%;
+  display: block;
+  background-color: #222;
+  overflow: hidden;
+}
+/*scrollbar custom*/
+.mastercode_container ::-webkit-scrollbar {
+  height: 3px;
+  width: 5px;
+  border-radius: 15px;
+}
+.mastercode_container ::-webkit-scrollbar-track {
+  background-color: #000;
+  border-radius: 15px;
+}
+.mastercode_container ::-webkit-scrollbar-thumb {
+  background: linear-gradient(#000, #e60000, #000);
+  border-radius: 15px;
+}
+/*scrollbar custom FIN*/
+.codeContainer > img {
+  height: 30vh;
+  width: 100%;
+}
+.mastercode_container > h4 {
+  text-align: center;
+  height: auto;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: "Orbitron", sans-serif;
+}
+.codeContainer_code > code {
+  text-align: center;
+  padding: 5px;
+}
+.mastercode_container > h4 > span {
+  color: #e60000;
+  font-family: "Orbitron", sans-serif;
+}
+/*conteneur de code*/
+.language-html {
+  height: 30vh;
+  width: 100%;
+  color: #0088cc;
+  background-color: #222;
+}
+.language-css {
+  height: 30vh;
+  width: 100%;
+  color: #ff3333;
+  background-color: #222;
+}
+.language-javascript {
+  height: 30vh;
+  width: 100%;
+  color: #deb44a;
+  background-color: #222;
+}
+.language-html,
+.language-css,
+.language-javascript {
+  border: none;
+}
+/*conteneur de code FIN*/
+/*compteur statistique*/
+
+#codemeter1 {
+  color: #00cccc;
+  font-family: "Orbitron", sans-serif;
+}
+#codemeter2 {
+  color: #ff3333;
+  font-family: "Orbitron", sans-serif;
+}
+#codemeter3 {
+  color: #deb44a;
+  font-family: "Orbitron", sans-serif;
+}
+/*compteur statistique FIN*/
+/*iframe publication*/
+#res2 {
+  padding: 10px;
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 1.2rem;
+  overflow: scroll;
+  resize: vertical;
+  min-height: 17vh;
+}
+/*iframe publication FIN*/
