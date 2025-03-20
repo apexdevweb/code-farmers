@@ -2,7 +2,7 @@
 if (isset($_SESSION['confirmkey'])) {
     if (isset($_SESSION['valideAuth'])) {
 ?>
-        <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-chevron-left" style="color:#E60000;"></i><i class="fa-solid fa-chevron-left" style="color:#E60000;"></i> <i class="fa-regular fa-user"></i></button>
+        <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-left"></i> <i class="fa-regular fa-user"></i></button>
         <br>
         <br>
         <div class="Panel_container" id="mySidepanel">
@@ -12,14 +12,14 @@ if (isset($_SESSION['confirmkey'])) {
             <h5 style="text-shadow: 1px 2px 3px #000;text-decoration: none; text-align: center;">Bonjour <?= $_SESSION['userName'] ?></h5>
             <li class="nav-item dropdown" style="color:#fff;">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 3.5rem; color:#E60000;">
-                    <img src="assets/usersimg/<?= $_SESSION['id']; ?>" class="img-fluid" style="width: 60px; height: 60px; border-radius: 50px; border: 2px solid #fff;"></a>
+                    <img src="assets/usersimg/<?= $_SESSION['id']; ?>" class="img-fluid"></a>
                 <ul class="dropdown-menu">
                     <li style="color:#333;"><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen" style="color:#333;"></i>Publier</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open" style="color:#333;"></i>Mes Publications</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments" style="color:#333;"></i>Message</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="https://discord.gg/NjcmEd7n/"><i class="fa-brands fa-discord" style="color:#333;"></i>Officiale-Discord-Europe</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['id'] ?>"><i class="fa-solid fa-gear" style="color:#333;"></i>Gérer profil</a></li>
-                    <li style="color:#333;"><a class="dropdown-item" href="actionback/users/logout.php"><i class="fa-solid fa-power-off" style="color:#333;"></i>Déconnexion</a></li>
+                    <li style="color:#333;"><a class="dropdown-item" href="../backend/security/logout.php"><i class="fa-solid fa-power-off" style="color:#333;"></i>Déconnexion</a></li>
                 </ul>
             </li>
         </div>
@@ -30,7 +30,7 @@ if (isset($_SESSION['confirmkey'])) {
 ?>
 <script>
     function openNav() {
-        document.getElementById("mySidepanel").style.width = "200px";
+        document.getElementById("mySidepanel").style.width = "350px";
         document.getElementById("mySidepanel").style.opacity = "1";
 
     }

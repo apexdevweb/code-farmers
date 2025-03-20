@@ -2,12 +2,15 @@
 .nav-link {
   font-size: 0.9rem;
   font-family: "Orbitron", sans-serif;
+  text-shadow: 0px 0px 2px #000;
+  letter-spacing: 1px;
 }
 .navbar {
   height: auto;
   width: 100%;
-  background-color: #000;
-  box-shadow: 1px 2px 10px #000;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  box-shadow: 1px 2px 8px #000;
 }
 .navbar > a {
   text-shadow: 1px 2px 3px #000;

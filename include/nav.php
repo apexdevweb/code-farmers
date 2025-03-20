@@ -6,16 +6,16 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../home.php" style="color:#fff;"><i class="fa-solid fa-house" style="color:#E60000;"></i> Home</a>
+                    <a class="nav-link active" aria-current="page" href="../home.php" style="color:#fff;"><i class="fa-solid fa-house" style="color:#000;"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../profileGlobale.php" style="color:#fff;"><i class="fa-solid fa-users" style="color:#E60000;"></i> Membres</a>
+                    <a class="nav-link" href="../profileGlobale.php" style="color:#fff;"><i class="fa-solid fa-users" style="color:#000;"></i> Membres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../recherche.php" style="color:#fff;"><i class="fa-solid fa-magnifying-glass" style="color:#E60000;"></i> Recherche</a>
+                    <a class="nav-link" href="../recherche.php" style="color:#fff;"><i class="fa-solid fa-magnifying-glass" style="color:#000;"></i> Recherche</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-laptop-code" style="color:#E60000;"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-laptop-code" style="color:#000;"></i>
                         Utilitaire-frontend
                     </a>
                     <ul class="dropdown-menu">
@@ -40,7 +40,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-server" style="color:#E60000;"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-server" style="color:#000;"></i>
                         Utilitaire-backend
                     </a>
                     <ul class="dropdown-menu">
@@ -59,7 +59,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-euro-sign" style="color:#E60000;"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-euro-sign" style="color:#000;"></i>
                         Système-paiement-online
                     </a>
                     <ul class="dropdown-menu">
@@ -73,7 +73,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-network-wired" style="color:#E60000;"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-network-wired" style="color:#000;"></i>
                         Team-network
                     </a>
                     <ul class="dropdown-menu">
@@ -87,7 +87,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-images" style="color:#E60000;"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-images" style="color:#000;"></i>
                         Image rework
                     </a>
                     <ul class="dropdown-menu">
@@ -99,7 +99,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-regular fa-image" style="color:#E60000;"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-regular fa-image" style="color:#000;"></i>
                         Wallpapper & icon
                     </a>
                     <ul class="dropdown-menu">
@@ -114,7 +114,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-microchip" style="color:#E60000;"></i>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;"><i class="fa-solid fa-microchip" style="color:#000;"></i>
                         A.i
                     </a>
                     <ul class="dropdown-menu">
@@ -124,7 +124,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../backend/security/logout.php" style="color:#fff;">Sortie <i class="fa-solid fa-arrow-right-from-bracket" style="color:#E60000;"></i></a>
+                    <a class="nav-link" href="../backend/security/logout.php" style="color:#fff;">Sortie <i class="fa-solid fa-arrow-right-from-bracket" style="color:#000;"></i></a>
                 </li>
             </ul>
         </div>

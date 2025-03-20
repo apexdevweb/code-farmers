@@ -17,7 +17,7 @@ if (isset($_POST['signup'])) {
         $confirmkey = mt_rand(3000000, 9000000);
         $Uname = htmlspecialchars(strip_tags($_POST['userName']));
         $Umail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
-        $Upasse = htmlspecialchars(strip_tags($_POST['userPassword']));
+        $Upass = htmlspecialchars(strip_tags($_POST['userPassword']));
         $confirmPasse = htmlspecialchars(strip_tags($_POST['confirmPassword']));
         $Ubirthday = $_POST['dateNaissance'];
         $Ucity = $_POST['city'];
