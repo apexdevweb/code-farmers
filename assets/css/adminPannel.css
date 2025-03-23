@@ -36,8 +36,20 @@
 .view__users--container {
   min-height: 100vh;
   width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 .tempo_msg {
   text-align: center;
+}
+.adm__announce--container {
+  height: auto;
+  width: 100vw;
+  text-align: center;
+}
+.adm_announce {
+  font-size: 1.3rem;
 }
 /*administration des utilisateur fin*/

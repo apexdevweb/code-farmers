@@ -74,8 +74,8 @@ include('include/head.php');
             <?php
             while ($reponses = $verifReponsExist->fetch()) {
             ?>
-                <div class="card" style="margin-top: 10px;">
-                    <div class="card-header">
+                <div class="card" style="margin-top: 10px; background:none;">
+                    <div class="card-header" style="background:none;">
                         <h5><i class="fa-solid fa-hashtag"></i><?= $reponses['name_auteur']; ?></h5>
                     </div>
                     <div class="card-body">

@@ -25,22 +25,26 @@ include("include/head.php");
             ?>
             <div class="mb-3">
                 <label for="userName" class="form-label">Company name</label>
-                <input type="text" class="form-control" name="compagnyName">
+                <input type="text" class="form-control" name="compagnyName" required>
             </div>
             <div class="input-group mb-3">
-                <input type="email" class="form-control" name="compagnyMail" placeholder="E-mail">
+                <input type="email" class="form-control" name="compagnyMail" placeholder="E-mail" required>
                 <span class="input-group-text">@example.com</span>
             </div>
             <div class="mb-3">
+                <label for="userName" class="form-label">Company number identification</label>
+                <input type="text" class="form-control" name="compagnyNumber" required>
+            </div>
+            <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" name="compagnyPassword">
+                <input type="password" class="form-control" name="compagnyPassword" required>
             </div>
             <div class="mb-3">
                 <label for="confirmPassword" class="form-label">Confirme password</label>
-                <input type="password" class="form-control" name="confirmPassword">
+                <input type="password" class="form-control" name="confirmPassword" required>
             </div>
             <label for="city" class="form-label">Compagny location</label>
-            <select class="form-select form-select-sm" name="city">
+            <select class="form-select form-select-sm" name="city" required>
                 <option selected>...</option>
                 <option value="Anvers">Anvers</option>
                 <option value="Limbourg">Limbourg</option>

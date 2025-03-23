@@ -3,7 +3,9 @@
 class Professionel
 {
 
+    private int $pro_id;
     protected string $pro_name;
+    protected string $pro_mail;
 
 
     public function __construct(string $proName)

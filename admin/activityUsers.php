@@ -7,6 +7,7 @@ try {
 } catch (PDOException $e) {
     die("Erreur d'affichage des utilisateurs" . $e->getMessage());
 }
+$admin_announcement = "Espace Administration des utilisateurs"
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,6 +24,9 @@ include("../include/head.php");
         ?>
     </header>
     <main>
+        <div class="adm__announce--container">
+            <cite class="adm_announce"><?= $admin_announcement ?></cite>
+        </div>
         <br>
         <a href="../home.php" class="btnRetour"><i class="fa-solid fa-arrow-left"></i> Retour</a>
         <section class="view__users--container">

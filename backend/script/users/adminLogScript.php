@@ -19,12 +19,14 @@ if (isset($_POST['connexion'])) {
                 if ($admin_passe === $admin_pass_db) {
 
                     $administrator = new Administrateur(
+                        $admin_infos['admin_id'],
                         $admin_infos['admin_name'],
                         $admin_infos['admin_mail'],
                         $admin_infos['admin_password'],
                     );
                     $_SESSION["adminAuth"] = true;
                     $_SESSION['data'] = [
+                        "adm_id" => $administrator->get_id_admin(),
                         "adm_name" => $administrator->get_name_admin(),
                         "adm_mail" => $administrator->get_mail_admin(),
                         "adm_pass" => $administrator->get_pass_admin(),
