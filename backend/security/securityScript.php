@@ -1,9 +1,5 @@
 <?php
 session_start();
-if (!isset($_SESSION['valideAuth'])  && !isset($_SESSION['confirmkey']))
-    header('Location: login.php');
-elseif (!isset($_SESSION['pro_Auth']) && !isset($_SESSION['confirmkey'])) {
-    header('Location: login.php');
-} elseif (!isset($_SESSION['adminAuth'])) {
+if (!isset($_SESSION['valideAuth'])  && !isset($_SESSION['confirmkey']) && !isset($_SESSION['pro_Auth']) && !isset($_SESSION['adminAuth'])) {
     header('Location: login.php');
 }
