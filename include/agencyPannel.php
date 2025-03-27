@@ -9,12 +9,19 @@ if (isset($_SESSION['pro_Auth'])) {
             <div class="Panel_containerSecond">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
             </div>
-            <h5 class="title__admin--pannel">Bonjour: <?= $_SESSION['pro_data']['pro_name'] ?></h5>
-            <ul class="admin__nav">
-                <li class="admin__nav--item"><a href="admin/activityUsers.php"><i class="fa-solid fa-users"></i>Utilisateurs</a></li>
-                <li class="admin__nav--item"><a href="admin/activityPubli.php"><i class="fa-regular fa-folder-open"></i>Publications</a></li>
-                <li class="admin__nav--item"><a href="../backend/security/logout.php"><i class="fa-solid fa-power-off"></i>Déconnexion</a></li>
-            </ul>
+            <h5 style="text-shadow: 1px 2px 3px #000;text-decoration: none; text-align: center;">Bonjour <?= $_SESSION['pro_data']['pro_name'] ?></h5>
+            <li class="nav-item dropdown" style="color:#fff;">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 3.5rem; color:#E60000;">
+                    <img src="assets/usersimg/<?= $_SESSION['pro_data']['pro_banner']; ?>" class="img-fluid"></a>
+                <ul class="dropdown-menu">
+                    <li style="color:#333;"><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen" style="color:#333;"></i>Publier</a></li>
+                    <li style="color:#333;"><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open" style="color:#333;"></i>Mes Publications</a></li>
+                    <li style="color:#333;"><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments" style="color:#333;"></i>Message</a></li>
+                    <li style="color:#333;"><a class="dropdown-item" href="https://discord.gg/NjcmEd7n/"><i class="fa-brands fa-discord" style="color:#333;"></i>Officiale-Discord-Europe</a></li>
+                    <li style="color:#333;"><a class="dropdown-item" href="editeurProfile.php?id=<?= $_SESSION['pro_data']['pro_id'] ?>"><i class="fa-solid fa-gear" style="color:#333;"></i>Gérer profil</a></li>
+                    <li style="color:#333;"><a class="dropdown-item" href="../backend/security/logout.php"><i class="fa-solid fa-power-off" style="color:#333;"></i>Déconnexion</a></li>
+                </ul>
+            </li>
         </div>
 
 <?php
