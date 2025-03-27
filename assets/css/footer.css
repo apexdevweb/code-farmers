@@ -4,8 +4,7 @@ footer {
   bottom: 0;
   height: auto;
   width: 100%;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-color: #000;
   box-shadow: 1px 2px 10px #000;
 }
 .foot_contain {
@@ -19,8 +18,12 @@ footer {
 }
 
 .foot_contain > p {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-family: "Orbitron", sans-serif;
   color: #fff;
+}
+.foot_contain > a > img {
+  height: 4vh;
+  width: auto;
 }
 /****************FOOTER FIN************************************/

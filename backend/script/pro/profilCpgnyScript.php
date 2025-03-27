@@ -13,6 +13,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         $cpgnySelectInfo = $cpgnySelect->fetch();
         //ON PLACE LA DATA RECUPERE DANS DES VARIABLES
         $cpgny_name_select =  $cpgnySelectInfo['enterprise_name'];
+        $cpgny_mail_select =  $cpgnySelectInfo['enterprise_mail'];
+        $cpgny_number_select =  $cpgnySelectInfo['enterprise_number'];
         $cpgny_avatar_select =  $cpgnySelectInfo['enterprise_banner'];
         $cpgny_city_select = $cpgnySelectInfo['enterprise_location'];
     } else {

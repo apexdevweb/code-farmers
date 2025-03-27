@@ -12,7 +12,7 @@ if (isset($_SESSION['pro_Auth'])) {
             <h5 style="text-shadow: 1px 2px 3px #000;text-decoration: none; text-align: center;">Bonjour <?= $_SESSION['pro_data']['pro_name'] ?></h5>
             <li class="nav-item dropdown" style="color:#fff;">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 3.5rem; color:#E60000;">
-                    <img src="assets/usersimg/<?= $_SESSION['pro_data']['pro_banner']; ?>" class="img-fluid"></a>
+                    <img src="assets/proBanner/<?= $_SESSION['pro_data']['pro_id']; ?>" class="img-fluid"></a>
                 <ul class="dropdown-menu">
                     <li style="color:#333;"><a class="dropdown-item" href="publication.php"><i class="fa-solid fa-file-pen" style="color:#333;"></i>Publier</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="maPublication.php"><i class="fa-regular fa-folder-open" style="color:#333;"></i>Mes Publications</a></li>
