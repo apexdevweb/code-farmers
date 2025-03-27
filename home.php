@@ -23,6 +23,8 @@ include("include/head.php");
         include("include/adminPannel.php");
     } elseif (isset($_SESSION["valideAuth"])) {
         include("include/userpanel.php");
+    } elseif (isset($_SESSION['pro_Auth'])) {
+        include("include/agencyPannel.php");
     }
 
     include("include/slider.php");

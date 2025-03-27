@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('backend/connection/connexionDB.php');
-require('backend/mail/autoMail.php');
+require('backend/mail/proAutoMail.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -37,12 +37,12 @@ if (isset($_POST['compagnySignup'])) {
                 $cpgny_insert->execute([$cpgny_name, $cpgny_mail,  $cpgny_pass_crypted, $cpgny_number, $cpgny_city, $date_inscription, $confirmkey, 0]);
 
                 // Récupère les infos de l'utilisateur
-                $rescu_cpgny_info = $bdd->prepare("SELECT `id`, userName FROM users WHERE userName = ? AND mail = ?");
+                $rescu_cpgny_info = $bdd->prepare("SELECT id_enterprise, enterprise_name FROM enterprise WHERE enterprise_name = ? AND enterprise_mail = ?");
                 $rescu_cpgny_info->execute([$cpgny_name, $cpgny_mail]);
                 $cpgnyInfo = $rescu_cpgny_info->fetch();
 
                 if ($cpgnyInfo) {
-                    $_SESSION['cpgnyAuth'] = true;
+                    $_SESSION['pro_Auth'] = true;
                     $_SESSION['id_enterprise'] = $cpgnyInfo['id_enterprise'];
                     $_SESSION['enterprise_name'] = $cpgnyInfo['enterprise_name'];
                 } else {
@@ -53,7 +53,7 @@ if (isset($_POST['compagnySignup'])) {
             }
 
             // Récupère les informations utilisateur pour envoyer le mail de confirmation
-            $recupCpgnyInfo = $bdd->prepare("SELECT * FROM enterprise WHERE enterpise_mail = ?");
+            $recupCpgnyInfo = $bdd->prepare("SELECT * FROM enterprise WHERE enterprise_mail = ?");
             $recupCpgnyInfo->execute([$cpgny_mail]);
 
             if ($recupCpgnyInfo->rowCount() > 0) {

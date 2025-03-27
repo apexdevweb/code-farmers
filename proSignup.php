@@ -33,7 +33,7 @@ include("include/head.php");
             </div>
             <div class="mb-3">
                 <label for="userName" class="form-label">Company number identification</label>
-                <input type="text" class="form-control" name="compagnyNumber" required>
+                <input type="text" class="form-control" name="compagnyNumber" minlength="14" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>

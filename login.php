@@ -1,7 +1,8 @@
 <?php
 session_start();
 require("backend/script/users/loginScript.php");
-require("backend/script/users/adminLogScript.php")
+require("backend/script/users/proLogScript.php");
+require("backend/script/users/adminLogScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
