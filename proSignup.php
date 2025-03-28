@@ -1,5 +1,5 @@
 <?php
-require("backend/script/users/proSignupScript.php");
+require("backend/script/pro/proSignupScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
