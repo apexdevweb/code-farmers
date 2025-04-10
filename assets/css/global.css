@@ -55,14 +55,13 @@
   width: auto;
   border-radius: 5px;
   padding: 4px;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-color: #000;
   color: #fff;
   font-family: "Orbitron", sans-serif;
   font-size: 1rem;
 }
 .btnRetour > i {
-  color: #000;
+  color: #fff;
 }
 /*petit liens de retour FIN*/
 /***********CARTE RESPONSIVE PUBLICATION****************************************/
@@ -126,8 +125,15 @@
   padding: 3px;
   height: auto;
   width: 100%;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background: radial-gradient(
+    circle at 10% -20%,
+    #a0d9f2,
+    #cbd6ff,
+    #fde4d5,
+    #faf0e4,
+    #f8f9f0,
+    #ffffff
+  );
   box-shadow: 1px 2px 10px #000;
   overflow: hidden;
 }

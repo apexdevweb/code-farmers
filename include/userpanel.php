@@ -7,9 +7,9 @@ if (isset($_SESSION['confirmkey'])) {
         <br>
         <div class="Panel_container" id="mySidepanel">
             <div class="Panel_containerSecond">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark" style="color:#000;"></i></a>
             </div>
-            <h5 style="text-shadow: 1px 2px 3px #000;text-decoration: none; text-align: center;">Bonjour <?= $_SESSION['userName'] ?></h5>
+            <h5 style="text-decoration: none; text-align: center;">Bonjour <?= $_SESSION['userName'] ?></h5>
             <li class="nav-item dropdown" style="color:#fff;">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 3.5rem; color:#E60000;">
                     <img src="assets/usersimg/<?= $_SESSION['id']; ?>" class="img-fluid"></a>

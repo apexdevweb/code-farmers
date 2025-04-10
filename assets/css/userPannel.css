@@ -8,8 +8,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background: radial-gradient(
+    circle at 10% -20%,
+    #a0d9f2,
+    #cbd6ff,
+    #fde4d5,
+    #faf0e4,
+    #f8f9f0,
+    #ffffff
+  );
   border: 1px solid #fff;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
@@ -32,7 +39,7 @@
   transition: 0.5s;
 }
 .Panel_container > h5 {
-  color: #fff;
+  color: #000;
   font-size: 1.3rem;
   transition: 0.5s;
   backdrop-filter: blur(3px);

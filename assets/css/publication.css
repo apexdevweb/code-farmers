@@ -145,3 +145,32 @@
   min-height: 17vh;
 }
 /*iframe publication FIN*/
+/*annonce de recrutement*/
+.device__container--choice {
+  height: auto;
+  max-width: 30vw;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.device__sub--container {
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  width: 4vw;
+  margin: auto;
+}
+.device__label {
+  height: auto;
+  width: 5vw;
+  font-size: 1.5rem;
+}
+.device__label > img {
+  height: auto;
+  width: 3vw;
+  font-size: 1.5rem;
+  filter: drop-shadow(0px 0px 1px #000);
+}
+/*annonce de recrutement FIN*/

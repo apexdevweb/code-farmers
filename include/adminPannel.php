@@ -7,7 +7,7 @@ if (isset($_SESSION['adminAuth'])) {
         <br>
         <div class="Panel_container" id="mySidepanel">
             <div class="Panel_containerSecond">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark" style="color:#000;"></i></a>
             </div>
             <h5 class="title__admin--pannel">Administrateur: <?= $_SESSION['data']['adm_name'] ?></h5>
             <ul class="admin__nav">
