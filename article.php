@@ -20,7 +20,13 @@ include('include/head.php');
     </header>
     <br>
     <?php
-    include("include/userpanel.php");
+    if (isset($_SESSION["adminAuth"])) {
+        include("include/adminPannel.php");
+    } elseif (isset($_SESSION["valideAuth"])) {
+        include("include/userpanel.php");
+    } elseif (isset($_SESSION['pro_Auth'])) {
+        include("include/agencyPannel.php");
+    }
     ?>
     <div class="container">
 

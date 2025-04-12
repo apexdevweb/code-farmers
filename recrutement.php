@@ -1,6 +1,6 @@
 <?php
 require('backend/security/securityScript.php');
-require("backend/script/publications/publicationScript.php");
+require("backend/script/proPublications/insertJobScript.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,7 +21,7 @@ include("include/head.php");
     include("include/userpanel.php");
     ?>
     <div class="container">
-        <form method="POST" enctype="multipart/form-data">
+        <form method="POST">
             <?php
             if (isset($errorMsg,)) {
                 echo "<p>" . $errorMsg . "</p>";
@@ -32,15 +32,15 @@ include("include/head.php");
             <section class="txt_bloc">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Le post que vous proposer</label>
-                    <input type="text" class="form-control" name="titlePubli" maxlength="25" required>
+                    <input type="text" class="form-control" name="jobTitle" maxlength="25" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Description de l'offre</label>
-                    <textarea class="form-control" name="containPubli" required></textarea>
+                    <textarea class="form-control" name="jobDesc" required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Lieu de de travail</label>
-                    <select class="form-select form-select-sm" name="city" required>
+                    <select class="form-select form-select-sm" name="jobLocation" required>
                         <option selected>...</option>
                         <option value="Anvers">Anvers</option>
                         <option value="Limbourg">Limbourg</option>
@@ -56,11 +56,11 @@ include("include/head.php");
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Les heures par semaines</label>
-                    <input type="number">
+                    <input type="number" class="form-control" name="jobTime">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Type de contrat proposer</label>
-                    <select class="form-select form-select-sm" name="city" required>
+                    <select class="form-select form-select-sm" name="jobContract" required>
                         <option selected>...</option>
                         <option value="cdd">Cdd</option>
                         <option value="cdi">Cdi</option>
@@ -75,39 +75,24 @@ include("include/head.php");
                         <i class="fa-solid fa-arrow-right"></i>
                         <div class="device__sub--container">
                             <label for="device" class="device__label"><img src="assets/images/euro.png" alt="logoEuro"></label>
-                            <input type="radio" value="euro" name="device">
+                            <input type="radio" value="euro" name="jobDevice">
                         </div>
                         <div class="device__sub--container">
                             <label for="device" class="device__label"><img src="assets/images/dollar.png" alt="logoDollar"></label>
-                            <input type="radio" value="usd" name="device">
+                            <input type="radio" value="usd" name="jobDevice">
                         </div>
                     </div>
-                    <!-- <input type="number" placeholder="€" id="eur">
-                    <input type="number" placeholder="$" id="dollars"> -->
+                    <input type="number" class="form-control" name="device_mount">
                 </div>
             </section>
             <br>
-
-            <br>
-            <div class="mb-3">
-                <div class="input-group mb-3">
-                    <label class="input-group-text">Publier un fichier</label>
-                    <input type="file" class="form-control" name="publiImg">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary" name="publish">Publier</button>
+            <button type="submit" class="btn btn-primary" name="jobPublish">Publier</button>
         </form>
     </div>
-    <script type="text/javascript">
-        const eur = document.getElementById("eur");
-        const doll = document.getElementById("dollars");
-
-        if (eur) {
-
-        } else if (doll) {
-
-        }
-    </script>
+    <br>
+    <?php
+    include("include/footer.php");
+    ?>
 </body>
 
 </html>

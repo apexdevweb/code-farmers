@@ -7,7 +7,8 @@ try {
 } catch (PDOException $e) {
     die("Erreur d'affichage des utilisateurs" . $e->getMessage());
 }
-$admin_announcement = "Espace Administration des utilisateurs"
+$admin_announcement = "Espace Administration des utilisateurs";
+$Msg = "Aucun utilisateur pour le moment...";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -33,7 +34,6 @@ include("../include/head.php");
             <?php
             if (isset($_SESSION['adminAuth']) && isset($_SESSION['data']['adm_name'])) {
                 if ($admin_view_users->rowCount() == 0) {
-                    $Msg = "Aucun utilisateur pour le moment...";
             ?>
                     <br>
                     <p class="tempo_msg"><?= $Msg ?></p>

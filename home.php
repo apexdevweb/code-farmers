@@ -1,6 +1,7 @@
 <?php
 session_start();
 require('backend/script/publications/affichepubliScript.php');
+require('backend/script/proPublications/affichJobScript.php');
 require('backend/script/publications/afficheRecherche.php');
 ?>
 <!DOCTYPE html>
@@ -73,6 +74,7 @@ include("include/head.php");
         }
         ?>
     </section>
+    <br>
     <?php
     include("include/footer.php");
     ?>

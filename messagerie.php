@@ -2,7 +2,7 @@
 require("backend/security/securityScript.php");
 require("backend/connection/connexionDB.php");
 // Récupération de l'ID de l'utilisateur connecté depuis la session
-$sessionUser = $_SESSION['id'];
+$sessionUser = $_SESSION['id'] . $_SESSION['pro_data']['pro_id'];
 // Préparation de la requête pour récupérer les utilisateurs sauf celui connecté
 $req_users = $bdd->prepare("SELECT * FROM users WHERE id != :sessionUser ORDER BY id DESC");
 // Liaison du paramètre
@@ -11,7 +11,6 @@ $req_users->bindParam(':sessionUser', $sessionUser, PDO::PARAM_INT);
 $req_users->execute();
 // Récupération des résultats
 $users = $req_users->fetchAll(PDO::FETCH_ASSOC);
-
 
 ?>
 <!DOCTYPE html>
@@ -39,7 +38,7 @@ include("include/head.php");
     ?>
             <br>
             <div class="container-sm">
-                <h6><img src="asset/image/<?= $message_users['avatar']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><a href="mp.php?id=<?= $message_users['id']; ?>"><?= $message_users['userName']; ?></a></h6>
+                <h6><img src="assets/usersimg/<?= $message_users['avatar']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><a href="mp.php?id=<?= $message_users['id']; ?>"><?= $message_users['userName']; ?></a></h6>
             </div>
 
     <?php
