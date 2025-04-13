@@ -18,7 +18,9 @@ include("include/head.php");
     </header>
     <br>
     <?php
-    include("include/userpanel.php");
+    if (isset($_SESSION['pro_Auth'])) {
+        include("include/agencyPannel.php");
+    }
     ?>
     <div class="container">
         <form method="POST">
