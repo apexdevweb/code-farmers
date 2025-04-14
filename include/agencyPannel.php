@@ -16,7 +16,7 @@ if (isset($_SESSION['pro_Auth'])) {
                 <ul class="dropdown-menu">
                     <li style="color:#333;"><a class="dropdown-item" href="recrutement.php"><i class="fa-solid fa-file-pen" style="color:#333;"></i>Publier une offre d'emplois</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="myJobPubli.php"><i class="fa-regular fa-folder-open" style="color:#333;"></i>Mes offres publier</a></li>
-                    <li style="color:#333;"><a class="dropdown-item" href="messagerie.php"><i class="fa-regular fa-comments" style="color:#333;"></i>Message</a></li>
+                    <li style="color:#333;"><a class="dropdown-item" href="messageriePro.php"><i class="fa-regular fa-comments" style="color:#333;"></i>Message</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="https://discord.gg/NjcmEd7n/"><i class="fa-brands fa-discord" style="color:#333;"></i>Officiale-Discord-Europe</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="editeurCpgnyProfil.php?id=<?= $_SESSION['pro_data']['pro_id'] ?>"><i class="fa-solid fa-gear" style="color:#333;"></i>Gérer profil</a></li>
                     <li style="color:#333;"><a class="dropdown-item" href="../backend/security/logout.php"><i class="fa-solid fa-power-off" style="color:#333;"></i>Déconnexion</a></li>

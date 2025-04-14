@@ -57,7 +57,7 @@ include('include/head.php');
                 <br>
                 <hr>
                 <div class="foot__container--job">
-                    <a href="#">Par : <?= $job_employer; ?></a><a href="#"><i class="fa-regular fa-star"></i> Favoris</a><a href="#">Postuler <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#">Par : <?= $job_employer; ?></a><a href="#"><i class="fa-regular fa-star"></i> Favoris</a><a href="candid.php?id=<?= $job_artcl_id ?>">Postuler <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             <?php
         }

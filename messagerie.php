@@ -2,7 +2,7 @@
 require("backend/security/securityScript.php");
 require("backend/connection/connexionDB.php");
 // Récupération de l'ID de l'utilisateur connecté depuis la session
-$sessionUser = $_SESSION['id'] . $_SESSION['pro_data']['pro_id'];
+$sessionUser = $_SESSION['id'];
 // Préparation de la requête pour récupérer les utilisateurs sauf celui connecté
 $req_users = $bdd->prepare("SELECT * FROM users WHERE id != :sessionUser ORDER BY id DESC");
 // Liaison du paramètre
@@ -11,7 +11,6 @@ $req_users->bindParam(':sessionUser', $sessionUser, PDO::PARAM_INT);
 $req_users->execute();
 // Récupération des résultats
 $users = $req_users->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
