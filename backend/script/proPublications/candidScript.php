@@ -33,9 +33,12 @@ if (isset($_POST['applyValide'])) {
                     $lmUploaded = move_uploaded_file($_FILES['LM']['tmp_name'], $routeLm);
 
                     if ($cvUploaded && $lmUploaded) {
-                        $req_insert_apply = $bdd->prepare("INSERT INTO candidature (candid_title,candid_ref,candid_fname,candid_lname,candid_mail,candid_tel,candid_description,candid_cv,candid_lm) VALUES (?,?,?,?,?,?,?,?,?)");
-                        $req_insert_apply->execute([$apply_title, $apply_ref, $apply_f_name, $apply_l_name, $apply_mail, $apply_tel_sanitized,  $apply_about,  $cvUploaded, $lmUploaded]);
-
+                        try {
+                            $req_insert_apply = $bdd->prepare("INSERT INTO candidature (candid_title,candid_ref,candid_fname,candid_lname,candid_mail,candid_tel,candid_description,candid_cv,candid_lm) VALUES (?,?,?,?,?,?,?,?,?)");
+                            $req_insert_apply->execute([$apply_title, $apply_ref, $apply_f_name, $apply_l_name, $apply_mail, $apply_tel_sanitized,  $apply_about,  $cvUploaded, $lmUploaded]);
+                        } catch (PDOException $e) {
+                            die("Erreur d'envoi de la candidature" . $e->getMessage());
+                        }
                         $successMsg = "Candidature envoyer";
                     } else {
                         echo "Erreur de transfert des documents";
