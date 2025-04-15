@@ -26,8 +26,9 @@ if (isset($_POST['applyValide'])) {
                 $extLmUpload = strtolower(substr(strrchr($_FILES['LM']['name'], '.'), 1));
 
                 if (in_array($extCvUpload, $extension) && in_array($extLmUpload, $extension)) {
-                    $routeCv = "assets/candidImg/" . $_SESSION['id'] . "_cv." . $extCvUpload;
-                    $routeLm = "assets/candidImg/" . $_SESSION['id'] . "_lm." . $extLmUpload;
+                    $uniqid = uniqid($_SESSION['id'] . "_", true);
+                    $routeCv = "assets/candidImg/" . $uniqid . "_cv." . $extCvUpload;
+                    $routeLm = "assets/candidImg/" . $uniqid . "_lm." . $extLmUpload;
 
                     $cvUploaded = move_uploaded_file($_FILES['CV']['tmp_name'], $routeCv);
                     $lmUploaded = move_uploaded_file($_FILES['LM']['tmp_name'], $routeLm);
@@ -35,7 +36,7 @@ if (isset($_POST['applyValide'])) {
                     if ($cvUploaded && $lmUploaded) {
                         try {
                             $req_insert_apply = $bdd->prepare("INSERT INTO candidature (candid_title,candid_ref,candid_fname,candid_lname,candid_mail,candid_tel,candid_description,candid_cv,candid_lm) VALUES (?,?,?,?,?,?,?,?,?)");
-                            $req_insert_apply->execute([$apply_title, $apply_ref, $apply_f_name, $apply_l_name, $apply_mail, $apply_tel_sanitized,  $apply_about,  $cvUploaded, $lmUploaded]);
+                            $req_insert_apply->execute([$apply_title, $apply_ref, $apply_f_name, $apply_l_name, $apply_mail, $apply_tel_sanitized,  $apply_about, $routeCv, $routeLm]);
                         } catch (PDOException $e) {
                             die("Erreur d'envoi de la candidature" . $e->getMessage());
                         }
