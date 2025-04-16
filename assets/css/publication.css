@@ -229,7 +229,8 @@
 }
 
 .apply__container {
-  height: 50vh;
+  margin: 0;
+  height: 60vh;
   width: 25vw;
   border: 1px solid #000;
   border-radius: 10px;
@@ -247,8 +248,18 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  background: radial-gradient(
+    circle at 10% -20%,
+    #a0d9f2,
+    #cbd6ff,
+    #fde4d5,
+    #faf0e4,
+    #f8f9f0,
+    #ffffff
+  );
+  border-radius: 10px;
+  padding: 5px;
 }
-
 .apply__infos {
   height: 25vh;
   width: 100%;
@@ -256,11 +267,26 @@
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: space-evenly;
-  overflow: scroll;
-  border: 1px solid #000;
+}
+.apply__infos--title {
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+.apply__separator {
+  height: 3px;
+  width: 15vw;
+  background-color: #000;
+  border: none;
   border-radius: 10px;
 }
-
+.apply__container > p {
+  height: auto;
+  width: 40ch;
+  text-align: left;
+  word-break: break-word;
+}
 .apply__img--container {
   height: auto;
   width: 100%;
@@ -275,8 +301,14 @@
   width: 10ch;
 }
 .apply__img--container > a {
+  height: 5vh;
+  width: auto;
   filter: drop-shadow(0px 0px 2px #000);
   border-radius: 10px;
+}
+.apply__img--container > a > img {
+  height: 5vh;
+  width: auto;
 }
 .apply__img--container > a:hover {
   background-color: #000;
