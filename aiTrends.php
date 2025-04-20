@@ -1,5 +1,6 @@
 <?php
 require("backend/security/securityScript.php");
+require("backend/script/Ai/viewAi.php");
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,22 @@ include("include/head.php");
     <div class="affichage_mode">
         <h4><span>A</span>i <span>T</span>rends</h4>
     </div>
-
+    <section class="AI__container--trends">
+        <article class="ai__article">
+            <div class="ai__subcontainer--trends">
+                <hgroup class="ai__title--container">
+                    <h3></h3>
+                    <h4></h4>
+                </hgroup>
+                <p class="ai__descript"></p>
+                <figure class="ai__fig">
+                    <img src="" alt="aiLogo">
+                    <figcaption></figcaption>
+                </figure>
+        </article>
+        </div>
+    </section>
+    <br>
     <?php
     include("include/footer.php");
     ?>
