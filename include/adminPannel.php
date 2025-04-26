@@ -13,7 +13,7 @@ if (isset($_SESSION['adminAuth'])) {
             <ul class="admin__nav">
                 <li class="admin__nav--item"><a href="admin/activityUsers.php"><i class="fa-solid fa-users"></i>Utilisateurs</a></li>
                 <li class="admin__nav--item"><a href="admin/activityPubli.php"><i class="fa-regular fa-folder-open"></i>Publications</a></li>
-                <li class="admin__nav--item"><a href="admin/viewAi.php"><i class="fa-solid fa-microchip"></i>Gestion des i.a</a></li>
+                <li class="admin__nav--item"><a href="insertAi.php"><i class="fa-solid fa-microchip"></i>Gestion des i.a</a></li>
                 <li class="admin__nav--item"><a href="../backend/security/logout.php"><i class="fa-solid fa-power-off"></i>Déconnexion</a></li>
             </ul>
         </div>

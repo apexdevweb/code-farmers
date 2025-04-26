@@ -1,6 +1,6 @@
 <?php
 require("backend/security/securityScript.php");
-require("backend/script/Ai/viewAi.php");
+require("backend/script/Ai/viewAiScript.php");
 ?>
 
 <!DOCTYPE html>
@@ -27,20 +27,30 @@ include("include/head.php");
     <div class="affichage_mode">
         <h4><span>A</span>i <span>T</span>rends</h4>
     </div>
+    <br>
     <section class="AI__container--trends">
-        <article class="ai__article">
-            <div class="ai__subcontainer--trends">
-                <hgroup class="ai__title--container">
-                    <h3></h3>
-                    <h4></h4>
-                </hgroup>
-                <p class="ai__descript"></p>
-                <figure class="ai__fig">
-                    <img src="" alt="aiLogo">
-                    <figcaption></figcaption>
-                </figure>
-        </article>
-        </div>
+
+        <?php
+        if (isset($affiche_ai)) {
+            foreach ($affiche_ai as $view_ai) {
+        ?>
+                <article class="ai__article">
+                    <div class="ai__subcontainer--trends">
+                        <hgroup class="ai__title--container">
+                            <h3><?= $view_ai['ai_name'] ?></h3>
+                        </hgroup>
+                        <p class="ai__descript"><?= $view_ai['ai_description'] ?></p>
+                        <figure class="ai__fig">
+                            <img src="<?= $view_ai['ai_logo'] ?>" alt="aiLogo">
+                            <figcaption><a href="<?= $view_ai['ai_link'] ?>">View Ai<i class="fa-solid fa-arrow-right"></i></a></figcaption>
+                        </figure>
+                    </div>
+                </article>
+        <?php
+            }
+        }
+        ?>
+
     </section>
     <br>
     <?php

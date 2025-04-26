@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once("../backend/connection/connexionDB.php");
+require_once("backend/connection/connexionDB.php");
 try {
-    $admin_view_ai = $bdd->prepare("SELECT * FROM tendance_ai");
+    $admin_view_ai = $bdd->prepare("SELECT * FROM tendance_ai WHERE id_ai ORDER BY id_ai DESC");
     $admin_view_ai->execute();
 } catch (PDOException $e) {
     die("Erreur d'affichage des i.a" . $e->getMessage());
@@ -11,7 +11,7 @@ $admin_announcement = "Espace Administration des i.a";
 
 if (isset($_POST['ia_insert'])) {
     if (
-        !empty($_POST['ia_name']) && !empty($_POST['ia_descript']) && !empty($_POST['ia_descript'])
+        !empty($_POST['ia_name']) && !empty($_POST['ia_descript'])
         && !empty($_POST['ia_link']) && !empty($_FILES['logo_ia']  && !empty($_FILES['logo_ia']['name']))
     ) {
 
@@ -22,51 +22,45 @@ if (isset($_POST['ia_insert'])) {
         $tailleAiMax = 2097152;
         $extensionAiValide = array('jpg', 'jpeg', 'png', 'webp');
 
-        //////////////////////////A REFAIRE ///////////////////////////////////////////////////
+
         if ($_FILES['logo_ia']['size'] <= $tailleAiMax) {
             $extAiUpload = strtolower(substr(strrchr($_FILES['logo_ia']['name'], '.'), 1));
 
             if (in_array($extAiUpload, $extensionAiValide)) {
-                $uniqid = uniqid($_SESSION['id'] . "_", true);
-                $routeCv = "assets/candidImg/" . $uniqid . "_cv." . $extCvUpload;
-                $routeLm = "assets/candidImg/" . $uniqid . "_lm." . $extLmUpload;
+                $uniqAiId = uniqid($_SESSION['data']['adm_id'] . "_", true);
+                $routeAi = "assets/aiLogo/" . $uniqAiId . "_ia." . $extAiUpload;
+                $aiUploaded = move_uploaded_file($_FILES['logo_ia']['tmp_name'], $routeAi);
 
-                $cvUploaded = move_uploaded_file($_FILES['CV']['tmp_name'], $routeCv);
-                $lmUploaded = move_uploaded_file($_FILES['LM']['tmp_name'], $routeLm);
-
-                if ($cvUploaded && $lmUploaded) {
+                if ($aiUploaded) {
                     try {
-                        $req_insert_apply = $bdd->prepare("INSERT INTO tendance_ai () VALUES ()");
-                        $req_insert_apply->execute([$apply_title, $apply_ref, $apply_f_name, $apply_l_name, $apply_mail, $apply_tel_sanitized,  $apply_about, $routeCv, $routeLm]);
+                        $req_insert_ai = $bdd->prepare("INSERT INTO tendance_ai (ai_name,ai_description,ai_link,ai_logo) VALUES (?,?,?,?)");
+                        $req_insert_ai->execute([$ai_name, $ai_descript, $ai_link, $routeAi]);
                     } catch (PDOException $e) {
                         die("Erreur d'insertion de l'i.a" . $e->getMessage());
                     }
-                    $successMsg = "Candidature envoyer";
+                    $successMsg = "Ai upload";
                 } else {
-                    echo "Erreur de transfert des documents";
+                    echo "Erreur d'insertion des info ai";
                 }
             } else {
                 echo "Votre image dois être au format : jpg, jpeg, png, pdf";
             }
         }
-        /////////////////////////////////////////////////////////////////////////////
     }
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
-include("../include/head.php");
+include("include/head.php");
 ?>
 
 <body>
     <header>
         <?php
-        include("../include/logo.php");
-        include("../include/nav.php");
+        include("include/logo.php");
+        include("include/nav.php");
         ?>
     </header>
     <main>
@@ -92,13 +86,11 @@ include("../include/head.php");
                         <div class="responsive_carte">
                             <div class="card carte_hov" style="width: 15rem; height: auto; margin-top: 10px;background: url('../assets/images/symbolehtml.jpg') no-repeat 50% 57%;background-size: cover; overflow:hidden;">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="color: #fff; backdrop-filter: blur(3px); text-shadow: 1px 2px 5px #000; font-size: 1.4rem; backdrop-filter: blur(2px);"><?= $view_ai['titre'] ?></h5>
+                                    <h5 class="card-title" style="color: #fff; backdrop-filter: blur(3px); text-shadow: 1px 2px 5px #000; font-size: 1.4rem; backdrop-filter: blur(2px);"><?= $view_ai['ai_name'] ?></h5>
                                     <div style="color: #fff; border:1px solid #fff; box-shadow: 1px 2px 5px #000; border-radius:5px;"></div>
                                     <br>
-                                    <img src="../assets/userimgpubli/<?= $view_ai['img_publication']; ?>" style="width: 100%; height: 7rem; border-radius: 5px;">
                                     <br>
-                                    <br>
-                                    <button type="button" class="btn btn-info"><a href="deletePubScript.php?id=<?= $view_ai['id']; ?>">Supprimer</a></button>
+                                    <button type="button" class="btn btn-info"><a href="deletePubScript.php?id=<?= $view_ai['id_ai']; ?>">Supprimer</a></button>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +104,6 @@ include("../include/head.php");
         <section class="gestion__container--ai">
             <ul class="gestion__options--ai">
                 <li class="gestion__options--items" id="ia_add"><button><i class="fa-solid fa-plus"></i>Ajouter une i.a</button></li>
-                <!-- <li><a href=""><i class="fa-solid fa-minus"></i></a></li> -->
             </ul>
             <div class="gestion__ai--separator"></div>
             <div class="form__ai--container" id="ia_content">
@@ -129,7 +120,7 @@ include("../include/head.php");
     </main>
     <br>
     <?php
-    include("../include/footer.php");
+    include("include/footer.php");
     ?>
     <script type="text/javascript" defer>
         const ajouter = document.getElementById("ia_add");
