@@ -334,8 +334,13 @@ input[type="submit"] {
   text-align: center;
   height: auto;
   width: 100%;
+  background-color: #000;
+  border-radius: 10px;
+}
+.ai__title--container > h3 {
+  color: transparent;
   background: radial-gradient(
-    circle at 10% -20%,
+    circle at 30% 50%,
     #a0d9f2,
     #cbd6ff,
     #fde4d5,
@@ -343,7 +348,8 @@ input[type="submit"] {
     #f8f9f0,
     #ffffff
   );
-  border-radius: 10px;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .ai__descript {
   color: #000;
