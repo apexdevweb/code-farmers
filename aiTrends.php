@@ -29,7 +29,6 @@ include("include/head.php");
     </div>
     <br>
     <section class="AI__container--trends">
-
         <?php
         if (isset($affiche_ai)) {
             foreach ($affiche_ai as $view_ai) {
@@ -50,7 +49,6 @@ include("include/head.php");
             }
         }
         ?>
-
     </section>
     <br>
     <?php

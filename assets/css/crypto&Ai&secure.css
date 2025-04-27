@@ -199,6 +199,11 @@ h5 > span {
   background-color: #000;
   margin: 8px;
 }
+
+/*administration*/
+.tempo_msg {
+  text-align: center;
+}
 /*administration des i.a*/
 .view__ai--container {
   min-height: 25vh;
@@ -206,6 +211,10 @@ h5 > span {
   border: 1px solid #000;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .gestion__container--ai {
   margin: 0;
@@ -308,6 +317,7 @@ input[type="submit"] {
 /*administration des i.a FIN*/
 /*carte ai public dans ai trends*/
 .ai__article {
+  margin: 10px;
   padding: 5px;
   height: auto;
   width: 25vw;
@@ -352,10 +362,10 @@ input[type="submit"] {
   -webkit-background-clip: text;
 }
 .ai__descript {
+  margin: 10px;
   color: #000;
   width: 38ch;
   letter-spacing: 2px;
-  margin: auto;
 }
 .ai__fig {
   padding: 5px;
@@ -377,12 +387,17 @@ input[type="submit"] {
   border-radius: 10px;
 }
 .ai__fig > img {
+  margin: 0;
+  padding: 0;
   height: auto;
-  width: 150px;
+  max-width: 5vw;
 }
 .ai__fig > figcaption > a {
+  margin: 0;
   font-size: 1.4rem;
   font-weight: 500;
 }
 /*carte ai public dans ai trends FIN*/
 /*AI TRENDS FIN*/
+/*security tools*/
+/*security tools FIN*/

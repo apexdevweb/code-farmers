@@ -1,5 +1,6 @@
 <?php
 require("backend/security/securityScript.php");
+require("backend/script/secureTools/viewSecureToolScript.php");
 ?>
 
 <!DOCTYPE html>
@@ -24,9 +25,31 @@ include("include/head.php");
     <br>
     <br>
     <div class="affichage_mode">
-        <h4><span>S</span>ecurity</h4>
+        <h4><span>w</span>eb <span>S</span>ecurity</h4>
     </div>
-
+    <br>
+    <section class="AI__container--trends">
+        <?php
+        if (isset($affiche_secure_tools)) {
+            foreach ($affiche_secure_tools as $view_public_tools) {
+        ?>
+                <article class="ai__article">
+                    <div class="ai__subcontainer--trends">
+                        <hgroup class="ai__title--container">
+                            <h3><?= $view_public_tools['scrt_name'] ?></h3>
+                        </hgroup>
+                        <p class="ai__descript"><?= $view_public_tools['scrt_descript'] ?></p>
+                        <figure class="ai__fig">
+                            <img src="<?= $view_public_tools['scrt_logo'] ?>" alt="aiLogo">
+                            <figcaption><a href="<?= $view_public_tools['scrt_link'] ?>">View tool<i class="fa-solid fa-arrow-right"></i></a></figcaption>
+                        </figure>
+                    </div>
+                </article>
+        <?php
+            }
+        }
+        ?>
+    </section>
     <?php
     include("include/footer.php");
     ?>

@@ -1,6 +1,6 @@
 <article class="ethical__container">
     <hgroup class="crypto__title--container">
-        <h4><span>S</span>ecurity</h4>
+        <h4><span>W</span>eb <span>S</span>ecurity</h4>
     </hgroup>
     <blockquote class="crypto__txt--container">
         <p>Here you can stay informed about the best security tools available today.</p>

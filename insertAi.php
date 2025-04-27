@@ -90,7 +90,7 @@ include("include/head.php");
                                     <div style="color: #fff; border:1px solid #fff; box-shadow: 1px 2px 5px #000; border-radius:5px;"></div>
                                     <br>
                                     <br>
-                                    <button type="button" class="btn btn-info"><a href="deletePubScript.php?id=<?= $view_ai['id_ai']; ?>">Supprimer</a></button>
+                                    <button type="button" class="btn btn-info"><a href="admin/deleteAiScript.php?id=<?= $view_ai['id_ai']; ?>">Supprimer</a></button>
                                 </div>
                             </div>
                         </div>
