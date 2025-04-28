@@ -16,6 +16,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         $cpgny_mail_select =  $cpgnySelectInfo['enterprise_mail'];
         $cpgny_number_select =  $cpgnySelectInfo['enterprise_number'];
         $cpgny_avatar_select =  $cpgnySelectInfo['enterprise_banner'];
+        $cpgny_descript_select =  $cpgnySelectInfo['enterprise_description'];
+        $cpgny_link_select =  $cpgnySelectInfo['enterprise_link'];
         $cpgny_city_select = $cpgnySelectInfo['enterprise_location'];
     } else {
         $errorMsg = "Aucun utilisateur a été trouver";

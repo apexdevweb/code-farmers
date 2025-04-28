@@ -40,10 +40,11 @@ include("include/head.php");
                         <hr>
                         <img src="assets/proBanner/<?= $cpgny_avatar_select; ?>" class="img-fluid" style="width: 250px; height: 250px; border-radius: 10px;">
                         <hr>
-                        <h6>Ville: <?= $cpgny_city_select; ?></h6>
                         <h6>E-mail: <?= $cpgny_mail_select; ?></h6>
                         <h6>identifiant entreprise: <?= $cpgny_number_select; ?></h6>
                         <h6>Ville: <?= $cpgny_city_select; ?></h6>
+                        <h6>Lien vers votre site web: <?= $cpgny_link_select; ?></h6>
+                        <h6>Description: <?= $cpgny_descript_select; ?></h6>
                         <hr>
                     <?php
                     }
@@ -70,11 +71,11 @@ include("include/head.php");
                         <form method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Modifier votre nom</label>
-                                <input type="text" class="form-control" name="profilName" value="<?= $profil_name ?>">
+                                <input type="text" class="form-control" name="proName" value="<?= $profil_name ?>">
                             </div>
                             <label for="city" class="form-label">Modifier la province</label>
                             <div class="mb-3">
-                                <select class="form-select form-select-sm" name="city">
+                                <select class="form-select form-select-sm" name="proCity">
                                     <option selected>...</option>
                                     <option value="Anvers">Anvers</option>
                                     <option value="Limbourg">Limbourg</option>
@@ -88,32 +89,26 @@ include("include/head.php");
                                     <option value="Luxembourg">Luxembourg</option>
                                 </select>
                             </div>
-                            <label for="langProg">Votre secteur d'activité </label>
+                            <label for="proActivity">Votre secteur d'activité </label>
                             <br>
                             <br>
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" value="html5" name="skill[]">
+                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" value="html5" name="proSkill[]">
                             <label class="btn btn-outline-primary" for="btncheck1">Développement web</label>
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" value="html5" name="skill[]">
+                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" value="html5" name="proSkill[]">
                             <label class="btn btn-outline-primary" for="btncheck2">crypto & finance</label>
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" value="html5" name="skill[]">
+                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" value="html5" name="proSkill[]">
                             <label class="btn btn-outline-primary" for="btncheck3">Sécurité</label>
                             <br>
                             <br>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Profil github</label>
-                                <input type="text" class="form-control" name="liengit" value="<?= $profil_gitlien ?>">
-                            </div>
-                            <br>
-                            <br>
-                            <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">lien vers votre site</label>
-                                <input type="text" class="form-control" name="lien" value="<?= $profil_webLien ?>">
+                                <input type="text" class="form-control" name="proLien" value="<?= $cpgny_link_select; ?>">
                             </div>
                             <br>
                             <br>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Votre chaîne youtube</label>
-                                <input type="text" class="form-control" name="Ytube" value="<?= $profil_tubeLien ?>">
+                            <div class="input-group">
+                                <span class="input-group-text">Description de l'entreprise</span>
+                                <textarea class="form-control" aria-label="With textarea" name="proDescript"></textarea>
                             </div>
                             <br>
                             <br>

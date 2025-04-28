@@ -3,18 +3,23 @@ require_once('backend/connection/connexionDB.php');
 //VALIDATION DU FORMULAIRE
 if (isset($_POST['proModif'])) {
     //ON VERIFIE QUE LES CHAMPS NE SONT PAS VIDE
-    if (!empty($_POST['profilName']) && !empty($_FILES['proAvatar']) && !empty($_POST['city']) && !empty($_POST['skill'])) {
+    if (!empty($_POST['proName'])  && !empty($_POST['proCity']) && !empty($_POST['proSkill']) && !empty($_POST['proLien']) && !empty($_POST['proDescript']) && !empty($_FILES['proAvatar'])) {
         //ON SECURISE LE NOUVEAU TITRE ET CONTENU AVEC UN STRIP_TAGS
-        $new_profil_name = strip_tags($_POST['profilName']);
-        $new_profil_city = strip_tags($_POST['city']);
-        $new_profil_skill = $_POST['skill'];
+        $new_pro_name = htmlspecialchars(strip_tags($_POST['proName']));
+        $new_pro_city = htmlspecialchars(strip_tags($_POST['proCity']));
+        $new_pro_skill = $_POST['proSkill'];
         //ON UTILISE IMPLODE POUR UPDATE LES CHECKBOX
-        $allSkill = implode(" ", $new_profil_skill);
+        $allProSkill = implode(" ", $new_pro_skill);
+        $new_pro_descript = htmlspecialchars(strip_tags($_POST['proDescript']));
+        $new_pro_link = htmlspecialchars(strip_tags($_POST['proLien']));
 
-        //ON MET A JOUR LES NOUVELLES DONNEES DANS LA DATABASE
-        $UpProfil = $bdd->prepare("UPDATE enterpise SET enterprise_name = ? , enterprise_location = ?, skill = ?, lien_github = ?, lien_web = ?, youtube = ? WHERE `id` = ?");
-        $UpProfil->execute(array($new_profil_name, $new_profil_city, $allSkill,  $new_profil_git, $new_lien_web, $new_lien_tube, $idProfil));
-
+        try {
+            //ON MET A JOUR LES NOUVELLES DONNEES DANS LA DATABASE
+            $UpProfil = $bdd->prepare("UPDATE enterpise SET enterprise_name = ? , enterprise_location = ?, enterprise_description = ?,enterprise_sector = ?, enterprise_link = ?, enterprise_banner = ? WHERE id_enterprise = ?");
+            $UpProfil->execute([$new_pro_name, $new_pro_city, $allProSkill, $new_pro_descript, $new_pro_link, $id_pro_profil]);
+        } catch (PDOException $e) {
+            echo "Erreur de mise a jour des info de l'entreprise" . $e->getMessage();
+        }
         header('Location: editeurProfile.php');
     } else {
         $errorMsg = "Veuillez completer tous les champs";
