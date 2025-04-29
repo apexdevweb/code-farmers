@@ -3,10 +3,10 @@ require_once('backend/connection/connexionDB.php');
 //ON VERIFIE LA METHODE GET EST EXISTANTE ET QUE LE CHAMPS EST REMPLI
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
-    $cpgny_select_id = (int) $_GET['id'];
+    $cpgny_select_id = (int) $_GET['id'];;
     //ON VERIFIE QUE LE PROFIL EXISTE
     $cpgnySelect = $bdd->prepare("SELECT * FROM enterprise WHERE id_enterprise = ?");
-    $cpgnySelect->execute(array($cpgny_select_id));
+    $cpgnySelect->execute([$cpgny_select_id]);
 
     if ($cpgnySelect->rowCount() > 0) {
         //ON RECUPERE TOUTE LA DATA DU PROFIL
@@ -17,6 +17,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         $cpgny_number_select =  $cpgnySelectInfo['enterprise_number'];
         $cpgny_avatar_select =  $cpgnySelectInfo['enterprise_banner'];
         $cpgny_descript_select =  $cpgnySelectInfo['enterprise_description'];
+        $cpgny_sector_select =  $cpgnySelectInfo['enterprise_sector'];
         $cpgny_link_select =  $cpgnySelectInfo['enterprise_link'];
         $cpgny_city_select = $cpgnySelectInfo['enterprise_location'];
     } else {

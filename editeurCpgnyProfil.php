@@ -1,10 +1,10 @@
 <?php
 require('backend/security/securityScript.php');
-require("backend/script/pro/proEditeurInfoScript.php");
 require('backend/script/pro/profilCpgnyScript.php');
-require("backend/script/pro/avatarCpgnyScript.php");
+require("backend/script/pro/proEditeurInfoScript.php");
 require("backend/script/pro/updateProScript.php");
-require("backend/class/proClass.php");
+require("backend/script/pro/avatarCpgnyScript.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,16 +30,13 @@ include("include/head.php");
             <div class="col">
                 <div class="container-fluid">
                     <?php
-                    if (isset($errorMsg)) {
-                        echo $errorMsg;
-                    }
                     if (isset($cpgnySelectInfo)) {
-                        include("include/agecalcule.php");
                     ?>
                         <h3><?= $cpgny_name_select; ?></h3>
                         <hr>
                         <img src="assets/proBanner/<?= $cpgny_avatar_select; ?>" class="img-fluid" style="width: 250px; height: 250px; border-radius: 10px;">
                         <hr>
+                        <h6>Secteur: <?= $cpgny_sector_select; ?></h6>
                         <h6>E-mail: <?= $cpgny_mail_select; ?></h6>
                         <h6>identifiant entreprise: <?= $cpgny_number_select; ?></h6>
                         <h6>Ville: <?= $cpgny_city_select; ?></h6>
@@ -71,7 +68,7 @@ include("include/head.php");
                         <form method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Modifier votre nom</label>
-                                <input type="text" class="form-control" name="proName" value="<?= $profil_name ?>">
+                                <input type="text" class="form-control" name="proName" value="<?= $pro_info_name ?>">
                             </div>
                             <label for="city" class="form-label">Modifier la province</label>
                             <div class="mb-3">
@@ -92,17 +89,17 @@ include("include/head.php");
                             <label for="proActivity">Votre secteur d'activité </label>
                             <br>
                             <br>
-                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" value="html5" name="proSkill[]">
-                            <label class="btn btn-outline-primary" for="btncheck1">Développement web</label>
-                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" value="html5" name="proSkill[]">
-                            <label class="btn btn-outline-primary" for="btncheck2">crypto & finance</label>
-                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" value="html5" name="proSkill[]">
-                            <label class="btn btn-outline-primary" for="btncheck3">Sécurité</label>
+                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" value="Developpement web" name="proSkill[]">
+                            <label class="btn btn-outline-primary" for="btncheck1">Developpement web</label>
+                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" value="Crypto & Finance" name="proSkill[]">
+                            <label class="btn btn-outline-primary" for="btncheck2">Crypto & Finance</label>
+                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" value="Securite" name="proSkill[]">
+                            <label class="btn btn-outline-primary" for="btncheck3">Securite</label>
                             <br>
                             <br>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">lien vers votre site</label>
-                                <input type="text" class="form-control" name="proLien" value="<?= $cpgny_link_select; ?>">
+                                <input type="text" class="form-control" name="proLien" value="<?= $pro_info_link; ?>">
                             </div>
                             <br>
                             <br>
