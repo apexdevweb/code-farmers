@@ -1,11 +1,11 @@
 function refreshpub() {
-  const cdepub_html = document.getElementById("myCopy1").value;
+  const cdepub_html = document.getElementById("editor-html").value;
   const cdepub_css =
-    "<style>" + document.getElementById("myCopy2").value + "</style>";
+    "<style>" + document.getElementById("editor-css").value + "</style>";
   const cdepub_js =
     "<scri" +
     "pt>" +
-    document.getElementById("myCopy3").value +
+    document.getElementById("editor-js").value +
     "</scri" +
     "pt>";
   const page = document.getElementById("res2").contentWindow.document;

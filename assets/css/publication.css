@@ -24,18 +24,19 @@
 /********************PAGE ARTICLE PHP********************************/
 
 .sub_containerARTCL {
-  height: auto;
+  height: 80vh;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-evenly;
   overflow: hidden;
+  background-color: #000;
 }
 
 .codeContainer {
   margin: 2px;
-  height: 30vh;
+  height: auto;
   width: 100%;
   display: block;
   border: 1px solid #000;
@@ -51,43 +52,35 @@
   height: 30vh;
   width: 100%;
   overflow: hidden;
-  background-color: #222;
-  border: 1px solid #000;
   border-radius: 10px;
 }
-
-.codeContainer_code {
-  height: 30vh;
+.sub_code_ctnr {
+  margin: 0;
+  height: auto;
   width: 100%;
-  display: block;
-  background-color: #222;
-  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
-/*scrollbar custom*/
-.mastercode_container ::-webkit-scrollbar {
-  height: 3px;
-  width: 5px;
-  border-radius: 15px;
-}
-.mastercode_container ::-webkit-scrollbar-track {
-  background-color: #000;
-  border-radius: 15px;
-}
-.mastercode_container ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#000, #e60000, #000);
-  border-radius: 15px;
-}
-/*scrollbar custom FIN*/
 .codeContainer > img {
   height: 30vh;
-  width: 100%;
+  width: auto;
 }
 .mastercode_container > h4 {
   text-align: center;
   height: auto;
   width: 100%;
-  background-color: #000;
-  color: #fff;
+  background: radial-gradient(
+    circle at 10% -20%,
+    #a0d9f2,
+    #cbd6ff,
+    #fde4d5,
+    #faf0e4,
+    #f8f9f0,
+    #ffffff
+  );
+  color: #000;
   letter-spacing: 2px;
   font-family: "Orbitron", sans-serif;
 }
@@ -100,24 +93,6 @@
   font-family: "Orbitron", sans-serif;
 }
 /*conteneur de code*/
-.language-html {
-  height: 30vh;
-  width: 100%;
-  color: #0088cc;
-  background-color: #222;
-}
-.language-css {
-  height: 30vh;
-  width: 100%;
-  color: #ff3333;
-  background-color: #222;
-}
-.language-javascript {
-  height: 30vh;
-  width: 100%;
-  color: #deb44a;
-  background-color: #222;
-}
 .language-html,
 .language-css,
 .language-javascript {

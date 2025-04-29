@@ -49,22 +49,18 @@ include('include/head.php');
                         <div id="caption"></div>
                     </div>
                 </div>
-                <div class="mastercode_container">
-                    <h4><span>H</span>tml <span id="codemeter1"></span></h4>
-                    <div class="codeContainer_code">
-                        <textarea class="language-html" id="myCopy1" oninput="refreshpub()"><?= $publi_html_select ?></textarea>
+                <div class="sub_code_ctnr">
+                    <div class="mastercode_container">
+                        <h4><span>H</span>tml <span id="codemeter1"></span></h4>
+                        <div id="editor-html" style="width:25vw; height:500px;" oninput="refreshpub()"></div>
                     </div>
-                </div>
-                <div class="mastercode_container">
-                    <h4><span>C</span>ss <span id="codemeter2"></span></h4>
-                    <div class="codeContainer_code">
-                        <textarea class="language-css" id="myCopy2" oninput="refreshpub()"><?= $publi_css_select ?></textarea>
+                    <div class="mastercode_container">
+                        <h4><span>C</span>ss <span id="codemeter2"></span></h4>
+                        <div id="editor-css" style="width:25vw; height:500px;" oninput="refreshpub()"></div>
                     </div>
-                </div>
-                <div class="mastercode_container">
-                    <h4><span>J</span>avascript <span id="codemeter3"></span></h4>
-                    <div class="codeContainer_code">
-                        <textarea class="language-javascript" id="myCopy3" oninput="refreshpub()"><?= $publi_js_select ?></textarea>
+                    <div class="mastercode_container">
+                        <h4><span>J</span>avascript <span id="codemeter3"></span></h4>
+                        <div id="editor-js" style="width:25vw; height:500px;" oninput="refreshpub()"></div>
                     </div>
                 </div>
             </div>
@@ -108,10 +104,23 @@ include('include/head.php');
         ?>
     </div>
     <!--script de l'éditeur de code de publication-->
-    <script src="assets/js/editcodepubli.js"></script>
     <!--script de l'éditeur de code de publication fin-->
+    <script>
+
+    </script>
+    <script id="html-content" type="application/json">
+        <?php echo json_encode($publi_html_select ?? ''); ?>
+    </script>
+    <script id="css-content" type="application/json">
+        <?php echo json_encode($publi_css_select ?? ''); ?>
+    </script>
+    <script id="js-content" type="application/json">
+        <?php echo json_encode($publi_js_select ?? ''); ?>
+    </script>
     <script src="assets/js/modalJs.js"></script>
-    <script src="assets/js/codemeter.js"></script>
+    <script src="assets/js/editcodepubli.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.33.0/min/vs/loader.js"></script>
+    <script src="assets/js/mncoEditorConfig.js"></script>
 </body>
 
 </html>
