@@ -43,3 +43,19 @@ require(["vs/editor/editor.main"], function () {
     theme: "vs-dark",
   });
 });
+
+//expansion de l'éditeur
+const iconExp = document.querySelectorAll(".exp");
+const editorExpand = document.querySelectorAll(".mastercode_container");
+
+iconExp.forEach((btnExp, index) => {
+  editorExpandEl = editorExpand[index];
+  btnExp.addEventListener("click", () => {
+    console.log(btnExp);
+    if (editorExpandEl.classList.contain("expansionEditor")) {
+      editorExpandEl.classList.remove("expansionEditor");
+    } else {
+      editorExpandEl.classList.add("expansionEditor");
+    }
+  });
+});

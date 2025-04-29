@@ -51,16 +51,25 @@ include('include/head.php');
                 </div>
                 <div class="sub_code_ctnr">
                     <div class="mastercode_container">
-                        <h4><span>H</span>tml <span id="codemeter1"></span></h4>
-                        <div id="editor-html" style="width:25vw; height:500px;" oninput="refreshpub()"></div>
+                        <hgroup class="mastercode__title--container">
+                            <h4><span>H</span>tml</h4>
+                            <i class="fa-solid fa-expand exp"></i>
+                        </hgroup>
+                        <div id="editor-html" oninput="refreshpub()"></div>
                     </div>
                     <div class="mastercode_container">
-                        <h4><span>C</span>ss <span id="codemeter2"></span></h4>
-                        <div id="editor-css" style="width:25vw; height:500px;" oninput="refreshpub()"></div>
+                        <hgroup class="mastercode__title--container">
+                            <h4><span>C</span>ss</h4>
+                            <i class="fa-solid fa-expand exp"></i>
+                        </hgroup>
+                        <div id="editor-css" oninput="refreshpub()"></div>
                     </div>
                     <div class="mastercode_container">
-                        <h4><span>J</span>avascript <span id="codemeter3"></span></h4>
-                        <div id="editor-js" style="width:25vw; height:500px;" oninput="refreshpub()"></div>
+                        <hgroup class="mastercode__title--container">
+                            <h4><span>J</span>avascript</h4>
+                            <i class="fa-solid fa-expand exp"></i>
+                        </hgroup>
+                        <div id="editor-js" oninput="refreshpub()"></div>
                     </div>
                 </div>
             </div>
