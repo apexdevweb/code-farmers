@@ -39,6 +39,7 @@ include('include/head.php');
         ?>
             <h3><?= $publi_titre_select; ?></h3>
             <hr>
+            <p><?= $publi_contenu_select; ?></p>
             <div class="sub_containerARTCL">
                 <div class="codeContainer">
                     <i class="fa-solid fa-maximize" id="croix"></i>
@@ -75,7 +76,6 @@ include('include/head.php');
             </div>
             <hr>
             <iframe id="res2"></iframe>
-            <p><?= $publi_contenu_select; ?></p>
             <hr>
             <small><?= $publi_date_select . " " . $publi_auteur_select; ?></small>
             <br>
