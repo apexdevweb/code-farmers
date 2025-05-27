@@ -112,11 +112,10 @@ include('include/head.php');
         }
         ?>
     </div>
-    <!--script de l'éditeur de code de publication-->
-    <!--script de l'éditeur de code de publication fin-->
-    <script>
-
-    </script>
+    <br>
+    <?php
+    include("include/footer.php");
+    ?>
     <script id="html-content" type="application/json">
         <?php echo json_encode($publi_html_select ?? ''); ?>
     </script>
