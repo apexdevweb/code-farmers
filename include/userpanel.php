@@ -32,7 +32,6 @@ if (isset($_SESSION['confirmkey'])) {
     function openNav() {
         document.getElementById("mySidepanel").style.width = "350px";
         document.getElementById("mySidepanel").style.opacity = "1";
-
     }
 
     function closeNav() {

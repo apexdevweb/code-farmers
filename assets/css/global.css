@@ -143,6 +143,7 @@
   color: #fff;
   height: auto;
   width: 50%;
+  text-shadow: 0px 0px 3px #000;
 }
 .affichage_mode > h4 > span {
   color: #000;

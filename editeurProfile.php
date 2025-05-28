@@ -39,13 +39,15 @@ include("include/head.php");
                         <hr>
                         <img src="assets/usersimg/<?= $user_avatar_select; ?>" class="img-fluid" style="width: 250px; height: 250px; border-radius: 10px;">
                         <hr>
-                        <h6>âge: <?= age($user_age_select); ?></h6>
-                        <h6>Genre: <?= $user_genre_select; ?></h6>
-                        <h6>Ville: <?= $user_city_select; ?></h6>
-                        <h6>Compétence: <?= $user_skill_select; ?></h6>
-                        <h6>Github: <?= $user_git_select; ?></h6>
-                        <h6>Youtube: <?= $user_tube_select; ?></h6>
-                        <h6>Site web: <?= $user_lien_select; ?></h6>
+                        <div class="info__editor--profil">
+                            <h6><span class="editor__profil--item">âge:</span> <?= age($user_age_select); ?></h6>
+                            <h6><span class="editor__profil--item">Genre:</span> <?= $user_genre_select; ?></h6>
+                            <h6><span class="editor__profil--item">Ville:</span> <?= $user_city_select; ?></h6>
+                            <h6><span class="editor__profil--item">Compétence:</span> <?= $user_skill_select; ?></h6>
+                            <h6><span class="editor__profil--item">Github:</span> <?= $user_git_select; ?></h6>
+                            <h6><span class="editor__profil--item">Youtube:</span> <?= $user_tube_select; ?></h6>
+                            <h6><span class="editor__profil--item">Site web:</span> <?= $user_lien_select; ?></h6>
+                        </div>
                         <hr>
                     <?php
                     }

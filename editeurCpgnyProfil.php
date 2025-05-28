@@ -36,12 +36,14 @@ include("include/head.php");
                         <hr>
                         <img src="assets/proBanner/<?= $cpgny_avatar_select; ?>" class="img-fluid" style="width: 250px; height: 250px; border-radius: 10px;">
                         <hr>
-                        <h6>Secteur: <?= $cpgny_sector_select; ?></h6>
-                        <h6>E-mail: <?= $cpgny_mail_select; ?></h6>
-                        <h6>identifiant entreprise: <?= $cpgny_number_select; ?></h6>
-                        <h6>Ville: <?= $cpgny_city_select; ?></h6>
-                        <h6>Lien vers votre site web: <?= $cpgny_link_select; ?></h6>
-                        <h6>Description: <?= $cpgny_descript_select; ?></h6>
+                        <div class="info__editor--profil">
+                            <h6><span class="editor__profil--item">Secteur:</span> <?= $cpgny_sector_select; ?></h6>
+                            <h6><span class="editor__profil--item">E-mail:</span> <?= $cpgny_mail_select; ?></h6>
+                            <h6><span class="editor__profil--item">identifiant entreprise:</span> <?= $cpgny_number_select; ?></h6>
+                            <h6><span class="editor__profil--item">Ville:</span> <?= $cpgny_city_select; ?></h6>
+                            <h6><span class="editor__profil--item">Lien vers votre site web:</span> <?= $cpgny_link_select; ?></h6>
+                            <h6><span class="editor__profil--item">Description:</span> <?= $cpgny_descript_select; ?></h6>
+                        </div>
                         <hr>
                     <?php
                     }
