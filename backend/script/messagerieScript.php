@@ -1,5 +1,5 @@
 <?php
-require('../connection/connexionDB.php');
+require('backend/connection/connexionDB.php');
 /////////////////////////////////////////////////////////////////////////////////////////////
 //TRAITEMENT DE LA MESSAGERIE
 if (isset($_POST['envoi_pv'])) {

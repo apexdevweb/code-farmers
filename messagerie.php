@@ -11,6 +11,9 @@ $req_users->bindParam(':sessionUser', $sessionUser, PDO::PARAM_INT);
 $req_users->execute();
 // Récupération des résultats
 $users = $req_users->fetchAll(PDO::FETCH_ASSOC);
+
+//titre liste des contacts
+$tilte_contact = "Liste des contacts";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,20 +34,23 @@ include("include/head.php");
     include("include/userpanel.php");
     ?>
     <br>
-    <?php
-    if (!empty($users)) {
-        foreach ($users as $message_users) {
-    ?>
-            <br>
-            <div class="container-sm">
-                <h6><img src="assets/usersimg/<?= $message_users['avatar']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><a href="mp.php?id=<?= $message_users['id']; ?>"><?= $message_users['userName']; ?></a></h6>
-            </div>
 
-    <?php
+    <div class="container-sm main__container--msg-list">
+        <cite><?= $tilte_contact ?></cite>
+        <br>
+        <br>
+        <?php
+        if (!empty($users)) {
+            foreach ($users as $message_users) {
+        ?>
+                <div class="sub__container--msg-list">
+                    <h6><img src="assets/usersimg/<?= $message_users['avatar']; ?>" style="width: 50px; height: 50px; border-radius: 50px;"><a href="mp.php?id=<?= $message_users['id']; ?>"><?= " " . $message_users['userName']; ?></a></h6>
+                </div>
+        <?php
+            }
         }
-    }
-    ?>
-
+        ?>
+    </div>
 </body>
 
 </html>

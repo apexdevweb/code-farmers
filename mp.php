@@ -1,13 +1,13 @@
 <?php
-require("actionback/users/securityScript.php");
-require("actionback/privateMessage/messagerieScript.php");
+require("backend/security/securityScript.php");
+require("backend/script/messagerieScript.php");
 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <?php
-include("includes/head.php");
+include("include/head.php");
 ?>
 
 <body>
@@ -22,26 +22,24 @@ include("includes/head.php");
     <br>
     <div class="container GlobalMsg">
         <section id="messages">
-            <h5>Discussion avec : <img src="asset/image/<?= $_GET['id']; ?>" style="width: 60px; height: 60px; border-radius: 50px; border: 2px solid #fff;"></h5>
+            <h5 class="msg__title--profil">Discussion avec : <img src="assets/usersimg/<?= $_GET['id']; ?>" style="width: 60px; height: 60px; border-radius: 50px; border: 2px solid #fff;"></h5>
             <hr>
             <div class="containerMsgPv">
                 <!--on récupère et affiche le message -->
                 <?php
-
                 while ($message = $recupMsg->fetch()) {
                     if ($message['id_destinataire'] == $_SESSION['id']) {
                 ?>
                         <div class="containerDesti">
-                            <img src="asset/image/<?= $_GET['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;">
+                            <img src="assets/usersimg/<?= $_GET['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;">
                             <p><?= " " . $message['message']; ?></p>
                             <small><?= $message['msg_date'] . " " ?></small>
                         </div>
-
                     <?php
                     } elseif ($message['id_destinataire'] == $getid) {
                     ?>
                         <div class="containerExpe">
-                            <img src="asset/image/<?= $_SESSION['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;">
+                            <img src="assets/usersimg/<?= $_SESSION['id']; ?>" style="width: 50px; height: 50px; border-radius: 50px;">
                             <p><?= " " . $message['message']; ?></p>
                             <small><?= $message['msg_date'] . " " ?></small>
                         </div>
@@ -61,6 +59,10 @@ include("includes/head.php");
             <button type="submit" class="btn btn-primary" name="envoi_pv">Envoyer</button>
         </form>
     </div>
+    <br>
+    <?php
+    include("include/footer.php");
+    ?>
 </body>
 
 </html>
