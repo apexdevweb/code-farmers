@@ -2,7 +2,7 @@
 require('backend/security/securityScript.php');
 require('backend/script/users/profilScript.php');
 require('backend/script/users/personalPubliUser.php');
-if (isset($_SESSION['id'], $_SESSION['data']['adm_id'], $_GET['id']) && $_SESSION['data']['adm_id'] != $_GET['id']) {
+if (isset($_SESSION['id'], $_GET['id']) && $_SESSION['id'] != $_GET['id']) {
     include('include/visite.php');
 }
 

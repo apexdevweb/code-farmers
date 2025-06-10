@@ -14,6 +14,7 @@ if (isset($_POST['signup'])) {
         !empty($_POST['confirmPassword']) && !empty($_POST['city']) && !empty($_POST['dateNaissance'])
     ) {
         // Nettoyage des données et sécurisation
+        $U_ip = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP);
         $confirmkey = mt_rand(3000000, 9000000);
         $Uname = htmlspecialchars(strip_tags($_POST['userName']));
         $Umail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
@@ -33,9 +34,9 @@ if (isset($_POST['signup'])) {
             $Upasse_crypted = password_hash($_POST['userPassword'], PASSWORD_ARGON2ID);
             // Insère l'utilisateur en base de données
             if ($data_verif->rowCount() == 0) {
-                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey, confirm) 
-                                              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                $user_insert->execute([$Uname, $Umail,  $Upasse_crypted, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey, 0]);
+                $user_insert = $bdd->prepare("INSERT INTO users (userName, mail, userPassword, date_naissance, ville, genre, date_inscription, confirmkey, confirm, user_ip) 
+                                              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                $user_insert->execute([$Uname, $Umail,  $Upasse_crypted, $Ubirthday, $Ucity, $Usex, $date_inscription, $confirmkey, 0, $U_ip]);
 
                 // Récupère les infos de l'utilisateur
                 $rescu_user_info = $bdd->prepare("SELECT `id`, userName FROM users WHERE userName = ? AND mail = ?");
