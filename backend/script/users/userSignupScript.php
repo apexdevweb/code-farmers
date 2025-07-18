@@ -6,11 +6,11 @@ require('backend/mail/autoMail.php');
 use PHPMailer\PHPMailer\PHPMailer;
 
 // Vérifie si le formulaire est soumis
-if (isset($_POST['signup'])) {
+if (isset($_POST['signup']) && isset($_SERVER['REMOTE_ADDR'])) {
 
     // Vérifie que tous les champs sont remplis
     if (
-        !empty($_POST['userName']) && !empty($_POST['mail']) && !empty($_POST['userPassword']) &&
+        !empty($_SERVER['REMOTE_ADDR']) && !empty($_POST['userName']) && !empty($_POST['mail']) && !empty($_POST['userPassword']) &&
         !empty($_POST['confirmPassword']) && !empty($_POST['city']) && !empty($_POST['dateNaissance'])
     ) {
         // Nettoyage des données et sécurisation
