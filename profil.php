@@ -84,6 +84,11 @@ include('include/head.php');
         <h3>Publication de <?= $user_name_select; ?> <i class="fa-solid fa-arrow-down"></i></h3>
         <div class="cntrPubli">
             <?php
+            if (isset($no_publi_msg)) {
+            ?>
+                <p><?= $no_publi_msg ?></p>
+            <?php
+            }
             while ($publication = $publi_rescu->fetch()) {
             ?>
                 <br>
